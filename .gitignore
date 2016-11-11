@@ -62,7 +62,5 @@ npm-debug.log
 .installed
 
 css/
-html/api/upload/*.*
 docs/
 release/
-html/json

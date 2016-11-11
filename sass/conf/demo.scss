@@ -1,0 +1,10 @@
+//支持images base64
+.img-base64{
+	background: inline-image('error-img.png');
+}
+
+//支持images相对输出路径
+.img-base64{
+	background: image-url('error-img.png');
+}
+

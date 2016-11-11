@@ -1,31 +1,29 @@
+var path = require('path');
 module.exports = {
-    srcPath: {
-        sass: './sass/**/*.{sass,scss}',
-        js: './js/conf/**/*',
-        images: './images/**/*',
-        fonts: './fonts/**/*',
-        tempCss: './css/**/*.{css}'
+    dist : './dist',
+    images: {
+        src: './images/**/*',
+        dest: './dist/images'
     },
-    distPath: {
-        dist: './dist/',
-        sass: './dist/css',
-        js: './dist/js',
-        images: './dist/images',
-        fonts: './dist/fonts'
+    fonts: {
+        src: './fonts/**/*',
+        dest: './dist/fonts'
+    },
+    css: {
+        src: './css/**/*.css',
+        dest: './dist/css'
+    },
+    sass:{
+        src : './sass/**/*.{sass,scss}',
+        dest : './css'
     },
     //compass 配置
     compass: {
-        // project: path.join(__dirname, 'assets'),
-        css: './dist/css',
+        project: path.join(__dirname, '../'),
+        css: 'css',
         sass: 'sass',
         images: 'images',
         style: 'expanded' //expanded(default)|compressed
-    },
-    //支持配置
-    cssBase64: {
-        baseDir: './dist/images',
-        maxWeightResource: 20*1024,
-        extensionsAllowed: ['.gif', '.jpg', '.png', '.jpeg']
     },
     //autoprefixer 配置，自动添加需要兼容浏览器前缀
     autoprefixer: {
