@@ -41,6 +41,12 @@ module.exports = {
             //     excludeRequireCss: true
             // },
             // include: ['jquery'],
+            map: {
+                '*': {
+                    'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
+                    'text': 'lib/require/2.1/plugins/text/text' // or whatever the path to require-css is
+                }
+            },
             findNestedDependencies: true,
             paths: {
                 'jquery': 'lib/jquery/1.11.1/jquery',
@@ -56,6 +62,12 @@ module.exports = {
             // pragmasOnSave: {
             //     excludeRequireCss: true
             // },
+            map: {
+                '*': {
+                    'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
+                    'text': 'lib/require/2.1/plugins/text/text' // or whatever the path to require-css is
+                }
+            },
             extend: ['app'],
             inlineText: false,
             findNestedDependencies: true,
