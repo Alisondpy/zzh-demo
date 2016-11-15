@@ -9,21 +9,17 @@ module.exports = {
         src: './source/fonts/**/*',
         dest: './dist/fonts'
     },
-    css: {
-        src: './source/css/**/*.css',
-        dest: './dist/css'
-    },
     html: {
         src: './source/html/**/*.{html,htm}',
         dest: './dist/html'
     },
     sass: {
         src: './source/sass/**/*.{sass,scss}',
-        dest: './dist/css',
-        rev: './dist/cssrev',
+        dest: './dist/css'
     },
     js: {
         src: './source/js/**/*.js',
+        filter: ['source/js/**/*.js', 'source/js/app.js'],
         dest: './dist/js/'
     },
     //autoprefixer 配置，自动添加需要兼容浏览器前缀
@@ -41,10 +37,15 @@ module.exports = {
     },
     requirejs: {
         app: {
-            inlineText: false,
+            // pragmasOnSave: {
+            //     excludeRequireCss: true
+            // },
+            // include: ['jquery'],
             findNestedDependencies: true,
             paths: {
                 'jquery': 'lib/jquery/1.11.1/jquery',
+                'css': 'lib/require/2.1/plugins/css/css',//https://github.com/guybedford/require-css/
+                'text': 'lib/require/2.1/plugins/text/text',
                 'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
             },
             shim: {
@@ -52,10 +53,16 @@ module.exports = {
             }
         },
         modules: {
+            // pragmasOnSave: {
+            //     excludeRequireCss: true
+            // },
+            extend: ['app'],
             inlineText: false,
             findNestedDependencies: true,
             paths: {
                 'jquery': 'lib/jquery/1.11.1/jquery',
+                'css': 'lib/require/2.1/plugins/css/css',//https://github.com/guybedford/require-css/
+                'text': 'lib/require/2.1/plugins/text/text',
                 'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
             },
             shim: {

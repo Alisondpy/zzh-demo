@@ -37,6 +37,8 @@ var urlrev = require('postcss-urlrev');
 var postcssSprites = require('postcss-sprites');
 //require优化
 var concat = require("gulp-concat");
+//This plugin does not support streaming. If you have files from a streaming source, such as browserify, you should use gulp-buffer before gulp-rev in your pipeline:
+var buffer = require('gulp-buffer');
 
 
 var requirejsOptimize = require('gulp-requirejs-optimize');
@@ -47,7 +49,7 @@ gulp.task("sass", function() {
     var postcssProcessors = [
         assets,
         urlrev,
-        autoprefixer({ browsers: ['last 10 version'] }),
+        autoprefixer(config.autoprefixer),
         // postcssSprites({
         //     spritePath: './dist/images', //雪碧图合并后存放地址
         //     stylesheetPath: './dist/css'
@@ -62,6 +64,7 @@ gulp.task("sass", function() {
         .pipe(postcss(postcssProcessors))
         // .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(config.sass.dest))
+        .pipe(buffer())
         .pipe(rev())
         .pipe(gulp.dest(config.sass.dest))
         .pipe(rev.manifest())
@@ -111,7 +114,7 @@ gulp.task('copy-js', function() {
 gulp.task('scripts', function() {
     var filter = require('gulp-filter');
     return gulp.src([config.js.src])
-        .pipe(filter(['**/js/conf/**/*.js', '**/js/app.js']))
+        .pipe(filter(['source/js/conf/**/*.js', 'source/js/app.js']))
         .pipe(requirejsOptimize(function(file) {
             if (file.relative == 'app.js') {
                 return Object.assign({}, config.requirejs.app);
