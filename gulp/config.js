@@ -34,9 +34,9 @@ var CONFIG = {
     rev: {
         filter: ['./' + PATH_DIST + '/**/*.json', './' + PATH_SOURCE + '/**/*.html']
     },
-    //开发和生成环境通用
+    //开发和生成环境通用,生产环境会用gulp-clean-css瘦身压缩
     sassOptions: {
-        outputStyle: 'none' // compressed | none
+        outputStyle: 'nested' // Can be nested (default), compact, compressed, or expanded
     },
     revCollector: {
         replaceReved: true,
