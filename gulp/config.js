@@ -1,26 +1,70 @@
 var path = require('path');
-module.exports = {
-    dist: './dist',
+
+var PROJECT_NAME = 'example-project';
+var CDN = '//s1.zzhstatic.com/' + PROJECT_NAME + '/';
+
+var PATH_SOURCE = 'source';
+var PATH_DIST = 'dist';
+
+var CONFIG = {
+    cdn: CDN,
+    dist: './' + PATH_DIST,
+    revHash: true, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
     images: {
-        src: './source/images/**/*',
-        dest: './dist/images'
+        src: './' + PATH_SOURCE + '/images/**/*',
+        dest: './' + PATH_DIST + '/images'
     },
     fonts: {
-        src: './source/fonts/**/*',
-        dest: './dist/fonts'
+        src: './' + PATH_SOURCE + '/fonts/**/*',
+        dest: './' + PATH_DIST + '/fonts'
     },
     html: {
-        src: './source/html/**/*.{html,htm}',
-        dest: './dist/html'
+        src: './' + PATH_SOURCE + '/html/**/*.{html,htm}',
+        dest: './' + PATH_DIST + '/html'
     },
     sass: {
-        src: './source/sass/**/*.{sass,scss}',
-        dest: './dist/css'
+        src: './' + PATH_SOURCE + '/sass/**/*.{sass,scss}',
+        dest: './' + PATH_DIST + '/css'
     },
     js: {
-        src: './source/js/**/*.js',
-        filter: ['source/js/**/*.js', 'source/js/app.js'],
-        dest: './dist/js/'
+        src: './' + PATH_SOURCE + '/js/**/*.js',
+        filter: ['' + PATH_SOURCE + '/js/conf/**/*.js', '' + PATH_SOURCE + '/js/app.js'], //注意入口文件规定为'+PATH_SOURCE+'/js/app.js
+        dest: './' + PATH_DIST + '/js/'
+    },
+    rev: {
+        filter: ['./' + PATH_DIST + '/**/*.json', './' + PATH_SOURCE + '/**/*.html']
+    },
+    //开发和生成环境通用
+    sassOptions: {
+        outputStyle: 'none' // compressed | none
+    },
+    revCollector: {
+        replaceReved: true,
+        dirReplacements: {
+            '/css': function(manifestValue) {
+                return CDN + PATH_DIST + '/css/' + getManifestValueByRevHash(manifestValue);
+            },
+            '/js': function(manifestValue) {
+                return CDN + PATH_DIST + '/js/' + getManifestValueByRevHash(manifestValue);
+            },
+            '/images': function(manifestValue) {
+                return CDN + PATH_DIST + '/images/' + getManifestValueByRevHash(manifestValue);
+                // return '//s' + (Math.floor(Math.random() * 4) + 1) + '.zzhstatic.com' + '/example-project/'+PATH_DIST+'/images/' + getManifestValueByRevHash(manifestValue);
+            }
+        }
+    },
+    //只有生产环境才启用
+    htmlmin: {
+        // removeComments: true, //清除HTML注释
+        // ignoreCustomFragments: [/^<!--#include[\s\S]*-->$/g],
+        collapseWhitespace: true, //压缩HTML
+        collapseBooleanAttributes: true, //省略布尔属性的值
+        removeEmptyAttributes: true, //删除所有空格作属性值
+        removeScriptTypeAttributes: true, //删除<script>的type="text/javascript"
+        removeStyleLinkTypeAttributes: true, //删除<style>和<link>的type="text/css"
+        minifyJS: true, //压缩页面JS
+        minifyCSS: true, //压缩页面CSS
+        maxLineLength: 1024
     },
     //autoprefixer 配置，自动添加需要兼容浏览器前缀
     autoprefixer: {
@@ -35,12 +79,10 @@ module.exports = {
         ],
         cascade: false
     },
+    //只有生产环境才启用
     requirejs: {
-        app: {
-            // pragmasOnSave: {
-            //     excludeRequireCss: true
-            // },
-            // include: ['jquery'],
+        //公共配置
+        common: {
             map: {
                 '*': {
                     'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
@@ -50,7 +92,7 @@ module.exports = {
             findNestedDependencies: true,
             paths: {
                 'jquery': 'lib/jquery/1.11.1/jquery',
-                'css': 'lib/require/2.1/plugins/css/css',//https://github.com/guybedford/require-css/
+                'css': 'lib/require/2.1/plugins/css/css', //https://github.com/guybedford/require-css/
                 'text': 'lib/require/2.1/plugins/text/text',
                 'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
             },
@@ -58,28 +100,31 @@ module.exports = {
                 'bootstrap': ['jquery']
             }
         },
+        //app.js配置文件专门入口
+        app: {
+            name: 'app',
+            include: ['jquery']
+        },
+        //其他页面入口文件配置
         modules: {
-            // pragmasOnSave: {
-            //     excludeRequireCss: true
-            // },
-            map: {
-                '*': {
-                    'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
-                    'text': 'lib/require/2.1/plugins/text/text' // or whatever the path to require-css is
-                }
-            },
-            extend: ['app'],
-            inlineText: false,
-            findNestedDependencies: true,
-            paths: {
-                'jquery': 'lib/jquery/1.11.1/jquery',
-                'css': 'lib/require/2.1/plugins/css/css',//https://github.com/guybedford/require-css/
-                'text': 'lib/require/2.1/plugins/text/text',
-                'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
-            },
-            shim: {
-                'bootstrap': ['jquery']
-            }
+            exclude: ['jquery']
         }
     }
 };
+
+//根据
+function getManifestValueByRevHash(manifestValue) {
+    if (CONFIG.revHash) {
+        try {
+            var matchArr = manifestValue.match(/\/?[a-zA-Z-\.0-9]+-([0-9a-zA-Z]{10})(\.[a-zA-Z]+)+/);
+            var file = manifestValue;
+            file = file.replace(/-([0-9a-zA-Z]{10})\./, '.') + '?v=' + matchArr[1];
+            return file;
+        } catch (e) {
+            console.error('getManifestValueByRevHash is failed：', manifestValue, '=>', e.message);
+        }
+    }
+    return manifestValue;
+}
+
+module.exports = CONFIG;
