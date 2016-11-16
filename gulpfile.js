@@ -46,6 +46,10 @@ var through = require('through2');
 //压缩html
 var htmlmin = require('gulp-htmlmin');
 
+var modify = require('gulp-modify');
+
+var md5 = require('md5');
+
 //这里替换了以后gulp-rev-collector就无法替换，目前是移植到gulp-rev-collector的dirReplacements来配置
 function customRevHash(file, enc, cb) {
     // if (CONFIG.revHash) {
@@ -119,6 +123,7 @@ gulp.task('copy-images', function() {
 //requirejs 合并
 gulp.task('scripts', function() {
     var filter = require('gulp-filter');
+    // var replace = require('gulp-replace');
     return gulp.src([CONFIG.js.src])
         .pipe(gulpif(gIsRelease, filter(CONFIG.js.filter)))
         .pipe(gulpif(gIsRelease, requirejsOptimize(function(file) {
@@ -127,6 +132,15 @@ gulp.task('scripts', function() {
             }
             return Object.assign({}, CONFIG.requirejs.common, CONFIG.requirejs.modules);
         })))
+        .pipe(modify({
+            fileModifier: function(file, contents) {
+                if (file.history && file.history[0] == CONFIG.appName) {
+                    var md5Cnt = md5(contents).substring(0, 10);
+                    return contents + 'require.config({urlArgs : "' + md5Cnt + '"});';
+                }
+                return contents;
+            }
+        }))
         .pipe(gulp.dest(CONFIG.js.dest))
         .pipe(rev())
         .pipe(through.obj(customRevHash))

@@ -6,7 +6,11 @@ var CDN = '//s1.zzhstatic.com/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';
 var PATH_DIST = 'dist';
 
+//主配置文件
+var APP_NAME = 'app';
+
 var CONFIG = {
+    appName: APP_NAME + '.js',
     cdn: CDN,
     dist: './' + PATH_DIST,
     revHash: false, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
@@ -92,8 +96,6 @@ var CONFIG = {
             findNestedDependencies: true,
             paths: {
                 'jquery': 'lib/jquery/1.11.1/jquery',
-                'css': 'lib/require/2.1/plugins/css/css', //https://github.com/guybedford/require-css/
-                'text': 'lib/require/2.1/plugins/text/text',
                 'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
             },
             shim: {
@@ -102,7 +104,7 @@ var CONFIG = {
         },
         //app.js配置文件专门入口
         app: {
-            name: 'app',
+            name: APP_NAME,
             include: ['jquery']
         },
         //其他页面入口文件配置
