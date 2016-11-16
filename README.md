@@ -9,5 +9,5 @@ gulp
 ##生产环境
 
 ```sh
-gulp p
+gulp release
 ```

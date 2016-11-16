@@ -9,7 +9,7 @@ var PATH_DIST = 'dist';
 var CONFIG = {
     cdn: CDN,
     dist: './' + PATH_DIST,
-    revHash: true, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
+    revHash: false, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
     images: {
         src: './' + PATH_SOURCE + '/images/**/*',
         dest: './' + PATH_DIST + '/images'

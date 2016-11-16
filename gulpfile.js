@@ -63,8 +63,8 @@ gulp.task("sass", function() {
         urlrev,
         autoprefixer(CONFIG.autoprefixer),
         // postcssSprites({
-        //     spritePath: './dist/images', //雪碧图合并后存放地址
-        //     stylesheetPath: './dist/css'
+        //     stylesheetPath: './dist/css',
+        //     spritePath: './dist/images' //雪碧图合并后存放地址
         // }),
         cssgrace
     ];
