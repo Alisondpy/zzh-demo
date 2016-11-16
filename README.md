@@ -5,14 +5,11 @@
 npm install
 ```
 
-###开发环境
+##运行gulp任务
 
 ```sh
+//开发环境
 gulp
-```
-
-###生产环境
-
-```sh
+//生成环境
 gulp release
 ```
