@@ -1,23 +1,26 @@
 @charset "UTF-8";
+
 /*常用compass组件*/
-/* @import 'compass/css3';
-@import 'compass/css3/transform';
-@import 'compass/css3/transition';
-@import 'compass/css3/box-sizing';
-@import 'compass/utilities';
-@import 'compass/support';*/
+
 
 /*样式重置*/
+
 @import "./reset/reset";
 
 /*全局配置参数*/
+
 @import "./config/config";
 
 /*字体*/
-@import "../../fonts/global/iconfont.css";
+
+@import "../../fonts/ibase/iconfont.css";
+.ibase {
+    font-size: rem(16);
+}
 
 
 /*公共常用样式*/
+
 .f-l {
     float: left;
 }
@@ -39,6 +42,6 @@
     background-size: contain;
 }
 
-.hide{
-	display: none;
+.hide {
+    display: none;
 }

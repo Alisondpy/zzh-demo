@@ -31,6 +31,12 @@ var CONFIG = {
         src: './' + PATH_SOURCE + '/sass/**/*.{sass,scss}',
         dest: './' + PATH_DIST + '/css'
     },
+    px2rem: {
+        isExecute: true,
+        options: {
+            remUnit: 75
+        }
+    },
     js: {
         src: './' + PATH_SOURCE + '/js/**/*.js',
         filter: [PATH_SOURCE + '/js/conf/**/*.js', PATH_SOURCE + '/js/app.js'], //注意入口文件规定为'+PATH_SOURCE+'/js/app.js

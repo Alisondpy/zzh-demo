@@ -52,6 +52,8 @@ var md5 = require('md5');
 
 var filter = require('gulp-filter');
 
+var px2rem = require('postcss-px2rem');
+
 //这里替换了以后gulp-rev-collector就无法替换，目前是移植到gulp-rev-collector的dirReplacements来配置
 function customRevHash(file, enc, cb) {
     // if (CONFIG.revHash) {
@@ -74,6 +76,9 @@ gulp.task("sass", function() {
         // }),
         cssgrace
     ];
+    if (CONFIG.px2rem.isExecute) {
+        postcssProcessors.push(px2rem(CONFIG.px2rem.options));
+    }
     return gulp.src(CONFIG.sass.src)
         .pipe(sass(CONFIG.sassOptions).on('error', sass.logError))
         .pipe(gulpif(gIsRelease, cleanCss()))
