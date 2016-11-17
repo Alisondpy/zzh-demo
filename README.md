@@ -11,6 +11,6 @@ npm install
 //开发环境
 gulp
 
-//生成环境
+//生产环境
 gulp release
 ```
