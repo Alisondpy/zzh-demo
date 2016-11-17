@@ -91,11 +91,10 @@ gulp.task("sass", function() {
 });
 
 gulp.task('rev-html', function() {
-    return gulp.src(CONFIG.html.revFilter)
-        .pipe(filter(CONFIG.html.filter))
+    return gulp.src(CONFIG.html.filter)
         .pipe(revCollector(CONFIG.revCollector))
         .pipe(gulpif(gIsRelease, htmlmin(CONFIG.htmlmin)))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(CONFIG.html.dest));
 });
 
 //./dist目录

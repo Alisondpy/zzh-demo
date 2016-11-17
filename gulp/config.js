@@ -13,7 +13,7 @@ var CONFIG = {
     appName: APP_NAME + '.js',
     cdn: CDN,
     dist: './' + PATH_DIST,
-    revHash: false, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
+    revHash: true, //gulp-ref默认是：filename-hashcode.css，如果此项为true，就会以以下格式显示:filename.css?hascode
     images: {
         src: './' + PATH_SOURCE + '/images/**/*',
         dest: './' + PATH_DIST + '/images'
@@ -25,8 +25,7 @@ var CONFIG = {
     html: {
         src: './' + PATH_SOURCE + '/html/**/*.{html,htm}',
         dest: './' + PATH_DIST + '/html',
-        revFilter: ['./' + PATH_DIST + '/**/*.json', './' + PATH_SOURCE + '/**/*.html'],
-        filter: [PATH_SOURCE + '/html/**/*.html']
+        filter: ['./' + PATH_DIST + '/**/*.json', './' + PATH_SOURCE + '/html/**/*.html']
     },
     sass: {
         src: './' + PATH_SOURCE + '/sass/**/*.{sass,scss}',
