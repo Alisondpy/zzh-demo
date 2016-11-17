@@ -133,15 +133,15 @@ gulp.task('scripts', function() {
             }
             return Object.assign({}, CONFIG.requirejs.common, CONFIG.requirejs.modules);
         })))
-        .pipe(modify({
+        .pipe(gulpif(gIsRelease, modify({
             fileModifier: function(file, contents) {
                 if (file.history && file.history[0] == CONFIG.appName) {
-                    var md5Cnt = md5(contents).substring(0, 10);
+                    var md5Cnt = md5(new Date().getTime()).substring(0, 10);
                     return contents + 'require.config({urlArgs : "' + md5Cnt + '"});';
                 }
                 return contents;
             }
-        }))
+        })))
         .pipe(gulp.dest(CONFIG.js.dest))
         .pipe(rev())
         .pipe(through.obj(customRevHash))

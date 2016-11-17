@@ -1,6 +1,7 @@
 require.config({
     baseUrl: '//s1.zzhstatic.com/example-project/dist/js/',
     paths: {
+        'lib': '//s1.zzhstatic.com/lib',
         'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
         'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
         'lib': '//s1.zzhstatic.com/lib',
