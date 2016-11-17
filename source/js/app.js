@@ -1,12 +1,8 @@
 require.config({
     baseUrl: '//s1.zzhstatic.com/example-project/dist/js/',
-    map: {
-        '*': {
-            'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
-            'text': 'lib/require/2.1/plugins/text/text' // or whatever the path to require-css is
-        }
-    },
     paths: {
+        'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
+        'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
         'lib': '//s1.zzhstatic.com/lib',
         'jquery': 'lib/jquery/1.11.1/jquery',
         'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'

@@ -24,7 +24,9 @@ var CONFIG = {
     },
     html: {
         src: './' + PATH_SOURCE + '/html/**/*.{html,htm}',
-        dest: './' + PATH_DIST + '/html'
+        dest: './' + PATH_DIST + '/html',
+        revFilter: ['./' + PATH_DIST + '/**/*.json', './' + PATH_SOURCE + '/**/*.html'],
+        filter: [PATH_SOURCE + '/html/**/*.html']
     },
     sass: {
         src: './' + PATH_SOURCE + '/sass/**/*.{sass,scss}',
@@ -32,11 +34,8 @@ var CONFIG = {
     },
     js: {
         src: './' + PATH_SOURCE + '/js/**/*.js',
-        filter: ['' + PATH_SOURCE + '/js/conf/**/*.js', '' + PATH_SOURCE + '/js/app.js'], //注意入口文件规定为'+PATH_SOURCE+'/js/app.js
+        filter: [PATH_SOURCE + '/js/conf/**/*.js', PATH_SOURCE + '/js/app.js'], //注意入口文件规定为'+PATH_SOURCE+'/js/app.js
         dest: './' + PATH_DIST + '/js/'
-    },
-    rev: {
-        filter: ['./' + PATH_DIST + '/**/*.json', './' + PATH_SOURCE + '/**/*.html']
     },
     //开发和生成环境通用,生产环境会用gulp-clean-css瘦身压缩
     sassOptions: {
@@ -87,14 +86,10 @@ var CONFIG = {
     requirejs: {
         //公共配置
         common: {
-            map: {
-                '*': {
-                    'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
-                    'text': 'lib/require/2.1/plugins/text/text' // or whatever the path to require-css is
-                }
-            },
             findNestedDependencies: true,
             paths: {
+                'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
+                'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
                 'jquery': 'lib/jquery/1.11.1/jquery',
                 'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
             },

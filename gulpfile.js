@@ -50,6 +50,8 @@ var modify = require('gulp-modify');
 
 var md5 = require('md5');
 
+var filter = require('gulp-filter');
+
 //这里替换了以后gulp-rev-collector就无法替换，目前是移植到gulp-rev-collector的dirReplacements来配置
 function customRevHash(file, enc, cb) {
     // if (CONFIG.revHash) {
@@ -89,7 +91,8 @@ gulp.task("sass", function() {
 });
 
 gulp.task('rev-html', function() {
-    return gulp.src(CONFIG.rev.filter)
+    return gulp.src(CONFIG.html.revFilter)
+        .pipe(filter(CONFIG.html.filter))
         .pipe(revCollector(CONFIG.revCollector))
         .pipe(gulpif(gIsRelease, htmlmin(CONFIG.htmlmin)))
         .pipe(gulp.dest('./dist'));
@@ -122,7 +125,6 @@ gulp.task('copy-images', function() {
 
 //requirejs 合并
 gulp.task('scripts', function() {
-    var filter = require('gulp-filter');
     // var replace = require('gulp-replace');
     return gulp.src([CONFIG.js.src])
         .pipe(gulpif(gIsRelease, filter(CONFIG.js.filter)))
