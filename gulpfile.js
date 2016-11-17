@@ -14,7 +14,9 @@ var gulp = require("gulp");
 //sass编译，注意：只支持sass，不支持compass
 var sass = require("gulp-sass");
 //自动刷新浏览器
-var browserSync = require("browser-sync");
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+
 //文件名加MD5后缀
 var rev = require("gulp-rev");
 //样式瘦身
@@ -92,14 +94,15 @@ gulp.task("sass", function() {
         .pipe(gulpif(!CONFIG.revHash, gulp.dest(CONFIG.sass.dest)))
         .pipe(rev.manifest())
         .pipe(gulp.dest(CONFIG.sass.dest))
-        .pipe(browserSync.reload({ stream: true }));
+        // .pipe(gulpif(!gIsRelease,reload({ stream: true })));
 });
 
 gulp.task('rev-html', function() {
     return gulp.src(CONFIG.html.filter)
         .pipe(revCollector(CONFIG.revCollector))
         .pipe(gulpif(gIsRelease, htmlmin(CONFIG.htmlmin)))
-        .pipe(gulp.dest(CONFIG.html.dest));
+        .pipe(gulp.dest(CONFIG.html.dest))
+        .pipe(gulpif(!gIsRelease, reload({ stream: true })));
 });
 
 //./dist目录
@@ -124,7 +127,7 @@ gulp.task('copy-images', function() {
         .pipe(gulpif(!CONFIG.revHash, gulp.dest(CONFIG.images.dest)))
         .pipe(rev.manifest())
         .pipe(gulp.dest(CONFIG.images.dest))
-        .pipe(browserSync.reload({ stream: true }));
+        // .pipe(gulpif(!gIsRelease,reload({ stream: true })));
 });
 
 //requirejs 合并
@@ -153,16 +156,19 @@ gulp.task('scripts', function() {
         .pipe(gulpif(!CONFIG.revHash, gulp.dest(CONFIG.js.dest)))
         .pipe(rev.manifest())
         .pipe(gulp.dest(CONFIG.js.dest))
-        .pipe(browserSync.reload({ stream: true }));
+        // .pipe(gulpif(!gIsRelease,reload({ stream: true })));
 });
 
 gulp.task('watch', function() {
+    browserSync.init(CONFIG.browserSync);
     gulp.watch(CONFIG.sass.src, gulp.series('sass', 'rev-html'));
     gulp.watch(CONFIG.fonts.src, gulp.series('copy-fonts', 'rev-html'));
     gulp.watch(CONFIG.images.src, gulp.series('copy-images', 'rev-html'));
     gulp.watch(CONFIG.js.src, gulp.series('scripts', 'rev-html'));
     gulp.watch(CONFIG.html.src, gulp.series('rev-html'));
 });
+
+
 
 gulp.task('release', function() {
     gIsRelease = true;

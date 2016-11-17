@@ -2,6 +2,7 @@ var path = require('path');
 
 var PROJECT_NAME = 'example-project';
 var CDN = '//s1.zzhstatic.com/' + PROJECT_NAME + '/';
+var WEB_SERVER = 'www.zzhstatic.com';
 
 var PATH_SOURCE = 'source';
 var PATH_DIST = 'dist';
@@ -22,6 +23,7 @@ var CONFIG = {
         src: './' + PATH_SOURCE + '/fonts/**/*',
         dest: './' + PATH_DIST + '/fonts'
     },
+
     html: {
         src: './' + PATH_SOURCE + '/html/**/*.{html,htm}',
         dest: './' + PATH_DIST + '/html',
@@ -58,6 +60,15 @@ var CONFIG = {
             '/images': function(manifestValue) {
                 return CDN + PATH_DIST + '/images/' + getManifestValueByRevHash(manifestValue);
                 // return '//s' + (Math.floor(Math.random() * 4) + 1) + '.zzhstatic.com' + '/example-project/'+PATH_DIST+'/images/' + getManifestValueByRevHash(manifestValue);
+            }
+        }
+    },
+    //只有开发环境使用
+    browserSync: {
+        proxy: {
+            target: "http://" + WEB_SERVER,
+            middleware: function(req, res, next) {
+                next();
             }
         }
     },
