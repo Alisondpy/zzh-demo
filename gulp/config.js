@@ -1,9 +1,8 @@
 var path = require('path');
 
 var PROJECT_NAME = 'example-project';
-var CDN = '//s1.zzhstatic.com/' + PROJECT_NAME + '/';
-var WEB_SERVER = 'www.zzhstatic.com';
-
+var STATIC_SERVER = 's1.zzhstatic.com';
+var CDN = '//' + STATIC_SERVER + '/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';
 var PATH_DIST = 'dist';
 
@@ -66,7 +65,7 @@ var CONFIG = {
     //只有开发环境使用
     browserSync: {
         proxy: {
-            target: "http://" + WEB_SERVER,
+            target: "http://" + STATIC_SERVER,
             middleware: function(req, res, next) {
                 next();
             }
