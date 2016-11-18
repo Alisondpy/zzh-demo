@@ -105,12 +105,9 @@ var CONFIG = {
             paths: {
                 'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
                 'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
-                'jquery': 'lib/jquery/1.11.1/jquery',
-                'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
+                'jquery': 'lib/zeptojs/1.1.5/zepto'
             },
-            shim: {
-                'bootstrap': ['jquery']
-            }
+            shim: {}
         },
         //app.js配置文件专门入口
         app: {

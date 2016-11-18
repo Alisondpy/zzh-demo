@@ -1,19 +1,16 @@
 require.config({
-    baseUrl: '//s1.zzhstatic.com/example-project/dist/js/',
+    baseUrl: '//s1.zzhstatic.com/service-market/dist/js/',
     paths: {
         'lib': '//s1.zzhstatic.com/lib',
         'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
         'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
-        'lib': '//s1.zzhstatic.com/lib',
-        'jquery': 'lib/jquery/1.11.1/jquery',
-        'bootstrap': 'lib/bootstrap/3.3.0/js/bootstrap.min'
+        'jquery': 'lib/zeptojs/1.1.5/zepto'
     },
     /**
      * for libs that either do not support AMD out of the box, or
      * require some fine tuning to dependency mgt'
      */
     shim: {
-        'bootstrap': ['jquery']
     }
 });
 if (!Function.prototype.bind) {
