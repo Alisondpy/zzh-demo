@@ -35,7 +35,7 @@ var CONFIG = {
     px2rem: {
         isExecute: true,
         options: {
-            remUnit: 75
+            remUnit: 46.875
         }
     },
     js: {

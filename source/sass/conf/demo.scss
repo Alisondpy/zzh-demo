@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "../common/common";
+body{
+	background-color: red;
+}
+.mod-page {
+    background-color: #eee;
+    width: 730px;
+    margin: 0 auto;
+    .item {
+        background-color: #fff;
+        width: 704px;
+        height: 172px;
+        border: 1px solid #ddd;/*px*/
+        padding: 18px 27px;
+        .img{
+        	width: 222px;
+        	height: 133px;
+        }
+        .cnt{
+        	width: 440px;
+        	.title{
+        		font-size: 24px;/*px*/
+        	}
+        }
+    }
+}
