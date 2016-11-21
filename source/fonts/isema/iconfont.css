@@ -1,10 +1,10 @@
 
 @font-face {font-family: "isema";
-  src: url('iconfont.eot?t=1479463552621'); /* IE9*/
-  src: url('iconfont.eot?t=1479463552621#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1479463552621') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1479463552621') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1479463552621#isema') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1479699668216'); /* IE9*/
+  src: url('iconfont.eot?t=1479699668216#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1479699668216') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1479699668216') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1479699668216#isema') format('svg'); /* iOS 4.1- */
 }
 
 .isema {
@@ -15,4 +15,30 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.isema-delete:before { content: "\e602"; }
+
+.isema-shutdown:before { content: "\e687"; }
+
+.isema-menu-down:before { content: "\e650"; }
+
+.isema-doing:before { content: "\e619"; }
+
+.isema-publish:before { content: "\e600"; }
+
+.isema-home:before { content: "\e603"; }
+
+.isema-success:before { content: "\e626"; }
+
+.isema-admin:before { content: "\e717"; }
+
+.isema-arrow-right:before { content: "\e615"; }
+
+.isema-error:before { content: "\e683"; }
+
+.isema-menu-all:before { content: "\e601"; }
+
+.isema-arrow-left:before { content: "\e718"; }
+
+.isema-menu-up:before { content: "\e719"; }
 
