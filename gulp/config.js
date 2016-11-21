@@ -22,7 +22,6 @@ var CONFIG = {
         src: './' + PATH_SOURCE + '/fonts/**/*',
         dest: './' + PATH_DIST + '/fonts'
     },
-
     html: {
         src: './' + PATH_SOURCE + '/html/**/*.{html,htm}',
         dest: './' + PATH_DIST + '/html',
