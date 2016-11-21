@@ -25,7 +25,10 @@ nbproject/*
 nbproject/private/
 build/
 nbbuild/
-dist/
+dist/fonts/
+dist/js/
+dist/css/
+dist/images/
 nbdist/
 nbactions.xml
 nb-configuration.xml
