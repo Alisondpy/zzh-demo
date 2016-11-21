@@ -1,6 +1,6 @@
 var path = require('path');
 
-var PROJECT_NAME = 'service-market';
+var PROJECT_NAME = 'm-service-market';
 var STATIC_SERVER = 's1.zzhstatic.com';
 var CDN = '//' + STATIC_SERVER + '/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';
