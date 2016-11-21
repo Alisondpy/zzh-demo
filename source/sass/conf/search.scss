@@ -1,0 +1,61 @@
+body{
+	
+}
+.pub-width{
+	width:750px;
+}
+.mod-search{
+	background:#eee;
+	height:57px;
+	margin:0 auto;
+
+	.box{
+		margin:0 auto;
+		margin-top:25px;
+		width:700px;
+		height:57px;
+		border:solid 2px #97edd1;
+		border-radius:30px;
+
+		form{
+			font-size:24px;
+			.select{
+				display-inline:block;
+				width:200px;
+				height:54px;
+				border:none;
+				border-radius:20px;
+				outline:none;
+				padding-left:20px;
+				margin-left:20px;
+				appearance:none;
+				-moz-appearance:none;
+				-webkit-appearance:none;
+				background: url();
+				option{
+					display:block;
+				}
+			}
+			.ipt{
+				width:460px;
+				height:54px;
+				border:none;
+				border-radius:30px;
+				outline:none;
+			}
+		}
+	}
+}
+.mod-split{
+	height: 40px;
+	padding:20px 0;
+}
+.mod-creatlist{
+	margin:0 auto;
+	ul{
+		
+		li{
+			list-style:none;
+		}
+	}
+}
