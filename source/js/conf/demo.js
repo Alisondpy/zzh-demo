@@ -24,6 +24,29 @@ define(function(require, exports, module) {
         }
     });
 
+    box.create({
+        content: 'text',
+        className: 'ui-bubble',
+        autofocus: false,
+        autoRelease: true,
+        close: false,
+        xtype: 'warn',
+        align: 'top',
+        duration: 0,
+        button: [{
+            text: '知道了',
+            fn: function() { callback(true) }
+        },{
+            text: '知道了1',
+            fn: function() { callback(true) }
+        },{
+            text: '知道了1',
+            fn: function() { callback(true) }
+        }],
+        hideWithAni: 'fadeOut',
+        showWithAni: 'fadeInUp'
+    }).show();
+
     var clickHandles = {
 
         loadUrl: function() {
@@ -41,7 +64,7 @@ define(function(require, exports, module) {
         loading: function() {
             // async request with loading bar
             var _box = box.loading('加载中,3秒后关闭');
-            setTimeout(function(){_box.hide();}, 3000);
+            setTimeout(function() { _box.hide(); }, 3000);
         },
 
         tips: function() {
