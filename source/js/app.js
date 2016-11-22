@@ -1,7 +1,7 @@
 require.config({
-    baseUrl: '//192.168.1.153:3000/m-service-market/dist/js/',
+    baseUrl: '//192.168.0.102:3000/m-service-market/dist/js/',
     paths: {
-        'lib': '//192.168.1.153:3000/lib',
+        'lib': '//192.168.0.102:3000/lib',
         'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
         'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
         'jquery': 'lib/zeptojs/1.1.5/zepto'

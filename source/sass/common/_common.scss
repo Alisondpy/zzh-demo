@@ -17,13 +17,15 @@
 @import "../../fonts/ibase/iconfont.css";
 @import "../../fonts/isema/iconfont.css";
 
-/*按钮*/
+/*表单*/
 
 @import "./button/button";
+@import "./input/input";
+
+/*重置字体样式*/
 .ibase,
 .isema {
-    font-size: 24px;
-    /*px*/
+    font-size: 24px;/*px*/
 }
 
 html {
@@ -67,7 +69,7 @@ a {
 /*公共常用样式*/
 
 body {
-    font: 1rem/1rem "PingFang SC", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font: 24px/24px "PingFang SC", "Helvetica Neue", "Helvetica", "STHeiTi", "sans-serif"; /*px*/
 }
 
 .clearfix:after {

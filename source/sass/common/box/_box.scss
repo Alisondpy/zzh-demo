@@ -313,7 +313,8 @@ $btn-height:44px;
     right: em(6px, $font-size);
     z-index: 1;
     padding: em(2px, $font-size);
-    font-size: 40px;/*px*/
+    font-size: 40px;
+    /*px*/
     font-weight: bold;
     cursor: pointer;
     font-family: "ui-box-iconf", monospace, 'Microsoft YaHei';
@@ -440,78 +441,80 @@ $btn-height:44px;
     display: block;
 }
 
-.ui-arrow i,
-.ui-arrow b {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-width: 8px;
-    border-style: solid;
-    border-color: transparent;
-    overflow: hidden;
-    font-size: 0;
-    line-height: 0;
-    vertical-align: top;
-    _color: #ff3fff;
-    _filter: chroma(color=#ff3fff);
+.ui-arrow {
+    i,
+    b {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-width: 16px;
+        border-style: solid;
+        border-color: transparent;
+        overflow: hidden;
+        font-size: 0;
+        line-height: 0;
+        vertical-align: top;
+        _color: #ff3fff;
+        _filter: chroma(color=#ff3fff);
+    }
 }
 
 .ui-layer-t {
     .ui-arrow {
-        bottom: -16px;
-        left: 20px;
+        bottom: -32px;
+        left: 40px;
         i {
             border-top-color: #e4e4e4;
             border-top-color: rgba(204, 204, 204, 0.5);
         }
         b {
             border-top-color: #fff;
-            margin: -1px 0 0 -16px;
+            margin: -1px 0 0 -32px;
         }
     }
 }
 
 .ui-layer-b {
     .ui-arrow {
-        top: -16px;
-        left: 20px;
+        top: -32px;
+        left: 40px;
         i {
             border-bottom-color: #e4e4e4;
             border-bottom-color: rgba(204, 204, 204, 0.5);
         }
         b {
             border-bottom-color: #fff;
-            margin: 1px 0 0 -16px;
+            margin: 1px 0 0 -32px;
         }
     }
 }
 
 .ui-layer-l {
     .ui-arrow {
-        right: -16px;
-        top: 20px;
+        right: -32px;
+        top: 40px;
         i {
             border-left-color: #e4e4e4;
             border-left-color: rgba(204, 204, 204, 0.5);
         }
         b {
             border-left-color: #fff;
-            margin-left: -17px;
+            margin-left: -33px;
         }
     }
 }
 
 .ui-layer-r {
     .ui-arrow {
-        left: -16px;
-        top: 20px;
+        left: -32px;
+        top: 40px;
         i {
             border-right-color: #e4e4e4;
             border-right-color: rgba(204, 204, 204, 0.5);
         }
         b {
             border-right-color: #fff;
-            margin-left: -15px;
+            margin-left: -31px;
         }
     }
 }

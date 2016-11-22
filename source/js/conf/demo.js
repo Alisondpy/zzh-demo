@@ -31,7 +31,7 @@ define(function(require, exports, module) {
     //     autoRelease: true,
     //     close: false,
     //     xtype: 'warn',
-    //     align: 'top',
+    //     align: 'bl',
     //     duration: 0,
     //     button: [{
     //         text: '知道了',
@@ -69,7 +69,7 @@ define(function(require, exports, module) {
 
         tips: function() {
             box.tips('ok! it\'s a tips', null, 5000);
-        },        
+        },
 
         alert: function() {
             box.alert('ok! it\'s a tips');
@@ -82,8 +82,12 @@ define(function(require, exports, module) {
                 },
                 function() {
                     alert('cancel');
-                }
+                }, this
             );
+        },
+
+        bubble: function() {
+            box.bubble('我是气泡，可以任意调整方向', {align:'t'}, this);
         },
 
         warn: function() {
