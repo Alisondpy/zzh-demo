@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/*常用compass组件*/
-
-
 /*样式重置*/
 
 @import "./reset/reset";
@@ -19,12 +16,16 @@
 /*按钮*/
 
 @import "./button/button";
-.ibase {
-    font-size: 16px;
+.ibase,.isema {
+    font-size: 24px;/*px*/
 }
 
 
 /*公共常用样式*/
+
+body {
+    font: 1rem/1rem "PingFang SC","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
 
 .clearfix:after {
     content: ".";
