@@ -24,30 +24,28 @@ define(function(require, exports, module) {
         }
     });
 
-    box.create({
-        content: 'text',
-        className: 'ui-bubble',
-        autofocus: false,
-        autoRelease: true,
-        close: false,
-        xtype: 'warn',
-        align: 'top',
-        duration: 0,
-        button: [{
-            text: '知道了',
-            fn: function() { callback(true) }
-        },{
-            text: '知道了1',
-            fn: function() { callback(true) }
-        },{
-            text: '知道了1',
-            fn: function() { callback(true) }
-        }],
-        hideWithAni: 'fadeOut',
-        showWithAni: 'fadeInUp'
-    }).show();
-
-    box.alert('你妹');
+    // box.create({
+    //     content: 'text',
+    //     className: 'ui-bubble',
+    //     autofocus: false,
+    //     autoRelease: true,
+    //     close: false,
+    //     xtype: 'warn',
+    //     align: 'top',
+    //     duration: 0,
+    //     button: [{
+    //         text: '知道了',
+    //         fn: function() { callback(true) }
+    //     },{
+    //         text: '知道了1',
+    //         fn: function() { callback(true) }
+    //     },{
+    //         text: '知道了1',
+    //         fn: function() { callback(true) }
+    //     }],
+    //     hideWithAni: 'fadeOut',
+    //     showWithAni: 'fadeInUp'
+    // }).show();
 
     var clickHandles = {
 
@@ -71,6 +69,10 @@ define(function(require, exports, module) {
 
         tips: function() {
             box.tips('ok! it\'s a tips', null, 5000);
+        },        
+
+        alert: function() {
+            box.alert('ok! it\'s a tips');
         },
 
         confirm: function() {
