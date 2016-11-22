@@ -8,28 +8,39 @@
     font-family: 'PingFang SC';
     font-weight: 400;
     padding: 0 100px;
-    background-color: #ffb712;
     border: none;
     border-radius: 4px;
     text-align: center;
     text-decoration: none;
 }
 
-.ui-btn-default {
-    background-color: #ffb712;
+.ui-btn,.ui-btn-default {
+    color: #666;
+    background-color: #ececec;
     &:active {
-        background-color: #ffc43e;
+        color: #fff;
+        background-color: #00deaa;
     }
 }
 
 .ui-btn-primary {
+    color: #fff;
     background-color: #2bd1aa;
     &:active {
         background-color: #00deaa;
     }
 }
 
+.ui-btn-info {
+    color: #fff;
+    background-color: #ffb712;
+    &:active {
+        background-color: #ffc43e;
+    }
+}
+
 .ui-btn-danger {
+    color: #fff;
     background-color: #ff4545;
     &:active {
         background-color: #ff5e5e;
@@ -37,6 +48,7 @@
 }
 
 .ui-btn-disabled {
+    color: #fff;
     background-color: #d7d7d7;
     &:active {
         background-color: #d7d7d7;
