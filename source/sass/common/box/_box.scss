@@ -279,7 +279,7 @@ $btn-height:44px;
 
 .ui-box-hd {
     white-space: nowrap;
-    border-bottom: 1px solid #e5e5e5;
+    // border-bottom: 1px solid #e5e5e5;
     /*no*/
     background-color: #fff;
     border-radius: $border-radius $border-radius 0 0;
@@ -295,12 +295,12 @@ $btn-height:44px;
         white-space: nowrap;
         text-overflow: ellipsis;
         cursor: default;
-        color: #666;
+        color: #444;
     }
 }
 
 .ui-box-bd {
-    padding: 50px 20px;
+    padding: 50px 30px;
     text-align: center;
     border-radius: 2px;
     overflow: hidden;
@@ -309,11 +309,11 @@ $btn-height:44px;
 .ui-box-close {
     $font-size: 15px;
     position: absolute;
-    top: em(9px, $font-size);
+    top: 7px;
     right: em(6px, $font-size);
     z-index: 1;
     padding: em(2px, $font-size);
-    font-size: em($font-size, $base-font-size);
+    font-size: 40px;/*px*/
     font-weight: bold;
     cursor: pointer;
     font-family: "ui-box-iconf", monospace, 'Microsoft YaHei';

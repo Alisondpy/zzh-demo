@@ -47,6 +47,8 @@ define(function(require, exports, module) {
         showWithAni: 'fadeInUp'
     }).show();
 
+    box.alert('你妹');
+
     var clickHandles = {
 
         loadUrl: function() {
