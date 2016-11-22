@@ -29,6 +29,7 @@ dist/fonts/
 dist/js/
 dist/css/
 dist/images/
+dist/html/
 nbdist/
 nbactions.xml
 nb-configuration.xml
