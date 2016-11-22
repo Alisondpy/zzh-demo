@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>发布需求</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/publish-require.css" type="text/css" charset="utf-8">
+</head>
+<body>
+<!--#include file="./common/header.html"-->
+<div class="mod-require">
+    <form action="">
+        <div class="common-pad title clearfix">
+            <label class="f-l">标题</label>
+            <input class="f-l" type="text" placeholder="请输入您的需求标题">
+        </div>
+        <div class="mod-classify">
+            <div class="common-pad title clearfix">
+                <label class="f-l">分类</label>
+                <input class="f-l" type="text" placeholder="选择你的需求分类">
+            </div>
+            <div class="lists clearfix">
+                <span class="list f-l">运营推广</span>
+                <span class="list f-l">美工设计</span>
+                <span class="list f-l">软件工具</span>
+                <span class="list f-l">人才培训</span>
+                <span class="list f-l">物流仓储</span>
+                <span class="list f-l">数据分析</span>
+                <span class="list f-l">金融支付</span>
+                <span class="list f-l">创业孵化</span>
+                <span class="list f-l">政策法律</span>
+                <span class="list f-l">其他</span>
+            </div>
+        </div>
+        <div class="common-pad description clearfix">
+            <label class="f-l">需求描述</label>
+            <textarea class="f-l" placeholder="描述越详细，定位越准确，为您匹配到的服务才更 加适合。"></textarea>
+        </div>
+        <div class="common-pad date clearfix">
+            <label class="f-l">需求截止时间</label>
+            <input class="f-l" type="date" value="2016年11月3日">
+        </div>
+        <div class="mod-quote">
+            <div class="common-pad clearfix">
+                <label class="f-l">报价</label>
+            </div>
+            <div class="lists">
+                <div class="content clearfix">
+                    <span class="list f-l current">预算</span>
+                    <span class="list f-l">一口价</span>
+                    <span class="list f-l">面议</span>
+                    <div class="price f-l">
+                        <input type="text" placeholder="0元">
+                        <span>至</span>
+                        <input type="text" placeholder="0元">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="common-pad contact clearfix">
+            <label class="f-l">联系人</label>
+            <input class="f-l" type="text" placeholder="请输入联系人姓名">
+        </div>
+        <div class="common-pad contact-information clearfix">
+            <label class="f-l">联系方式</label>
+            <input class="f-l" type="text" placeholder="请输入您联系方式，座机请加上区号">
+        </div>
+        <div class="submit-btn">
+            <input type="submit" value="发布需求">
+        </div>
+    </form>
+</div>
+<!--#include file="./common/footer.html"-->
+<!--#include file="./common/js.html"-->
+<script type="text/javascript">
+    require(['conf/publish-require'],function(){});
+</script>
+<!--#include file="./common/tj.html"-->
+<!--#include file="./common/statistics.html"-->
+</body>
+
+</html>

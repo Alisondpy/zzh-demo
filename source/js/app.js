@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '//s1.zzhstatic.com/service-market/dist/js/',
+    baseUrl: '//s1.zzhstatic.com/m-service-market/dist/js/',
     paths: {
         'lib': '//s1.zzhstatic.com/lib',
         'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is

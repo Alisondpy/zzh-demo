@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import "../common/common";
+body{
+  background-color: #eee;
+}
+.mod-success{
+  margin-top: rem(246);
+  text-align: center;
+  .success-img{
+    width: rem(200);
+    height: rem(200);
+    display: inline-block;
+    background:url('../../images/publish-require/success.png') no-repeat;
+    background-size: contain;
+  }
+  span{
+    display: inline-block;
+    margin-top: rem(30);
+    font-size: rem(36);
+    color: #2bd1aa;
+  }
+  p{
+    line-height: rem(36);
+    font-size: rem(20);
+    color: #999;
+  }
+  .return-my-center{
+    display: inline-block;
+    width: rem(180);
+    line-height: rem(50);
+    margin-top: rem(10);
+    background-color: #2bd1aa;
+    border-radius: rem(5);
+    font-size: rem(24);
+    color: #fff;
+    border: none;
+  }
+}
