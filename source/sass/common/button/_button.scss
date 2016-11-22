@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.ui-btn {
+    height: 94px;
+    line-height: 94px;
+    display: inline-block;
+    font-size: 28px;/*px*/
+    color: #fff;
+    font-family: 'PingFang SC';
+    font-weight: 400;
+    padding: 0 100px;
+    background-color: #ffb712;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.ui-btn-default {
+    background-color: #ffb712;
+    &:active {
+        background-color: #ffc43e;
+    }
+}
+
+.ui-btn-primary {
+    background-color: #2bd1aa;
+    &:active {
+        background-color: #00deaa;
+    }
+}
+
+.ui-btn-danger {
+    background-color: #ff4545;
+    &:active {
+        background-color: #ff5e5e;
+    }
+}
+
+.ui-btn-disabled {
+    background-color: #d7d7d7;
+    &:active {
+        background-color: #d7d7d7;
+    }
+}

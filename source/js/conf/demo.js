@@ -64,9 +64,12 @@ define(function(require, exports, module) {
         },
 
         sendPost: function() {
-            io.get('/m-service-market/source/api/demo/demo.json', { 'foo': 'foo text' }, function(res) {
+            io.jsonp('/m-service-market/source/api/demo/demo.json', { 'foo': 'foo text' }, function(res) {
                 alert(res.msg + ' (code: ' + res.error + ')');
             }, this);
+            // io.get('/m-service-market/source/api/demo/demo.json', { 'foo': 'foo text' }, function(res) {
+            //     alert(res.msg + ' (code: ' + res.error + ')');
+            // }, this);
         }
     };
 
