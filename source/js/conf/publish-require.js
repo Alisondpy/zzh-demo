@@ -9,4 +9,3 @@ define(function(require, exports, module) {
         $(".mod-classify .title input").text($(this).text());
     });
 });
-
