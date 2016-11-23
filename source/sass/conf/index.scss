@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import "../common/common";
-body{
+body,html{
     background-color:#eee ;
+    height: 100%;
 }
 li {
     list-style: none;
@@ -39,7 +40,7 @@ ul {
             .search{
                 z-index: 200;
                 position: absolute;
-                background: url(../../images/conf/search.png) no-repeat;
+                background: url(../../images/t/search.png) no-repeat;
                 width: 23px;
                 height: 23px;
                 top: 38px;
@@ -93,16 +94,40 @@ ul {
             width: 200%;
             li {
                 float: left;
-                    margin: 29px 38px 27px 33px;
+                    margin: 20px 38px 27px 33px;
                 
                 a {
                     display: block;
-
-                    em {
+                    em{
+                        width: 73px;
+                        height: 73px;
+                        display: inline-block;
                         margin-left: 10px;
+                    }
+                    .bg-icon0 {
+                        background: url(../../images/index/index.png) no-repeat 0 -295px;
+                        background-size: cover;
+                    }
+                    .bg-icon1 {
+                        background: url(../../images/index/index.png) no-repeat 0 -148px;
+                        background-size: cover;
+                    }
+                    .bg-icon2 {
+                        background: url(../../images/index/index.png) no-repeat 0 -75px;
+                        background-size: cover;
+                    }
+                    .bg-icon3 {
+                        background: url(../../images/index/index.png) no-repeat;
+                        background-size: cover;
+                    }
+                    .bg-icon4 {
+                        background: url(../../images/index/index.png) no-repeat 0 -221px;
+                        background-size: cover;
                     }
                     span {
                         display: block;
+                        font-size: 24px;
+                        margin-top: 10px;
                     }
                     p {
                         font-size: 22px;/*px*/
@@ -124,6 +149,7 @@ ul {
             em {
                 float: left;
                 font-style: normal;
+                font-size: 24px;
             }
             .more {
                 font-size: 20px;/*px*/
@@ -155,9 +181,9 @@ ul {
                 }
                 .con {
                     float: left;
-                    margin-left: 5px;
+                    margin-left: 15px;
                     .title {
-                        width: 200px;
+                        width: 150px;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         display: block;
@@ -165,26 +191,30 @@ ul {
                         font-weight: bold;
                         color: #000;
                         margin-bottom: 9px;
+                        font-size: 26px;
+                        margin-top: 10px;
                     }
                     .light {
                         border: 1px solid #40d1ad;
                         padding: 2px;
                         color: #40d1ad;
                         border-radius: 3px;
+                        font-size: 20px;
                     }
                 }
             }
             .context {
                 margin-top: 20px;
-                .js {
+                .comtext-m {
+                
                     width: 303px;
+                    font-size: 18px;
                     word-break: break-all;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
-                    overflow: hidden;
                 }
             }
+        }
+        .company-s{
+            margin-left: 10px;
         }
     }
     .servicep {
@@ -224,6 +254,8 @@ ul {
                 margin-left: 20px;
                 h2 {
                     float: left; 
+                    font-size: 26px;
+                    margin-top: 5px;
                 }
                 .span {
                     float: right;
@@ -234,18 +266,20 @@ ul {
                         color: #40d1ad;
                         padding: 2px;
                         border-radius: 3px;
+                        font-size: 20px;
                     }
                 }
                 p {
                     width: 400px;
                     word-break: break-all;
                     margin-top: 50px; 
+                    font-size: 18px;
                 }
             }
         }
     }
 }
-.footer {
+.mod-footer {
     position: fixed;
     bottom: 150px;
     left: 40px;
