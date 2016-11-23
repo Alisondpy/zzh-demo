@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/*常用compass组件*/
-
-
 /*样式重置*/
 
 @import "./reset/reset";
@@ -11,16 +8,69 @@
 
 @import "./config/config";
 
+/*box*/
+
+@import "./box/box";
+
 /*字体*/
 
 @import "../../fonts/ibase/iconfont.css";
 @import "../../fonts/isema/iconfont.css";
-.ibase {
-    font-size: 16px;
+
+/*表单*/
+
+@import "./button/button";
+@import "./input/input";
+
+/*重置字体样式*/
+.ibase,
+.isema {
+    font-size: 24px;/*px*/
+}
+
+html {
+    color: #000;
+    background: #FFF;
+    tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+a,
+button {
+    outline: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+p,
+ul,
+li,
+h2,
+h3,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 
 /*公共常用样式*/
+
+body {
+    font: 24px/24px "PingFang SC", "Helvetica Neue", "Helvetica", "STHeiTi", "sans-serif"; /*px*/
+}
 
 .clearfix:after {
     content: ".";
