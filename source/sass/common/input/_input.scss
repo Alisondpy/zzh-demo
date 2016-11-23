@@ -2,6 +2,9 @@
 	border:1px solid #e2e2e2;/*no*/
 	padding: 10px 20px;
 	color: #333;
+	&:focus{
+		border-color: #40d1ad;
+	}
 }
 
 .ui-input-error{
