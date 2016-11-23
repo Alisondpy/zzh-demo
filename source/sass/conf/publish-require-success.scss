@@ -3,35 +3,38 @@
 body{
   background-color: #eee;
 }
+a{
+  text-decoration: none;
+}
 .mod-success{
-  margin-top: rem(246);
+  margin-top: 246px;
   text-align: center;
   .success-img{
-    width: rem(200);
-    height: rem(200);
+    width: 200px;
+    height: 200px;
     display: inline-block;
     background:url('../../images/publish-require/success.png') no-repeat;
     background-size: contain;
   }
   span{
     display: inline-block;
-    margin-top: rem(30);
-    font-size: rem(36);
+    margin-top: 30px;
+    font-size: 36px;/*px*/
     color: #2bd1aa;
   }
   p{
-    line-height: rem(36);
-    font-size: rem(20);
+    line-height: 36px;
+    font-size: 20px;
     color: #999;
   }
   .return-my-center{
     display: inline-block;
-    width: rem(180);
-    line-height: rem(50);
-    margin-top: rem(10);
+    width: 180px;
+    line-height: 50px;
+    margin-top: 10px;
     background-color: #2bd1aa;
-    border-radius: rem(5);
-    font-size: rem(24);
+    border-radius: 5px;
+    font-size: 24px;/*px*/
     color: #fff;
     border: none;
   }
