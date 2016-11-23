@@ -5,6 +5,12 @@ define(function(require, exports, module) {
     'use strict';
     var $ = require('jquery');
     var box = require('lib/ui/box/1.0.1/box');
+    var io = require('lib/core/1.0.0/io/request');
+
+    //获取数据渲染
+    io.get('/m-service-market/source/api/publish-require/publish-require.json', {'type':1}, function(data) {
+        console.log(data);
+    });
 
     //分类
     $('#jClassify').on('tap','label',function(e) {
@@ -17,10 +23,10 @@ define(function(require, exports, module) {
 
     //报价
     var config = {
-        "value0":"<input type='text' placeholder='0元'>"
+        "value0":"<input type='number' name='start' step='0.001' placeholder='0.00'><label class='unit'>元</label>"
                 +"<span>至</span>"
-                +"<input type='text' placeholder='0元'>",
-        "value1":"<input type='text' placeholder='0元'>",
+                +"<input type='number' name='end' step='0.001' placeholder='0.01'><label class='unit'>元</label>",
+        "value1":"<input type='number' step='0.001' placeholder='0.00'><label class='unit'>元</label>",
         "value2":"<b style='font-weight: normal;'>价格以面议为准</b>"
     };
 
@@ -59,9 +65,52 @@ define(function(require, exports, module) {
     //验证必填项
     function validation(){
         var message = '';
-        $('.jRequired').children('input[type="text"]').each(function(){
+        var radio = $('.jRequired').children('input[type="radio"]:checked');
+        var radioL = radio.length;
+        var inputNum = $('.jRequired').children('.price').children('input[type="number"]');
+        var startVal = $('.jRequired').children('.price').children('input[name="start"]').val();
+        var endVal = $('.jRequired').children('.price').children('input[name="end"]').val();
+        if(radioL === 0){
+            message = '请选择报价方式';
+        }else if(radio.val() === "0"){
+            inputNum.each(function(){
+                if($(this).val() === ''){
+                    message = '请完善预算';
+                }else if($(this).val() < 0){
+                    message = '价格大于等于0且不能超过2位小数';
+                }else if(endVal <= startVal){
+                    message = '请输入正确的预算区间';
+                }else {
+                    try{
+                        if($(this).val().split(".")[1].length > 2){
+                            message = '价格大于等于0且不能超过2位小数';
+                        }
+                    }catch (e){
+
+                    }
+                }
+            });
+        }else if(radio.val() === "1"){
+            inputNum.each(function(){
+                if($(this).val() === ''){
+                    message = '请完善一口价';
+                }else if($(this).val() < 0){
+                    message = '价格大于等于0且不能超过2位小数';
+                }else {
+                    try{
+                        if($(this).val().split(".")[1].length > 2){
+                            message = '价格大于等于0且不能超过2位小数';
+                        }
+                    }catch (e){
+
+                    }
+                }
+            });
+        }
+
+        $('.jRequired').children('textarea').each(function(){
             if($(this).val() === ''){
-                message = '请输入标题、联系人和联系方式';
+                message = '请完善需求描述';
             }
         });
 
@@ -70,23 +119,11 @@ define(function(require, exports, module) {
             message = '请选择分类';
         }
 
-        var radio = $('.jRequired').children('input[type="radio"]:checked');
-        var radioL = radio.length;
-        if(radioL === 0){
-            message = '请选择报价方式';
-        }else if(radio.val() !== "2"){
-            $('.jRequired').children('.price').children('input[type="text"]').each(function(){
-                if($(this).val() === ''){
-                    message = '请输入预算或一口价';
-                }
-            });
-        }
-
-        $('.jRequired').children('textarea').each(function(){
+        $('.jRequired').children('input[type="text"]').each(function(){
             if($(this).val() === ''){
-                message = '请输入需求描述';
+                message = '请完善标题、联系人和联系方式';
             }
-        })
+        });
 
         return message;
     };
@@ -99,7 +136,7 @@ define(function(require, exports, module) {
         }
     });
 
-    $('.jRequired').find('input[type="text"]').on('blur',function(){
+    $('.jRequired').on('keyup','input[type="text"],input[type="number"]',function(){
         if(validation() == ''){
             $('input[type="submit"]').addClass('submit');
         }else {

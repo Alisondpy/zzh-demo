@@ -51,7 +51,7 @@ define(function(require, exports, module) {
 
         loadUrl: function() {
             // async request with loading bar
-            box.loadUrl('/m-service-market/source/api/demo/demo.json', {
+            box.loadUrl('/m-service-market/source/api/demo/publish-require.json', {
                 data: { t: +new Date },
                 content: '加载中',
                 success: function(res) {
@@ -95,10 +95,10 @@ define(function(require, exports, module) {
         },
 
         sendPost: function() {
-            io.jsonp('/m-service-market/source/api/demo/demo.json', { 'foo': 'foo text' }, function(res) {
+            io.jsonp('/m-service-market/source/api/demo/publish-require.json', { 'foo': 'foo text' }, function(res) {
                 alert(res.msg + ' (code: ' + res.error + ')');
             }, this);
-            // io.get('/m-service-market/source/api/demo/demo.json', { 'foo': 'foo text' }, function(res) {
+            // io.get('/m-service-market/source/api/demo/publish-require.json', { 'foo': 'foo text' }, function(res) {
             //     alert(res.msg + ' (code: ' + res.error + ')');
             // }, this);
         }
