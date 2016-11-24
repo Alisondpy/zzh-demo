@@ -17,15 +17,18 @@ define(function(require, exports, module) {
 
 
     var pullRefresh = new PullToRefresh('#jWrapper');
-    pullRefresh.on('pullDownEnd', function(callback) {
+    pullRefresh.on('pullDown', function(callback) {
         setTimeout(function() {
+            window.location.reload();
             callback && callback();
         }, 2000);
     });
     pullRefresh.on('pullScroll', function(iscroll) {
         lazy.update();
+        this.setPullUpHtml('<i class="isema isema-arrow-down"></i>松手开始加载');
     });
-    pullRefresh.on('pullUpEnd', function(callback) {
+    pullRefresh.on('pullUp', function(callback) {
+        io.post();
         setTimeout(function() {
             var str = '';
             for (var i = 0; i < 10; i++) {

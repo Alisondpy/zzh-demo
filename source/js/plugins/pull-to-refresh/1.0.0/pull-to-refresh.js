@@ -11,7 +11,9 @@ define(function(require, exports, module) {
      * 下拉刷新、上拉加载更多
      * @param selector [dom selector] dom选择器
      * @param options [mix] 参数
-     * @events end [mix] 参数
+     * @events pullScroll 滚动事件
+     * @events pullDown  下拉事件
+     * @events pullUp  上拉事件
      */
     function PullToRefresh(selector, options) {
         var _this = this;
@@ -115,7 +117,7 @@ define(function(require, exports, module) {
                     _this.setPullDownHtml();
                     if (!_this._isLoading) {
                         _this._isLoading = true;
-                        _this.emit('pullDownEnd', function() {
+                        _this.emit('pullDown', function() {
                             _this.pullDown.hide();
                             _this._isLoading = false;
                             _this.iscroll.refresh();
@@ -125,7 +127,7 @@ define(function(require, exports, module) {
                     _this.setPullUpHtml();
                     if (!_this._isLoading) {
                         _this._isLoading = true;
-                        _this.emit('pullUpEnd', function() {
+                        _this.emit('pullUp', function() {
                             _this.pullUp.hide();
                             _this._isLoading = false;
                             _this.iscroll.refresh();
