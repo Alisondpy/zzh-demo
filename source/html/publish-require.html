@@ -13,38 +13,21 @@
     <form action="publish-require-success.html" method="get" id="jForm">
         <div class="common-pad title clearfix jRequired">
             <label class="f-l">标题</label>
-            <input class="f-l" type="text" placeholder="请输入您的需求标题">
+            <input class="f-l" id="jTitle" type="text" placeholder="请输入您的需求标题">
         </div>
         <div class="mod-classify">
             <div class="common-pad title clearfix">
                 <label class="f-l">分类<span>选择你的需求分类</span></label>
             </div>
+            <!--渲染 begin-->
             <div class="lists clearfix jRequired" id="jClassify">
-                <label for="class1" class="list f-l">运营推广</label>
-                <input id="class1" type="checkbox" name="classify" value="1">
-                <label for="class2" class="list f-l">美工设计</label>
-                <input id="class2" type="checkbox" name="classify" value="2">
-                <label for="class3" class="list f-l">软件工具</label>
-                <input id="class3" type="checkbox" name="classify" value="3">
-                <label for="class4" class="list f-l">人才培训</label>
-                <input id="class4" type="checkbox" name="classify" value="4">
-                <label for="class5" class="list f-l">物流仓储</label>
-                <input id="class5" type="checkbox" name="classify" value="5">
-                <label for="class6" class="list f-l">数据分析</label>
-                <input id="class6" type="checkbox" name="classify" value="6">
-                <label for="class7" class="list f-l">金融支付</label>
-                <input id="class7" type="checkbox" name="classify" value="7">
-                <label for="class8" class="list f-l">创业孵化</label>
-                <input id="class8" type="checkbox" name="classify" value="8">
-                <label for="class9" class="list f-l">政策法律</label>
-                <input id="class9" type="checkbox" name="classify" value="9">
-                <label for="class10" class="list f-l">其他</label>
-                <input id="class10" type="checkbox" name="classify" value="10">
+
             </div>
+            <!--渲染 end-->
         </div>
         <div class="common-pad description clearfix jRequired">
             <label class="f-l">需求描述</label>
-            <textarea class="f-l" placeholder="描述越详细，定位越准确，为您匹配到的服务才更加适合。"></textarea>
+            <textarea class="f-l" rows="3" placeholder="描述越详细，定位越准确，为您匹配到的服务才更加适合。"></textarea>
         </div>
         <div class="common-pad date clearfix">
             <label class="f-l">需求截止时间</label>

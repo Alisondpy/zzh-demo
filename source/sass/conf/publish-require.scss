@@ -72,10 +72,12 @@ body{
   }
   .description{
     border-bottom: 1px solid #cecece;/*no*/
+    padding-bottom: 40px;
     textarea{
       width: 95%;
       padding: 0 20px;
       font-size: 24px;/*px*/
+      line-height: 48px;
       border: none;
       outline: none;
     }

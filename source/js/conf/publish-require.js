@@ -7,9 +7,26 @@ define(function(require, exports, module) {
     var box = require('lib/ui/box/1.0.1/box');
     var io = require('lib/core/1.0.0/io/request');
 
-    //获取数据渲染
-    io.get('/m-service-market/source/api/publish-require/publish-require.json', {'type':1}, function(data) {
-        console.log(data);
+    //发布需求数据渲染
+    function classify(data){//渲染分类
+        for(var i = 0; i < data.init.length; i++){
+            var list = '<label for="class"+i+"" class="list f-l">'+data.init[i].name+'</label>'
+                +'<input id="class"+i+"" type="checkbox" name="classify" value="'+i+'">';
+            $('#jClassify').append(list);
+        }
+    };
+    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
+        classify(data);
+    });
+
+    //修改需求数据渲染
+    function modify(data){
+        if(data.modify.title){//标题
+            $('#jTitle').val(data.modify.title);
+        }
+    }
+    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
+        modify(data);
     });
 
     //分类
@@ -148,7 +165,6 @@ define(function(require, exports, module) {
     $('#jForm').on('submit',function(){
         var isSubmit = true;
         var message = validation();
-        console.log(message);
         if(message != ''){
             isSubmit = false;
             box.warn(message);
