@@ -53,9 +53,11 @@ define(function(require, exports, module) {
     //需求截止时间
     var date = new Date().getFullYear()+"年"+(new Date().getMonth()+1)+"月"+new Date().getDate()+"日";
     $('.date .day').text(date);
+    $('#jHideDate').val(date);
     $('#jDate').on('change',function(){
         date = $(this).val().replace("-","年").replace("-","月")+"日";
         $('.date .day').text(date);
+        $('#jHideDate').val(date);
     });
 
     //验证必填项
@@ -159,18 +161,17 @@ define(function(require, exports, module) {
             $('#jClassify').append(list);
         }
     };
-    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
-        pageInit(data);
-        if(validation() == ''){
-            $('input[type="submit"]').addClass('submit');
-        }else {
-            $('input[type="submit"]').removeClass('submit');
-        };
-    });
+    //io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
+    //    pageInit(data);
+    //    if(validation() == ''){
+    //        $('input[type="submit"]').addClass('submit');
+    //    }else {
+    //        $('input[type="submit"]').removeClass('submit');
+    //    };
+    //});
 
     //修改需求数据渲染
     function pageModify(data){
-        console.log(data.modify.classify);
         if(data.modify.title){//标题
             $('#jTitle').val(data.modify.title);
         }
@@ -213,12 +214,12 @@ define(function(require, exports, module) {
             $('#jConcatInfo').val(data.modify.nameInfo);
         }
     };
-    //io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
-    //    pageModify(data);
-    //    if(validation() == ''){
-    //        $('input[type="submit"]').addClass('submit');
-    //    }else {
-    //        $('input[type="submit"]').removeClass('submit');
-    //    };
-    //});
+    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
+        pageModify(data);
+        if(validation() == ''){
+            $('input[type="submit"]').addClass('submit');
+        }else {
+            $('input[type="submit"]').removeClass('submit');
+        };
+    });
 });

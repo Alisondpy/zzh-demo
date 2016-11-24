@@ -13,7 +13,7 @@
     <form action="publish-require-success.html" method="get" id="jForm">
         <div class="common-pad title clearfix jRequired">
             <label class="f-l">标题</label>
-            <input class="f-l" id="jTitle" type="text" placeholder="请输入您的需求标题">
+            <input class="f-l" id="jTitle" name="title" type="text" placeholder="请输入您的需求标题">
         </div>
         <div class="mod-classify">
             <div class="common-pad title clearfix">
@@ -27,13 +27,14 @@
         </div>
         <div class="common-pad description clearfix jRequired">
             <label class="f-l">需求描述</label>
-            <textarea class="f-l" rows="3" id="jDescription" placeholder="描述越详细，定位越准确，为您匹配到的服务才更加适合。"></textarea>
+            <textarea class="f-l" rows="3" id="jDescription" name="description" placeholder="描述越详细，定位越准确，为您匹配到的服务才更加适合。"></textarea>
         </div>
         <div class="common-pad date clearfix">
             <label class="f-l">需求截止时间</label>
             <i class="f-r isema isema-arrow-right"></i>
             <label for="jDate" class="f-r day"></label>
             <input id="jDate" class="f-l" type="date">
+            <input type="hidden" id="jHideDate" name="date">
         </div>
         <div class="mod-quote">
             <div class="common-pad clearfix">
@@ -57,11 +58,11 @@
         </div>
         <div class="common-pad contact clearfix jRequired">
             <label class="f-l">联系人</label>
-            <input class="f-l" type="text" id="jConcat" placeholder="请输入联系人姓名">
+            <input class="f-l" type="text" id="jConcat" name="contact" placeholder="请输入联系人姓名">
         </div>
         <div class="common-pad contact-information clearfix jRequired">
             <label class="f-l">联系方式</label>
-            <input class="f-l" type="text" id="jConcatInfo" placeholder="请输入您联系方式，座机请加上区号">
+            <input class="f-l" type="text" id="jConcatInfo" name="contact-info" placeholder="请输入您联系方式，座机请加上区号">
         </div>
         <div class="submit-btn">
             <input type="submit" value="发布需求">
