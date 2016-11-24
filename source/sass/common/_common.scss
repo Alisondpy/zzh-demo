@@ -12,6 +12,10 @@
 
 @import "./box/box";
 
+/*animate loading*/
+
+@import "./animate/loading";
+
 /*字体*/
 
 @import "../../fonts/ibase/iconfont.css";
@@ -23,9 +27,11 @@
 @import "./input/input";
 
 /*重置字体样式*/
+
 .ibase,
 .isema {
-    font-size: 24px;/*px*/
+    font-size: 24px;
+    /*px*/
 }
 
 html {
@@ -69,7 +75,8 @@ a {
 /*公共常用样式*/
 
 body {
-    font: 24px/24px "PingFang SC", "Helvetica Neue", "Helvetica", "STHeiTi", "sans-serif"; /*px*/
+    font: 24px/24px "PingFang SC", "Helvetica Neue", "Helvetica", "STHeiTi", "sans-serif";
+    /*px*/
 }
 
 .clearfix:after {
@@ -99,7 +106,7 @@ body {
 }
 
 .img-error {
-    background: url('../../images/error-img.png');
+    background: url('../../images/error-img.gif');
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;

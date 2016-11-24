@@ -10,7 +10,8 @@ h1 {
     font-size: 36px;
     /*px*/
     padding: 0 0 10px 10px;
-    border-bottom:1px solid #40d1ad; /*no*/
+    border-bottom: 1px solid #40d1ad;
+    /*no*/
     height: 36px;
     line-height: 36px;
     color: #40d1ad;
@@ -108,4 +109,13 @@ h1 {
             height: 441px;
         }
     }
+}
+
+
+/*iscroll*/
+
+.mod-iscroll {
+    height: 200px;
+    overflow: hidden;
+    border:1px solid red;/*no*/
 }
