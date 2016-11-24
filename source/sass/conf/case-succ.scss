@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import "../common/common";
+body,html{
+    height: 100%;
+    background-color: #eee;
+}
+.mod-top{
+    .bg-pic{
+        width: 100%;
+        height: 454px;
+        background: url(../../../dist/images/b-detail/fields.png) no-repeat;
+    }
+}
+.mod-con{
+    background-color: #fff;
+    .up{
+        text-align: center;
+        height: 88px;
+        border-bottom: 1px solid #eee;/*no*/
+       padding-top: 55px;
+        .title{
+            .bt{
+                font-size: 26px;
+                
+            }
+            .address{
+                font-size: 20px;
+                color: #42eeb4;
+                margin-top: 10px;
+            }
+        }
+    }
+    .down{
+        padding: 33px 20px 60px 20px;
+        font-size: 18px;
+        .txt2{
+            margin-top: 22px;
+        }
+        .txt3{
+            margin-top: 20px;
+        }
+    }
+}
+
+.mod-footer{
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 119px;
+   .s-need{
+       float: left;
+       .fb{
+           width: 294px;
+           height: 119px;
+           font-size: 26px;
+           background-color: #00e3b7;
+           color: #fff;
+           border: none;
+           .isema-publish{
+               margin-right: 5px;
+           }
+       }
+   }
+   .s-talk{
+       .zx{
+           width: 456px;
+           height: 119px;
+           font-size: 26px;
+           background-color: #eee;
+           border: none;
+       }
+   }
+}

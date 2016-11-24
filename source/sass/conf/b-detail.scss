@@ -52,19 +52,19 @@ h1,p{
                margin-top: 24px;
                width: 706px;
                word-break: break-all;
-               font-size: 18px;
+               font-size: 18px;/*px*/
            }
        }
        .con-3{
            margin-top:24px ;
            .price{
                font-style: normal;
-               font-size: 24px;
+               font-size: 24px;/*px*/
                color: #40d1ad;
            }
            .ck-price{
                margin-left: 15px;
-               font-size:18px ;
+               font-size:18px ;/*px*/
                font-weight: normal;
            }
        }
@@ -74,21 +74,20 @@ h1,p{
            padding: 21px;
            background-color:#eee ;
            h3{
-               font-size: 18px;
+            font-size: 18px;/*px*/
            }
        }
        .con{
            padding-left: 21px;
            margin: 5px 0 20px 0;
            h3{
-               font-size: 18px;
+               font-size: 18px;/*px*/
                margin-top: 20px;
            }
            p{
                width: 706px;
                word-break: break-all;
                font-size: 18px;
-               margin-top: -10px;
            }
        }
    }

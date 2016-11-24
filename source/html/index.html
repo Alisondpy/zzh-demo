@@ -12,10 +12,10 @@
     <div class="mod-index">
 		<!--轮播图-->
 		<div class="mod-banner">
-			<div class="mod-search">
-				<div class="search"></div>
-				<input type="search" name="search" class="textposition" placeholder="搜服务商或已有服务商品" />
-			</div>
+			<a class="mod-search" href="http://www.baidu.com">
+				<div class="isema isema-search"></div>
+				<input type="search" class="textposition jSearch" placeholder="搜服务商或已有服务商品" />
+			</a>
 			<div class="banner jSlider">
 				<a href="javascript:;"><img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="/images/t/pro.png"/></a>
 				<a href="javascript:;"><img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="/images/index/compass-icon.png"/></a>
@@ -23,50 +23,76 @@
 			</div>
 		</div>
 
-		<div class="slide">
-			<ul>
-				<li>
-					<a>
-						<em class="bg-icon0"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon1"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon2"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon3"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon4"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em><img src="/images/index/compass-icon.png" /></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-			</ul>
+		<div class="mod-slide ui-scroll" id="jScroll">
+			<div id="jScrollCnt">
+				<ul class="list" id="jScrollList">
+					<li class="child">
+						<a>
+							<em class="bg-icon0"></em>
+							<span class="txt">运营推广</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon1"></em>
+							<span class="txt">美工设计</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon2"></em>
+							<span class="txt">软件工具</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon3"></em>
+							<span class="txt">人才培训</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon4"></em>
+							<span class="txt">法律咨询</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em><img src="/images/index/compass-icon.png" /></em>
+							<span class="txt">运营推广</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon0"></em>
+							<span class="txt">美工设计</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon1"></em>
+							<span class="txt">软件设计</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon2"></em>
+							<span class="txt">人才培训</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon3"></em>
+							<span class="txt">法律咨询</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<!--服务模块-->
 		<div class="mod-serve">
 			<!--服务商模块-->
-			<div class="service">
+			<div class="mod-service">
 				<div class="line">
 					<em>推荐服务商</em>
 					<a class="more">更多</a>
@@ -115,7 +141,7 @@
 				</div>
 			</div>
 			<!--服务产品模块-->
-			<div class="servicep">
+			<div class="mod-servicep">
 				<div class="line">
 					<em>推荐服务产品</em>
 					<a class="more">更多</a>

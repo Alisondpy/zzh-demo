@@ -5,17 +5,17 @@
     <title>首页</title>
     <!--#include file="./common/meta.html"-->
     <!--#include file="./common/css.html"-->
-    <link rel="stylesheet" href="//s1.zzhstatic.com/m-service-market/dist/css/conf/index.css?v=68d9aa5b0e" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="//s1.zzhstatic.com/m-service-market/dist/css/conf/index.css?v=615bd27c72" type="text/css" charset="utf-8">
 </head>
 
 <body>
     <div class="mod-index">
 		<!--轮播图-->
 		<div class="mod-banner">
-			<div class="mod-search">
-				<div class="search"></div>
-				<input type="search" name="search" class="textposition" placeholder="搜服务商或已有服务商品" />
-			</div>
+			<a class="mod-search" href="http://www.baidu.com">
+				<div class="isema isema-search"></div>
+				<input type="search" class="textposition jSearch" placeholder="搜服务商或已有服务商品" />
+			</a>
 			<div class="banner jSlider">
 				<a href="javascript:;"><img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="//s1.zzhstatic.com/m-service-market/dist/images/t/pro.png?v=384d368891"/></a>
 				<a href="javascript:;"><img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="//s1.zzhstatic.com/m-service-market/dist/images/index/compass-icon.png?v=af80932d29"/></a>
@@ -23,50 +23,76 @@
 			</div>
 		</div>
 
-		<div class="slide">
-			<ul>
-				<li>
-					<a>
-						<em class="bg-icon0"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon1"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon2"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon3"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em class="bg-icon4"></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						<em><img src="//s1.zzhstatic.com/m-service-market/dist/images/index/compass-icon.png?v=af80932d29" /></em>
-						<span>运营推广</span>
-					</a>
-				</li>
-			</ul>
+		<div class="mod-slide ui-scroll" id="jScroll">
+			<div id="jScrollCnt">
+				<ul class="list" id="jScrollList">
+					<li class="child">
+						<a>
+							<em class="bg-icon0"></em>
+							<span class="txt">运营推广</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon1"></em>
+							<span class="txt">美工设计</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon2"></em>
+							<span class="txt">软件工具</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon3"></em>
+							<span class="txt">人才培训</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon4"></em>
+							<span class="txt">法律咨询</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em><img src="//s1.zzhstatic.com/m-service-market/dist/images/index/compass-icon.png?v=af80932d29" /></em>
+							<span class="txt">运营推广</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon0"></em>
+							<span class="txt">美工设计</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon1"></em>
+							<span class="txt">软件设计</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon2"></em>
+							<span class="txt">人才培训</span>
+						</a>
+					</li>
+					<li class="child">
+						<a>
+							<em class="bg-icon3"></em>
+							<span class="txt">法律咨询</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<!--服务模块-->
 		<div class="mod-serve">
 			<!--服务商模块-->
-			<div class="service">
+			<div class="mod-service">
 				<div class="line">
 					<em>推荐服务商</em>
 					<a class="more">更多</a>
@@ -115,7 +141,7 @@
 				</div>
 			</div>
 			<!--服务产品模块-->
-			<div class="servicep">
+			<div class="mod-servicep">
 				<div class="line">
 					<em>推荐服务产品</em>
 					<a class="more">更多</a>

@@ -3,6 +3,18 @@ define(function(require, exports, module) {
     var $ = require('jquery');
     var Slider = require('lib/ui/slider/3.0.4/slider');
     var Lazyload = require('lib/plugins/lazyload/1.9.3/lazyload');
+    var IScroll = require('lib/plugins/iscroll/1.0.0/iscroll');
+
+
+	var jScrollList = $('#jScrollList li');;
+    $('#jScrollCnt').width(jScrollList.length*jScrollList.width());
+    
+	var myScroll = new IScroll('#jScroll', { 
+		eventPassthrough: true, 
+		scrollX: true, 
+		scrollY: false, 
+		preventDefault: false 
+	});
 
     //slider
     var slider = new Slider('.jSlider', {
@@ -31,31 +43,13 @@ define(function(require, exports, module) {
         snap: true
     });
     
-	//nav-footer 的一部分，这个地方我错误---donkey
-//	$('.isema-error').click(function(){
-//		$('.subnav ul').animate({	
-//			width:'70px',
-//			overflow:'hidden'
-//		},500);
-////		$('.isema-error').siblings().css;
-////		$('.isema-error').clone(true).appendTo($('.subnav'));
-//		$('.isema-error').replaceWith($('.isema-home')); 
-////		$('.isema-error').css('display','none');
-//		$('.isema-home').css('display','block');
-//	})
-//	
-//	$('.isema-home').click(function(){
-//		$('.isema-m').replaceWith($('.isema-error'));
-//		$('.isema-error').siblings().show();
-//		$('.subnav ul').animate({
-//			width:'440px'
-//		},500);
-//		
-//	})
-
-	$('.textposition').click(function(){
+    
+    $('.jSearch').click(function(){
 		window.location.href='demo.html';
 	})
+    
+
+    
 });
 
 	
