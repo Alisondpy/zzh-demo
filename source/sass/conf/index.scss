@@ -243,11 +243,15 @@ ul {
             margin-top: 20px;
             background-color: #fff;
             padding: 25px 20px 35px;
-            img {
+            .img{
                 float: left;
                 width: 224px;
                 height: 132px;
                 overflow: hidden;
+                text-align: center;
+                img {
+                    height: 132px;
+                }
             }
             .context {
                 overflow: hidden;

@@ -23,9 +23,7 @@ define(function(require, exports, module) {
     });
 
     //image-lazyload
-    var lazy = new Lazyload($('.jImg'), {
-        effect: 'fadeIn'
-    });
+    var lazy = new Lazyload('.jImg');
 
 });
 
