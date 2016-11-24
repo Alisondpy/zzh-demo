@@ -8,7 +8,7 @@ define(function(require, exports, module) {
 		}).find($('.service').css({
 				'border-bottom':'none'
 			}));
-			$('.tab-change1').css('display','block').find($('.tab-change2').css('display','none'));
+			$('.mod-tab1').css('display','block').find($('.mod-tab2').css('display','none'));
 		})
 	
     $('.service').click(function(){
@@ -17,7 +17,7 @@ define(function(require, exports, module) {
     	}).find($('.service').css({
     		'border-bottom':'3px solid #0044CC'
     		}));
-			$('.tab-change2').css('display','block').find($('.tab-change1').css('display','none'));
+			$('.mod-tab2').css('display','block').find($('.mod-tab1').css('display','none'));
     		
     })
     
