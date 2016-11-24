@@ -27,7 +27,7 @@
         </div>
         <div class="common-pad description clearfix jRequired">
             <label class="f-l">需求描述</label>
-            <textarea class="f-l" rows="3" placeholder="描述越详细，定位越准确，为您匹配到的服务才更加适合。"></textarea>
+            <textarea class="f-l" rows="3" id="jDescription" placeholder="描述越详细，定位越准确，为您匹配到的服务才更加适合。"></textarea>
         </div>
         <div class="common-pad date clearfix">
             <label class="f-l">需求截止时间</label>
@@ -40,13 +40,13 @@
                 <label class="f-l">报价</label>
             </div>
             <div class="lists">
-                <div class="content clearfix jRequired">
-                    <label for="content1" class="list f-l jLabel">预算</label>
-                    <input id="content1" type="radio" name="quote-type" value="0">
-                    <label for="content2" class="list f-l jLabel">一口价</label>
-                    <input id="content2" type="radio" name="quote-type" value="1">
-                    <label for="content3" class="list f-l jLabel">面议</label>
-                    <input id="content3" type="radio" name="quote-type" value="2">
+                <div class="content clearfix jRequired" id="jQuote">
+                    <label for="content0" class="list f-l jLabel jLabel0">预算</label>
+                    <input id="content0" type="radio" name="quote-type" value="0">
+                    <label for="content1" class="list f-l jLabel jLabel1">一口价</label>
+                    <input id="content1" type="radio" name="quote-type" value="1">
+                    <label for="content2" class="list f-l jLabel jLabel2">面议</label>
+                    <input id="content2" type="radio" name="quote-type" value="2">
                     <div class="price jPrice f-l">
                         <input type='number' name='start' step="0.001" placeholder='0.00'><label class='unit'>元</label>
                         <span>至</span>
@@ -57,11 +57,11 @@
         </div>
         <div class="common-pad contact clearfix jRequired">
             <label class="f-l">联系人</label>
-            <input class="f-l" type="text" placeholder="请输入联系人姓名">
+            <input class="f-l" type="text" id="jConcat" placeholder="请输入联系人姓名">
         </div>
         <div class="common-pad contact-information clearfix jRequired">
             <label class="f-l">联系方式</label>
-            <input class="f-l" type="text" placeholder="请输入您联系方式，座机请加上区号">
+            <input class="f-l" type="text" id="jConcatInfo" placeholder="请输入您联系方式，座机请加上区号">
         </div>
         <div class="submit-btn">
             <input type="submit" value="发布需求">

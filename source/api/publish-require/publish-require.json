@@ -47,9 +47,12 @@
     "date":"2016年12月1日",
     "quote":{
       "type":0,
-      "price":[2.88,3.99]
+      "price":{
+        "start":2.88,
+        "end":3.99
+      }
     },
-    "contact":"小诸葛",
-    "contactInfo":"0551-88888"
+    "name":"小诸葛",
+    "nameInfo":"0551-88888"
   }
 }

@@ -7,28 +7,7 @@ define(function(require, exports, module) {
     var box = require('lib/ui/box/1.0.1/box');
     var io = require('lib/core/1.0.0/io/request');
 
-    //发布需求数据渲染
-    function classify(data){//渲染分类
-        for(var i = 0; i < data.init.length; i++){
-            var list = '<label for="class"+i+"" class="list f-l">'+data.init[i].name+'</label>'
-                +'<input id="class"+i+"" type="checkbox" name="classify" value="'+i+'">';
-            $('#jClassify').append(list);
-        }
-    };
-    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
-        classify(data);
-    });
-
-    //修改需求数据渲染
-    function modify(data){
-        if(data.modify.title){//标题
-            $('#jTitle').val(data.modify.title);
-        }
-    }
-    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
-        modify(data);
-    });
-
+    /*交互效果*/
     //分类
     $('#jClassify').on('tap','label',function(e) {
         if($(e.target).hasClass('checked')){
@@ -47,12 +26,12 @@ define(function(require, exports, module) {
         "value2":"<b style='font-weight: normal;'>价格以面议为准</b>"
     };
 
-    $('.jLabel').each(function(){
-        if($(this).next('input[type="radio"]').val() === '0'){
-            $(this).addClass('current');
-            $(this).next('input[type="radio"]').prop('checked',true);
-        }
-    });
+    //$('.jLabel').each(function(){
+    //    if($(this).next('input[type="radio"]').val() === '0'){
+    //        $(this).addClass('current');
+    //        $(this).next('input[type="radio"]').prop('checked',true);
+    //    }
+    //});
 
     $('.jLabel').on('tap',function(){
         $(this).addClass('current').siblings().removeClass('current');
@@ -145,7 +124,7 @@ define(function(require, exports, module) {
         return message;
     };
 
-    $('.jRequired').find('input[type="checkbox"],input[type="radio"]').on('change',function(){
+    $('.jRequired').find('input[type="checkbox"],input[type="radio"],#jDescription').on('change',function(){
         if(validation() === ''){
             $('input[type="submit"]').addClass('submit');
         }else {
@@ -161,7 +140,6 @@ define(function(require, exports, module) {
         }
     });
 
-    validation();
     $('#jForm').on('submit',function(){
         var isSubmit = true;
         var message = validation();
@@ -171,4 +149,76 @@ define(function(require, exports, module) {
         }
         return isSubmit;
     });
+
+     /*数据渲染*/
+    //发布需求数据渲染
+    function pageInit(data){
+        for(var i = 0; i < data.init.length; i++){
+            var list = '<label for="class'+i+'" class="list list'+i+' f-l">'+data.init[i].name+'</label>'
+                +'<input id="class'+i+'" type="checkbox" name="classify" value="'+i+'">';
+            $('#jClassify').append(list);
+        }
+    };
+    io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
+        pageInit(data);
+        if(validation() == ''){
+            $('input[type="submit"]').addClass('submit');
+        }else {
+            $('input[type="submit"]').removeClass('submit');
+        };
+    });
+
+    //修改需求数据渲染
+    function pageModify(data){
+        console.log(data.modify.classify);
+        if(data.modify.title){//标题
+            $('#jTitle').val(data.modify.title);
+        }
+        if(data.modify.classify){//分类
+            pageInit(data);
+            for(var i=0; i < data.modify.classify.length; i++){
+                $('#jClassify').children('#class'+data.modify.classify[i]+'').prop("checked",true);
+                $('#jClassify').children('.list'+data.modify.classify[i]+'').addClass('checked');
+            }
+        }
+        if(data.modify.description){//需求描述
+            $('#jDescription').val(data.modify.description);
+        }
+        if(data.modify.date){//需求截止时间
+            $('.date .day').text(data.modify.date);
+        }
+        if(data.modify.quote){//报价
+            if(data.modify.quote.type || data.modify.quote.type === 0){//报价方式
+                $('#jQuote').children('.jLabel'+data.modify.quote.type+'').addClass('current');
+                $('#jQuote').children('#content'+data.modify.quote.type+'').prop('checked',true);
+                if(data.modify.quote.price){//价格
+                    if(data.modify.quote.type === 0){
+                        $('.jPrice').html("<input type='number' name='start' step='0.001' placeholder='0.00' value='"+data.modify.quote.price.start+"'><label class='unit'>元</label>"
+                            +"<span>至</span>"
+                            +"<input type='number' name='end' step='0.001' placeholder='0.01' value='"+data.modify.quote.price.end+"'><label class='unit'>元</label>");
+                    }
+                    if(data.modify.quote.type === 1){
+                        $('.jPrice').html("<input type='number' step='0.001' placeholder='0.00' value='"+data.modify.quote.price.start+"'><label class='unit'>元</label>");
+                    }
+                }
+                if(data.modify.quote.type === 2){
+                    $('.jPrice').html("<b style='font-weight: normal;'>价格以面议为准</b>");
+                }
+            }
+        }
+        if(data.modify.name){//联系人
+            $('#jConcat').val(data.modify.name);
+        }
+        if(data.modify.nameInfo){//联系方式
+            $('#jConcatInfo').val(data.modify.nameInfo);
+        }
+    };
+    //io.get('/m-service-market/source/api/publish-require/publish-require.json', function(data) {
+    //    pageModify(data);
+    //    if(validation() == ''){
+    //        $('input[type="submit"]').addClass('submit');
+    //    }else {
+    //        $('input[type="submit"]').removeClass('submit');
+    //    };
+    //});
 });
