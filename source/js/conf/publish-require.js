@@ -211,19 +211,15 @@ define(function(require, exports, module) {
             box.warn(message);
         }
         var formData = form.serializeForm($('#jForm'));
-        console.log(formData);
         if(isSubmit){
             io.get('/m-service-market/source/api/publish-require/publish-require.json',{'data':formData},function(data) {
-                console.log(data.info);
-                if(data.info.success){
-                    box.tips(data.info.success);
+                if(data.error > 0){
+                    box.tips(data.msg);
                     setTimeout(function(){
                         window.location.href='./publish-require-success.html';
                     },2000)
                 }else {
-                    if(data.info.error){
-                        box.tips(data.info.error);
-                    }
+                    box.error(data.msg);
                 }
             },this);
         }
