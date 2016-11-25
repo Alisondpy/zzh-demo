@@ -5,15 +5,15 @@
     <title>发布需求</title>
     <!--#include file="./common/meta.html"-->
     <!--#include file="./common/css.html"-->
-    <link rel="stylesheet" href="//s1.zzhstatic.com/m-service-market/dist/css/conf/publish-require.css?v=be931cee9b" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="//s1.zzhstatic.com/m-service-market/dist/css/conf/publish-require.css?v=b9c242340f" type="text/css" charset="utf-8">
 </head>
 <body>
 <!--#include file="./common/header.html"-->
 <div class="mod-require">
-    <form action="publish-require-success.html" method="get" id="jForm">
+    <form action="" method="" id="jForm">
         <div class="common-pad title clearfix jRequired">
             <label class="f-l">标题</label>
-            <input class="f-l" id="jTitle" name="title" type="text" placeholder="请输入您的需求标题">
+            <input class="f-l" id="jTitle" name="title" type="text" placeholder="请输入您的需求标题" autocomplete="off">
         </div>
         <div class="mod-classify">
             <div class="common-pad title clearfix">
@@ -42,12 +42,10 @@
             </div>
             <div class="lists">
                 <div class="content clearfix jRequired" id="jQuote">
-                    <label for="content0" class="list f-l jLabel jLabel0">预算</label>
-                    <input id="content0" type="radio" name="quote-type" value="0">
-                    <label for="content1" class="list f-l jLabel jLabel1">一口价</label>
-                    <input id="content1" type="radio" name="quote-type" value="1">
-                    <label for="content2" class="list f-l jLabel jLabel2">面议</label>
-                    <input id="content2" type="radio" name="quote-type" value="2">
+                    <input type="hidden" name="quote">
+                    <label class="list f-l jLabel jLabel0" data-value="0">预算</label>
+                    <label class="list f-l jLabel jLabel1" data-value="1">一口价</label>
+                    <label class="list f-l jLabel jLabel2" data-value="2">面议</label>
                     <div class="price jPrice f-l">
                         <input type='number' name='start' step="0.001" placeholder='0.00'><label class='unit'>元</label>
                         <span>至</span>
@@ -56,16 +54,16 @@
                 </div>
             </div>
         </div>
-        <div class="common-pad contact clearfix jRequired">
-            <label class="f-l">联系人</label>
-            <input class="f-l" type="text" id="jConcat" name="contact" placeholder="请输入联系人姓名">
+        <div class="common-pad contact jRequired">
+            <label class="common-pos">联系人</label>
+            <input type="text" id="jConcat" name="contact" placeholder="请输入联系人姓名" autocomplete="off">
         </div>
-        <div class="common-pad contact-information clearfix jRequired">
-            <label class="f-l">联系方式</label>
-            <input class="f-l" type="text" id="jConcatInfo" name="contact-info" placeholder="请输入您联系方式，座机请加上区号">
+        <div class="common-pad contact-information jRequired">
+            <label class="common-pos">联系方式</label>
+            <input type="text" id="jConcatInfo" name="contact-info" placeholder="请输入您联系方式，座机请加上区号" autocomplete="off">
         </div>
         <div class="submit-btn">
-            <input type="submit" value="发布需求">
+            <input type="button" name="submit" value="发布需求">
         </div>
     </form>
 </div>

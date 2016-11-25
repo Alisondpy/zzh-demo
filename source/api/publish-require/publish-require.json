@@ -42,17 +42,20 @@
   ],
   "modify":{
     "title":"我是标题",
-    "classify":[2,3,4,5],
+    "classify":"0,2,4,5",
     "description":"握草，我竟然是描述。",
-    "date":"2016年12月1日",
+    "date":"2017年12月1日",
     "quote":{
       "type":0,
       "price":{
-        "start":2.88,
-        "end":3.99
+        "start":4.99,
+        "end":5.00
       }
     },
     "name":"小诸葛",
     "nameInfo":"0551-88888"
+  },
+  "info":{
+    "success":"发布需求成功"
   }
 }

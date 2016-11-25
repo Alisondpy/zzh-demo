@@ -7,6 +7,11 @@ body{
   background-color: #fff;
 }
 .common-pad{
+  position: relative;
+  .common-pos{
+    position: absolute;
+    left: 20px;
+  }
   @extend .bg-c;
   line-height: 94px;
   label{
@@ -45,11 +50,6 @@ body{
     .lists{
       margin-left: 40px;
       padding-bottom: 20px;
-      input{
-        visibility: hidden;
-        width: 0;
-        height: 0;
-      }
     }
     .list{
       width: 150px;
@@ -109,12 +109,6 @@ body{
         margin: 0 auto;
         font-size: 24px;/*px*/
         color: #666;
-        input[type="radio"]{
-          visibility: hidden;
-          width: 0;
-          height:0;
-          position: absolute;
-        }
       }
       .price{
         position: relative;
@@ -164,12 +158,14 @@ body{
   .contact{
     border-bottom: 1px solid #cecece;/*no*/
     input[type="text"]{
-      width: 76%;
+      margin-left: 120px;
+      width: 72%;
     }
   }
   .contact-information{
     border-bottom: 1px solid #cecece;/*no*/
     input[type="text"]{
+      margin-left: 120px;
       width: 72%;
     }
   }
@@ -178,7 +174,7 @@ body{
     margin-top: 20px;
     padding-top: 25px;
     @extend .bg-c;
-    input[type="submit"]{
+    input[type="button"]{
       display: block;
       width: 680px;
       height: 94px;
