@@ -74,8 +74,12 @@ define(function(require, exports, module) {
             _this.pullType = null;
             _this._isDo = false;
             _this.scrolling = true;
-            _this.setPullDownHtml(_this.options.pullDown.todoHtml);
-            _this.setPullUpHtml(_this.options.pullUp.todoHtml);
+            if (_this.options.pullDown.enable) {
+                _this.setPullDownHtml(_this.options.pullDown.todoHtml);
+            }
+            if (_this.options.pullUp.enable) {
+                _this.setPullUpHtml(_this.options.pullUp.todoHtml);
+            }
         });
         _this.iscroll.on('scroll', function() {
             _this.emit('pullScroll', this);
