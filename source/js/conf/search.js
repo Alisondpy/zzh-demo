@@ -158,6 +158,7 @@ define(function(require, exports, module) {
 
     function _getProviderItem(data) {
         var str = '';
+        str += '<a href="">';
         str += '<div class="ui-service-providers">';
         str += '    <div class="cnt">';
         str += '        <div class="img">';
@@ -180,12 +181,13 @@ define(function(require, exports, module) {
         str += '    <div class="desc">';
         str += '        我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到 我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到';
         str += '    </div>';
-        str += '</div>';
+        str += '</div></a>';
         return str;
     }
 
     function _getProductItem(data) {
         var str = '';
+        str += '<a href="">';
         str += '<div class="ui-product">';
         str += '    <div class="img">';
         str += '        <img class="error-img" src="http://img1.imgtn.bdimg.com/it/u=4002728021,3052237326&fm=21&gp=0.jpg">';
@@ -206,7 +208,7 @@ define(function(require, exports, module) {
         str += '            我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到 我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到';
         str += '        </div>';
         str += '    </div>';
-        str += '</div>';
+        str += '</div></a>';
         return str;
     }
 
