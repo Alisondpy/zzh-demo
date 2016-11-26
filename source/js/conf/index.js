@@ -6,14 +6,14 @@ define(function(require, exports, module) {
     var IScroll = require('lib/plugins/iscroll/1.0.0/iscroll');
 
 
-	var jScrollList = $('#jScrollList li');;
+	var jScrollList = $('#jScrollList li');
     $('#jScrollCnt').width(jScrollList.length*jScrollList.width());
     
 	var myScroll = new IScroll('#jScroll', { 
-		eventPassthrough: true, 
+//		eventPassthrough: true, 
 		scrollX: true, 
 		scrollY: false, 
-		preventDefault: false 
+//		preventDefault: false 
 	});
 
     //slider

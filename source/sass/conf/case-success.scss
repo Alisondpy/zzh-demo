@@ -1,16 +1,18 @@
 @charset "UTF-8";
 @import "../common/common";
 body,html{
-    height: 100%;
     background-color: #eee;
-}
+  }
+/*顶部模块*/
 .mod-top{
     .bg-pic{
         width: 100%;
         height: 454px;
         background: url(../../images/t/logo.png) no-repeat;
+        background-size:cover;
     }
 }
+/*中间内容模块*/
 .mod-con{
     background-color: #fff;
     .up{
@@ -41,20 +43,22 @@ body,html{
         }
     }
 }
-
+/*底部模块*/
 .mod-footer{
     overflow: hidden;
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 119px;
+    // height: 119px;
    .s-need{
        float: left;
        .fb{
            width: 294px;
            height: 119px;
            font-size: 26px;/*px*/
-           background-color: #00e3b7;
+           background:url(../../images/b-person/bg-l.png) no-repeat;
+           background-size:cover;
+
            color: #fff;
            border: none;
            .isema-publish{
@@ -67,7 +71,8 @@ body,html{
            width: 456px;
            height: 119px;
            font-size: 26px;/*px*/
-           background-color: #eee;
+           background:url(../../images/b-person/bg-r.png) no-repeat;
+           background-size:cover;
            border: none;
        }
    }

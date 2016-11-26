@@ -4,7 +4,6 @@ body,
 html {
     background-color: #eee;
     height: 100%;
-    overflow: hidden;
 }
 li {
     list-style: none;
@@ -44,6 +43,7 @@ ul {
                 position: absolute;
                 top: 38px;
                 left: 43px;
+                color:#000;
             }
         }
         .banner {
@@ -84,19 +84,21 @@ ul {
         }
     }
     .mod-slide {
+        position: relative;
         width: 750px;
         height: 165px; 
         overflow: hidden;
         background-color: #fff;
-        .list {
-            list-style: none;
+        .scroll-cnt{
+            position:relative;
+                    .list {
             width: 100%;
             height: 165px;
             padding: 0;
             margin: 0; 
             li {
                 float: left;
-                width: 145px;
+                width: 150px;
                 height: 140px;
                 padding: 27px 0 0 22px;
                 a {
@@ -138,27 +140,28 @@ ul {
                 }
             }
         }
+        }
+
     }
 }
 .mod-serve {
     width: 100%;
-    height: 854px;
     background-color: #eee;
     .mod-service {
-        overflow: hidden;
         padding: 17px 22px;
+        overflow: hidden;
         .line {
             overflow: hidden;
+            margin-bottom:20px;
             em {
                 float: left;
                 font-style: normal;
-                font-size: 24px;
+                font-size: 24px;/*px*/
             }
             .more {
-                font-size: 20px;
-                /*px*/
+                font-size: 20px;/*px*/
                 text-align: center;
-                float: right;
+                float:right;
                 width: 88px;
                 height: 31px;
                 line-height: 31px;
@@ -168,58 +171,63 @@ ul {
                 color: #000000;
             }
         }
-        .company {
-            margin-top: 21px;
-            margin-right: 5px;
-            overflow: hidden;
-            padding: 25px 20px 35px;
-            background-color: #fff;
-            float: left;
-            .clear {
-                overflow: hidden;
-                img {
-                    width: 90px;
-                    height: 87px;
-                    border-radius: 50%;
-                    float: left;
-                }
-                .con {
-                    float: left;
-                    margin-left: 15px;
-                    .title {
-                        width: 150px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        display: block;
-                        white-space: nowrap;
-                        font-weight: bold;
-                        color: #000;
-                        margin-bottom: 9px;
-                        font-size: 26px;
-                        margin-top: 10px;
+        .vendor{
+            margin-left:-15px;
+            width:780px;
+            overflow:hidden;
+            .company {
+                background-color:#fff;
+                width:325px;
+                height:205px;
+                float:left;
+                margin-left:15px;
+                padding:20px 0 0 20px;
+      
+                .clearfix {
+                    overflow: hidden;
+                    img {
+                        width: 90px;
+                        height: 87px;
+                        border-radius: 50%;
+                        float: left;
                     }
-                    .light {
-                        border: 1px solid #40d1ad;
-                        padding: 2px;
-                        color: #40d1ad;
-                        border-radius: 3px;
-                        font-size: 20px;
+                    .con {
+                        float: left;
+                        margin-left: 15px;
+                        .title {
+                            width: 150px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: block;
+                            white-space: nowrap;
+                            font-weight: bold;
+                            color: #000;
+                            margin-bottom: 9px;
+                            font-size: 26px;
+                            margin-top: 10px;
+                        }
+                        .light {
+                            border: 1px solid #40d1ad;
+                            padding: 2px;
+                            color: #40d1ad;
+                            border-radius: 3px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                
+                .context {
+                    margin-top: 20px;
+                    .comtext-m {
+                        width: 303px;
+                        font-size: 18px;
+                        word-break: break-all;
                     }
                 }
             }
-            .context {
-                margin-top: 20px;
-                .comtext-m {
-                    width: 303px;
-                    font-size: 18px;
-                    word-break: break-all;
-                }
-            }
-        }
-        .company-s {
-            margin-left: 10px;
-        }
     }
+        }
+        
     .mod-servicep {
         padding: 17px 22px;
         .line {

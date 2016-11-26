@@ -1,9 +1,5 @@
 @charset "UTF-8";
 @import "../common/common";
-body,html{
-    width: 100%;
-    height: 100%;
-}
 a{
     color: #000;
     font-weight: bold;
@@ -17,11 +13,12 @@ a{
     .top{
         .bg-picture{
             width: 100%;
-            height: 236px;
+            height: 240px;
             background: url(../../images/b-detail/1.png) no-repeat;
             text-align: center;
+            background-size:100%;
             .icon{
-                padding-top: 25px;
+                padding-top: 17px;
                img{
                    width: 123px;
                    height: 123px;
@@ -36,10 +33,10 @@ a{
             .info{
                 color: #fff;
                 margin-top: 10px;
-                font-size: 16px;
+                font-size: 16px;/*px*/
                 span{
                     padding: 4px;
-                    border: 1px solid #fff;
+                    border: 1px solid #fff;/*no*/
                     border-radius: 3px;
                 }
             }
@@ -57,7 +54,7 @@ a{
    .tab{
        width: 100%;
        height: 87px;
-       border-bottom: 1px solid #eee;/*px*/
+       border-bottom: 1px solid #eee;/*no*/
        background-color: #fff;
        .one{
            width: 49%;
@@ -73,9 +70,9 @@ a{
            }
        }
        .two{
-           width: 50%;
-           height: 87px;
-           float: right;
+           width: 49%;
+           height: 85px;
+           float: left;
            line-height: 85px;
            text-align: center;
            .service{
@@ -84,11 +81,10 @@ a{
                height: 80px;
            }
        }
-   }
+    }
    .mod-tab1{
        .mod-up{
            background-color: #fff;
-           height: 452px;
            .txt{
                padding: 30px 20px;
                .title{
@@ -104,22 +100,30 @@ a{
            .pic{
                width: 100%;
                height: 293px;
+               img{
+                width:750px;
+               }
            }
        }
        .mod-down{
            padding-left: 22px;
+           width:728px;
            .title{
-               font-size: 20px;
+               font-size: 20px;/*px*/
                height: 58px;
                line-height: 58px;
            }
            .zone{
+                  width:100%;
+                  overflow:hidden;
+                  margin-left:-10px;
                .zone-one{
                    padding: 26px 24px 20px 24px;
                    width: 300px;
                    height: 268px;
                    background-color: #fff;
                    float: left;
+                   margin-left:10px;
                    .pic{
                        width: 300px;
                        height: 180px;
@@ -129,39 +133,15 @@ a{
                        }
                    }
                    .bt{
-                       font-size: 24px;
+                       font-size: 24px;/*px*/
                        margin-top: 20px;
                    }
                    .txt{
-                       font-size: 18px;
+                       font-size: 18px;/*px*/
                        margin-top: 7px;
                    }
                }
                
-               .zone-two{
-                   padding: 26px 24px 20px 24px;
-                   width: 300px;
-                   height: 268px;
-                   background-color: #fff;
-                   float: left;
-                   margin-left: 10px;
-                   .pic{
-                       width: 300px;
-                       height: 180px;
-                       img{
-                           width: 300px;
-                           height: 180px;
-                       }
-                   }
-                   .bt{
-                       font-size: 24px;
-                       margin-top: 20px;
-                   }
-                   .txt{
-                       font-size: 18px;
-                       margin-top: 7px;
-                   }
-               }
            }
        }
    }
@@ -233,6 +213,8 @@ a{
    }
 }
 
+
+
 .mod-footer{
     overflow: hidden;
     position: absolute;
@@ -244,8 +226,9 @@ a{
        .fb{
            width: 294px;
            height: 119px;
-           font-size: 26px;
-           background-color: #00e3b7;
+           font-size: 26px;/*px*/
+           background:url(../../images/b-person/bg-l.png) no-repeat;
+           background-size:cover;
            color: #fff;
            border: none;
            .isema-publish{
@@ -257,8 +240,9 @@ a{
        .zx{
            width: 456px;
            height: 119px;
-           font-size: 26px;
-           background-color: #eee;
+           font-size: 26px;/*px*/
+           background:url(../../images/b-person/bg-r.png) no-repeat;
+           background-size:cover;
            border: none;
        }
    }

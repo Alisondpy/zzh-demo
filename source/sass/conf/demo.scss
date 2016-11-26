@@ -10,7 +10,7 @@ h1 {
     font-size: 36px;
     /*px*/
     padding: 0 0 10px 10px;
-    border-bottom: 1px solid #40d1ad;
+    border-bottom: 1px solid #40d1ad;/*no*/
     /*no*/
     height: 36px;
     line-height: 36px;
@@ -42,7 +42,7 @@ h1 {
             display: none;
         }
         .ui-slider-pagination {
-            font-size: 0;
+            font-size: 0;  /*px*/
             height: 12px;
             bottom: 15px;
             li {
@@ -82,7 +82,7 @@ h1 {
         height: 60px;
         line-height: 60px;
         text-align: center;
-        font-size: 24px;
+        font-size: 24px;  /*px*/
         /*px*/
         display: block;
         margin: 20px auto;

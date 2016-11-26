@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import "../common/common";
+
+/*部分样式相同的部分*/
+	.my-need, .my-product, .my-company{
+			height:80px;
+			line-height:80px;
+			border-bottom:1px solid #eee;/*no*/
+			font-size:24px;/*px*/
+			color:#000;
+			padding:0 20px 0 25px;
+			.isema-arrow-right{
+				float:right;
+			}
+		}
+
+.mod-top{
+    width:100%;
+    height: 236px;
+    .top{
+        .bg-picture{
+            width: 100%;
+            height: 248px;
+            background: url(../../images/b-detail/1.png) no-repeat;
+            text-align: center;
+            background-size:100%;
+            .icon{
+                padding-top: 20px;
+               img{
+                   width: 123px;
+                   height: 123px;
+                   border-radius: 50%;
+               }
+            }
+            .pro{
+                color: #fff;
+                margin-top: 15px;
+                font-size: 22px;
+            }
+            .info{
+                color: #fff;
+                margin-top: 10px;
+                font-size: 16px;/*px*/
+                .linenone{
+					margin-right:10px;
+                }
+                .lineleft{
+                	border-left:1px solid #fff;
+                	padding-left:10px
+                }
+            }
+        }
+    }
+}
+/*总的内容*/
+.mod-con{
+	/*上面的内容*/
+	.up-con{
+		height:330px;
+		border-bottom:1px solid #eee;/*no*/
+	
+		.diff-con{
+			.left-zone{
+				position:relative;
+				width:118px;
+				height:155px;
+				margin:27px 0 0 128px;
+				float:left;
+				.bg-pic{
+					.bg-big{
+						background:url(../../images/b-person/loading.png) no-repeat;	
+						width:102px;
+						height:105px;
+						margin-top:32px;
+						text-align:center;
+						background-size:cover;
+						line-height:105px;/*px*/
+						.isema-doing{
+							font-size:60px;/*px*/
+							color:#fff;
+						}
+					}
+					.bg-small{
+						position:absolute;
+						top:0;
+						right:0;
+						margin-top:20px;
+						background:url(../../images/b-person/square.png) no-repeat;
+						width:36px;
+						height:36px;
+						background-size:cover;
+						text-align:center;
+						line-height:36px;/*px*/
+					}
+				}
+				.txt-doing{
+					margin:15px 0 0 10px;
+				}
+			}
+			.right-zone{	
+				width:118px;
+				height:155px;
+				margin:27px 133px 0 0;
+				float:right;
+				.bg-pic{
+					.bg-big{
+						background:url(../../images/b-person/end.png) no-repeat;	
+						background-size:cover;
+						width:102px;
+						height:105px;
+						margin-top:32px;
+						text-align:center;
+						line-height:101px;/*px*/
+						.isema-shutdown{
+							font-size:55px;/*px*/
+							color:#fff;
+						}
+					}
+				}
+				.txt-doing{
+					margin:15px 0 0 10px;
+				}
+			}
+		}
+	}
+	/*中间颜色块*/
+	.col{
+		width:750px;
+		height:46px;
+		background-color:#eee;/*no*/
+	}
+	/*最下面的内容*/
+	.down-con{
+		.my-need{
+			height:80px;
+			line-height:80px;
+			border-bottom:1px solid #eee;/*no*/
+			font-size:24px;/*px*/
+			color:#000;
+			padding:0 20px 0 25px;
+			.isema-arrow-right{
+				float:right;
+			}
+		}
+	}
+}
