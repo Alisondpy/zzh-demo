@@ -60,6 +60,7 @@ define(function(require, exports, module) {
         _this.mask.on('tap', function(e) {
             e.stopPropagation();
             _this.filterMenu.hide();
+            _this.el.removeClass('active');
         });
     }
 
