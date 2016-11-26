@@ -20,7 +20,7 @@ body {
         border-radius: 58px;
         margin: 0 auto;
         width: 710px;
-        border: 1px solid #02fdab;
+        border: 1px solid #eee;
         position: relative;
         background-color: #fff;
         .select-box {
@@ -61,6 +61,7 @@ body {
                     }
                 }
                 .selected {
+                    border-color: $select-color;
                     color: $select-color;
                 }
             }
