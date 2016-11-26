@@ -115,3 +115,15 @@ body {
 .hide {
     display: none;
 }
+
+.ui-tag {
+    $select-color: #40d1ad;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    padding: 0 5px;
+    border: 1px solid $select-color;
+    color: $select-color;
+    margin-left: 5px;
+    border-radius: 3px;
+}

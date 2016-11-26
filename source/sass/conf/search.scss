@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import "../common/common";
+@import "../module/ui-products";
+@import "../module/ui-service-providers";
 html,
 body {
     background-color: #eee;
@@ -11,7 +13,6 @@ body {
     width: 750px;
 }
 
-$select-color:#40d1ad;
 .mod-search {
     margin-top: 24px;
     .cnt {
@@ -234,7 +235,7 @@ $select-color:#40d1ad;
             margin-right: 3px;
         }
     }
-    .no-more-data{
+    .no-more-data {
         display: block;
     }
 }
@@ -244,52 +245,6 @@ $select-color:#40d1ad;
     .list {
         width: 705px;
         margin: 8px auto 0;
-        .item {
-            height: 135px;
-            padding: 20px;
-            position: relative;
-            background-color: #fff;
-            margin-bottom: 20px;
-            .img {
-                position: absolute;
-                left: 20px;
-                top: 20px;
-                width: 224px;
-                height: 135px;
-                overflow: hidden;
-                img {
-                    height: 135px;
-                }
-            }
-            .cnt {
-                margin-left: 240px;
-                .title {
-                    height: 28px;
-                    position: relative;
-                    .name {
-                        position: absolute;
-                        left: 0;
-                        width: 310px;
-                        font-size: 28px;
-                        /*px*/
-                        line-height: 28px;
-                        height: 28px;
-                        font-weight: 700;
-                    }
-                    .mod-tags {
-                        position: absolute;
-                        right: 0;
-                    }
-                }
-                .desc {
-                    overflow: hidden;
-                    line-height: 26px;
-                    height: 78px;
-                    margin-top: 28px;
-                    text-align: justify;
-                }
-            }
-        }
     }
 }
 
@@ -298,55 +253,6 @@ $select-color:#40d1ad;
     .list {
         width: 705px;
         margin: 8px auto 0;
-        .item {
-            &:nth-child(odd) {
-                margin-right: 9px;
-            }
-            background-color: #fff;
-            float: left;
-            width: 298px;
-            padding: 20px 25px 25px 25px;
-            margin-bottom: 20px;
-            .cnt {
-                position: relative;
-                height: 88px;
-                .img {
-                    position: absolute;
-                    left: 0;
-                    top: -10px;
-                    width: 88px;
-                    height: 88px;
-                    overflow: hidden;
-                    img {
-                        width: 88px;
-                        height: 88px;
-                        border-radius: 50%;
-                    }
-                }
-                .title {
-                    margin: 15px 0 0 105px;
-                    .name {
-                        height: 28px;
-                        line-height: 28px;
-                        font-size: 28px;
-                        /*px*/
-                        font-weight: 700;
-                    }
-                    .mod-tags {
-                        overflow: hidden;
-                        height: 28px;
-                        margin-top: 10px;
-                    }
-                }
-            }
-            .desc {
-                line-height: 26px;
-                height: 52px;
-                overflow: hidden;
-                text-align: justify;
-                margin-top: 10px;
-            }
-        }
     }
 }
 

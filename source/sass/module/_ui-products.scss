@@ -1,0 +1,46 @@
+.ui-product {
+    height: 135px;
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 20px;
+    .img {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 224px;
+        height: 135px;
+        overflow: hidden;
+        img {
+            height: 135px;
+        }
+    }
+    .cnt {
+        margin-left: 240px;
+        .title {
+            height: 28px;
+            position: relative;
+            .name {
+                position: absolute;
+                left: 0;
+                width: 310px;
+                font-size: 28px;
+                /*px*/
+                line-height: 28px;
+                height: 28px;
+                font-weight: 700;
+            }
+            .mod-tags {
+                position: absolute;
+                right: 0;
+            }
+        }
+        .desc {
+            overflow: hidden;
+            line-height: 26px;
+            height: 78px;
+            margin-top: 28px;
+            text-align: justify;
+        }
+    }
+}

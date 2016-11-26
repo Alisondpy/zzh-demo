@@ -158,7 +158,7 @@ define(function(require, exports, module) {
 
     function _getProviderItem(data) {
         var str = '';
-        str += '<li class="item">';
+        str += '<div class="ui-service-providers">';
         str += '    <div class="cnt">';
         str += '        <div class="img">';
         str += '            <img class="error-img" src="http://img1.imgtn.bdimg.com/it/u=4002728021,3052237326&fm=21&gp=0.jpg">';
@@ -168,10 +168,10 @@ define(function(require, exports, module) {
         str += '                        杭州带着风就开始减肥的设计费多乐士';
         str += '                    </h3>';
         str += '            <ul class="mod-tags clearfix">';
-        str += '                <li>';
+        str += '                <li class="ui-tag">';
         str += '                    软件工具';
         str += '                </li>';
-        str += '                <li>';
+        str += '                <li class="ui-tag">';
         str += '                    软件工具';
         str += '                </li>';
         str += '            </ul>';
@@ -180,13 +180,13 @@ define(function(require, exports, module) {
         str += '    <div class="desc">';
         str += '        我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到 我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到';
         str += '    </div>';
-        str += '</li>';
+        str += '</div>';
         return str;
     }
 
     function _getProductItem(data) {
         var str = '';
-        str += '<li class="item">';
+        str += '<div class="ui-product">';
         str += '    <div class="img">';
         str += '        <img class="error-img" src="http://img1.imgtn.bdimg.com/it/u=4002728021,3052237326&fm=21&gp=0.jpg">';
         str += '    </div>';
@@ -194,10 +194,10 @@ define(function(require, exports, module) {
         str += '        <div class="title clearfix">';
         str += '            <h3 class="name txt-overflow">超级OA</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        str += '                <li>';
+        str += '                <li class="ui-tag">';
         str += '                    软件工具';
         str += '                </li>';
-        str += '                <li>';
+        str += '                <li class="ui-tag">';
         str += '                    软件工具';
         str += '                </li>';
         str += '            </ul>';
@@ -206,7 +206,7 @@ define(function(require, exports, module) {
         str += '            我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到 我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到';
         str += '        </div>';
         str += '    </div>';
-        str += '</li>';
+        str += '</div>';
         return str;
     }
 
