@@ -6,96 +6,164 @@
     <!--#include file="./common/meta.html"-->
     <!--#include file="./common/css.html"-->
     <link rel="stylesheet" type="text/css" href="../fonts/isema/iconfont.css">
-    <link rel="stylesheet" href="//s1.zzhstatic.com/m-service-market/dist/css/conf/search.css?v=7d3085c289" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="//s1.zzhstatic.com/m-service-market/dist/css/conf/search.css?v=9d6bcb476c" type="text/css" charset="utf-8">
 </head>
+
 <body>
     <!--#include file="./common/header.html"-->
-    <!-- 搜索模块 -->
-    <div class="mod-search pub-width">
-        <div class="box">
-            <div class="select f-l">
-                <span data-id="product">服务产品</span>
-                <i class="isema isema-triangle-right-and-down"></i>
-                <div class="option">
-                    <div class="product" data-value="1">服务产品</div>
-                    <div class="vendor" data-value="2">服务商</div>
+    <div class="mod-page">
+        <!-- 搜索模块 start-->
+        <div class="mod-search w-750">
+            <div class="cnt" id="jSearchBox">
+                <div class="select-box">
+                    <div class="select-title" node-type="selectTitle"><span node-type="selected" data-id="1">服务产品</span><i class="isema isema-triangle-right-and-down"></i></div>
+                    <ul class="select-options" node-type="selectList">
+                        <li class="options" data-id="1">服务产品</li>
+                        <li class="options" data-id="2">服务商</li>
+                    </ul>
                 </div>
+                <input class="ipt" type="text" node-type="inputWord" placeholder="请输入搜索关键词">
+                <button class="btn" node-type="btn"><i class="isema isema-search"></i>搜索</button>
             </div>
-            <input type="text" name="ipt" class="ipt f-l" id="ipt" placeholder="请输入服务产品名称" />
         </div>
-    </div>
-    <!-- 选择产品分类和地区模块 -->
-    <div class="mod-split">
-        <div class="allsplit sub-width">
-            <span class="split"><em data-id="-1">所有分类</em><i class="isema isema-menu-down"></i></span>
-            <span class="area"><em data-id="-1">所有地区</em><i class="isema isema-menu-down"></i></span>
-        </div>
-        <div id="alllist">
-            <ul class="allspt">
-                <li class="jcolor" data-id="-1"><em>所有分类</em><i class="isema isema-success jcolor"></i></li>
-                <!-- <li><em>运营推广</em><i class="isema isema-success"></i></li>
-                <li><em>美工设计</em><i class="isema isema-success"></i></li>
-                <li><em>软件工具</em><i class="isema isema-success"></i></li>
-                <li><em>物流仓储</em><i class="isema isema-success"></i></li>
-                <li><em>企业孵化</em><i class="isema isema-success"></i></li> -->
-            </ul>
-            <ul class="allarea">
-                <li class="area-country">
-                    <div class="no-area active" data-id="-1">不限区域</div>
-                    <div class="all-country" data-id="0">全国</div>
-                </li>
-                <li class="area-list">
-                    <!-- <div data-id="1">华北</div>
-                    <div>华中</div>
-                    <div>华东</div>
-                    <div>华南</div>
-                    <div>东北</div>
-                    <div>西北</div>
-                    <div>西南</div>
-                    <div>港澳台</div> -->
-                </li>
-                <!-- 
-                <li class="re-compelet">
-                    <span class="jbtn-reset">重置</span>
-                    <span class="jbtn-compelet active">完成</span>
-                </li> -->
-
-            </ul>
-        </div>
-    </div>
-    <!-- 遮罩层 -->
-
-    <div class="mod-layout"></div>
-    <!-- 创建选择搜索列表 -->
-    <div class="mod-creatlist pub-width">
-        <ul class="creatul">
-            <li class="item clearfix">
-                <a href="demo.html" class="itema">
-                    <div class="f-l img">
-                        <img src="//s1.zzhstatic.com/m-service-market/dist/images/news.gif?v=333545e134" alt="psd" />
-                    </div>
-                    <div class="cnt f-l">
-                        <div class="title">
-                            <h3>EXOASD</h3>
+        <!-- 搜索模块 end-->
+        <!-- 选择产品分类和地区模块 start-->
+        <div class="mod-filter w-750">
+            <ul class="filter-list clearfix">
+                <li class="filter-item" id="jChooseType">
+                    <span node-type="selectedTitle" data-id="-1">所有分类</span>
+                    <i class="isema isema-menu-down"></i>
+                    <!-- 分类列表在这里输出 start -->
+                    <div class="mod-filter-menu" node-type="filterMenu">
+                        <div class="scroll-wrapper" node-type="iscrollWrapper">
+                            <div class="scroll-container">
+                                <ul class="menu-list" node-type="menuList">
+                                    <li class="menu-item clearfix" data-id="-1">
+                                        <span>所有分类</span>
+                                        <i class="isema isema-success"></i>
+                                    </li>
+                                    <li class="menu-item clearfix" data-id="1">
+                                        <span>1</span>
+                                        <i class="isema isema-success"></i>
+                                    </li>
+                                    <li class="menu-item clearfix" data-id="2">
+                                        <span>2</span>
+                                        <i class="isema isema-success"></i>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="tool">
-                            <span class="soft">软件工具</span><span class="soft">运营推广</span>
-
-                        </div>
-                        <div class="details">
-                            <p>
-                            风刀霜剑看风景的失联客机富利卡就分开了送积分卡数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看风景的失联客机富利卡就联客机富利卡就分开了送积分卡数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看风景的失联客机富利卡就
-                            </p>
+                        <div class="mask" node-type="mask">
                         </div>
                     </div>
-                </a>
-            </li> 
-        </ul>
+                    <!-- 分类列表在这里输出 end -->
+                </li>
+                <li class="filter-item" id="jChooseRegion">
+                    <span node-type="selectedTitle" data-id="-1">全部地区</span>
+                    <i class="isema isema-menu-down"></i>
+                    <!-- 地区列表在这里输出 start -->
+                    <div class="mod-filter-menu" node-type="filterMenu">
+                        <div class="scroll-wrapper" node-type="iscrollWrapper">
+                            <div class="scroll-container">
+                                <ul class="menu-list" node-type="menuList">
+                                    <li class="menu-item clearfix" data-id="-1">
+                                        <span>全部地区</span>
+                                        <i class="isema isema-success"></i>
+                                    </li>
+                                    <li class="menu-item clearfix" data-id="1">
+                                        <span>1</span>
+                                        <i class="isema isema-success"></i>
+                                    </li>
+                                    <li class="menu-item clearfix" data-id="2">
+                                        <span>2</span>
+                                        <i class="isema isema-success"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mask" node-type="mask">
+                        </div>
+                    </div>
+                    <!-- 地区列表在这里输出 end -->
+                </li>
+            </ul>
+        </div>
+        <!-- 选择产品分类和地区模块 end-->
+        <!-- 服务产品 start -->
+        <div class="ui-iscroll" id="jIscrollList1" style="display: none;" data-id="product">
+            <div class="mod-products w-750">
+                <div class="pull-down" node-type="pull-down"></div>
+                <div class="list" node-type="scrollList">
+                    <div class="ui-product">
+                        <div class="img">
+                            <img class="jImg error-img" src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.imgtn.bdimg.com/it/u=4002728021,3052237326&fm=21&gp=0.jpg">
+                        </div>
+                        <div class="cnt">
+                            <div class="title clearfix">
+                                <h3 class="name txt-overflow">超级OA</h3>
+                                <ul class="mod-tags clearfix">
+                                    <li class="ui-tag">
+                                        软件工具
+                                    </li>
+                                    <li class="ui-tag">
+                                        软件工具
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="desc">
+                                我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到 我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-up" node-type="pull-up"></div>
+            </div>
+        </div>
+        <!-- 服务产品 end -->
+        <!-- 服务商 start -->
+        <div class="ui-iscroll" id="jIscrollList" data-id="provider">
+            <div class="mod-service-providers w-750">
+                <div class="pull-down" node-type="pull-down"></div>
+                <div class="list clearfix" node-type="scrollList">
+                    <div class="ui-service-providers">
+                        <div class="cnt">
+                            <div class="img">
+                                <img class="jImg error-img" src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.imgtn.bdimg.com/it/u=4002728021,3052237326&fm=21&gp=0.jpg">
+                            </div>
+                            <div class="title">
+                                <h3 class="name txt-overflow">
+                                            杭州带着风就开始减肥的设计费多乐士
+                                        </h3>
+                                <ul class="mod-tags clearfix">
+                                    <li class="ui-tag">
+                                        软件工具
+                                    </li>
+                                    <li class="ui-tag">
+                                        软件工具
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到 我说的副教授积分离开就放开手经费实际福克斯就放开手的积分上的看法接口点击发射到
+                        </div>
+                    </div>   
+                </div>
+                <div class="pull-up" node-type="pull-up"></div>
+            </div>
+        </div>
+        <!-- 服务商 end -->
+        <!-- 空列表情况 start -->
+        <div class="mdd-empty">
+        </div>
+        <!-- 空列表情况 end -->
+    </div>
+    </div>
     </div>
     <!--#include file="./common/footer.html"-->
     <!--#include file="./common/js.html"-->
     <script type="text/javascript">
-        require(['conf/search'],function(){});
+    require(['conf/search'], function() {});
     </script>
     <!--#include file="./common/tj.html"-->
     <!--#include file="./common/statistics.html"-->
