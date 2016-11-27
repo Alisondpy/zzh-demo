@@ -2,11 +2,11 @@ define(function(require, exports, module) {
     'use strict';
     var $ = require('jquery');
     var Util = require('lib/core/1.0.0/utils/util');
-    var EventEmitter = require('lib/core/1.0.0/event/emitter');
     var build = require('lib/core/1.0.0/dom/build');
 
     /**
      * 浮动导航
+     * @params options {mix} 菜单配置
      */
     function FixNav(options) {
         var _this = this;
@@ -67,17 +67,26 @@ define(function(require, exports, module) {
         var _this = this;
         _this.more.on('click', function() {
             if (_this.el.hasClass('ui-fix-nav-show')) {
-                _this.cnt.width(0);
-                _this.el.removeClass('ui-fix-nav-show');
+                _this.hide();
             } else {
-                _this.cnt.width(_this.itemsWidth);
-                _this.el.addClass('ui-fix-nav-show');
+                _this.show();
             }
         });
     }
 
-    //继承自定义事件
-    // Util.inherits(FixNav, EventEmitter);
+    //收起
+    FixNav.prototype.hide = function() {
+        var _this = this;
+        _this.cnt.width(0);
+        _this.el.removeClass('ui-fix-nav-show');
+    }
+
+    //展开
+    FixNav.prototype.show = function() {
+        var _this = this;
+        _this.cnt.width(_this.itemsWidth);
+        _this.el.addClass('ui-fix-nav-show');
+    }
 
     module.exports = FixNav;
 });

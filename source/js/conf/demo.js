@@ -23,6 +23,8 @@ define(function(require, exports, module) {
         }]
     });
 
+    fixNav.show();
+
     //slider
     var slider = new Slider('#jSlider', {
         lazyLoad: {
