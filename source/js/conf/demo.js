@@ -5,6 +5,23 @@ define(function(require, exports, module) {
     var Slider = require('lib/ui/slider/3.0.4/slider');
     var Lazyload = require('lib/plugins/lazyload/1.9.3/lazyload');
     var io = require('lib/core/1.0.0/io/request');
+    var FixNav = require('../module/fix-nav/fix-nav');
+
+    var fixNav = new FixNav({
+        items: [{
+            href: '/',
+            title: '首页',
+            iconClass: 'isema isema-home'
+        }, {
+            href: '',
+            title: '发布需求',
+            iconClass: 'isema isema-publish'
+        }, {
+            href: '',
+            title: '个人中心',
+            iconClass: 'isema isema-admin'
+        }]
+    });
 
     //slider
     var slider = new Slider('#jSlider', {
@@ -87,7 +104,7 @@ define(function(require, exports, module) {
         },
 
         bubble: function() {
-            box.bubble('我是气泡，可以任意调整方向', {align:'t'}, this);
+            box.bubble('我是气泡，可以任意调整方向', { align: 't' }, this);
         },
 
         warn: function() {
@@ -121,9 +138,11 @@ define(function(require, exports, module) {
         snap: true
     });
 
-    //iscroll
-    var iscroll = new IScroll('#jWrapper',{
-        scrollbars: true
+    $('#jFixNav').find('.more').click(function() {
+        if ($('#jFixNav').hasClass('ui-fix-nav-show')) {
+            $('#jFixNav').removeClass('ui-fix-nav-show');
+        } else {
+            $('#jFixNav').addClass('ui-fix-nav-show');
+        }
     });
-    console.dir(iscroll.options);
 });

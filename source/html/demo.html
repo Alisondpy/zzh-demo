@@ -50,8 +50,8 @@
             <button class="btn" data-type="alert">Opps! (alert)</button>
             <button class="btn" data-type="confirm">Are yout sure (confirm)</button>
             <button class="btn" data-type="tips">Thanks! (tips)</button>
-            <button class="btn" data-type="loadUrl">Send a asyn  (box.loadUrl())</button>
-            <button class="btn" data-type="loading">Send a asyn  (box.loading())</button>
+            <button class="btn" data-type="loadUrl">Send a asyn (box.loadUrl())</button>
+            <button class="btn" data-type="loading">Send a asyn (box.loading())</button>
             <button class="btn" data-type="sendPost" data-async-text="登录中...">Send post (io.get())</button>
         </div>
         <!-- 弹窗 end -->
@@ -116,6 +116,37 @@
             </ul>
         </div>
         <!-- iscroll end -->
+        <!-- fix-nav start -->
+        <h1>fix-nav</h1>
+        <div class="ui-fix-nav" id="jFixNav" style="display: none;">
+            <div class="mask" node-type="mask"></div>
+            <div class="cnt" node-type="cnt">
+                <ul class="list clearfix" node-type="list">
+                    <li class="item" node-type="home">
+                        <a>
+                            <i class="isema isema-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a>
+                            <i class="isema isema-publish"></i>
+                            <span>发布需求</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a>
+                            <i class="isema isema-admin"></i>
+                            <span>个人中心</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="more" node-type="more">
+                <i class="isema isema-arrow-right"></i>
+            </div>
+        </div>
+        <!-- fix-nav end -->
     </div>
     <!--#include file="./common/footer.html"-->
     <!--#include file="./common/js.html"-->

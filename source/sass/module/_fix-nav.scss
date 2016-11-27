@@ -1,0 +1,80 @@
+.ui-fix-nav {
+    transition: transform .3s ease-in-out .2s;
+    transform: translateX(-100);
+    position: fixed;
+    left: 50px;
+    bottom: 70px;
+    height: 70px;
+    border-radius: 70px;
+    padding: 0 35px;
+    overflow: hidden;
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: #000;
+        opacity: 0.5;
+    }
+    .cnt {
+        width: 0;
+        transition: width .4s;
+        overflow: hidden;
+        margin-right: -20px;
+        .list {
+            position: relative;
+            z-index: 2;
+            .item {
+                float: left;
+                width: 110px;
+                height: 70px;
+                a {
+                    float: left;
+                    display: block;
+                    width: 110px;
+                    height: 70px;
+                    overflow: hidden;
+                }
+                i,
+                span {
+                    width: 100%;
+                    color: #fff;
+                    display: block;
+                    text-align: center;
+                    overflow: hidden;
+                }
+                i {
+                    margin-top: 8px;
+                    text-align: 36px;
+                    /*px*/
+                    line-height: 36px;
+                }
+                span {
+                    line-height: 16px;
+                    font-size: 16px;
+                    /*px*/
+                }
+            }
+        }
+    }
+    .more {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        color: #fff;
+        z-index: 3;
+        transform: rotate(0);
+    }
+}
+
+.ui-fix-nav-show {
+    .more {
+        transform: rotate(180deg);
+    }
+}
