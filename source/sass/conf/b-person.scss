@@ -60,65 +60,62 @@
 		border-bottom:1px solid #eee;/*no*/
 	
 		.diff-con{
+			height:250px;
+			display:flex;
+			align-items:center;
+			justify-content:space-between;
+			padding:0 125px;
 			.left-zone{
 				position:relative;
-				width:118px;
+				width:102px;
 				height:155px;
-				margin:27px 0 0 128px;
 				float:left;
-				.bg-pic{
-					.bg-big{
-						background:url(../../images/b-person/loading.png) no-repeat;	
-						width:102px;
-						height:105px;
-						margin-top:32px;
-						text-align:center;
-						background-size:cover;
-						line-height:105px;/*px*/
-						.isema-doing{
-							font-size:60px;/*px*/
-							color:#fff;
-						}
-					}
-					.bg-small{
+				text-align:center;
+				.zone{
+
+					width:102px;
+					height:101px;
+					line-height:101px;
+					background-color:#2bd1aa;
+					border-radius:10px;
+				}
+				.square{
 						position:absolute;
-						top:0;
-						right:0;
-						margin-top:20px;
-						background:url(../../images/b-person/square.png) no-repeat;
-						width:36px;
-						height:36px;
-						background-size:cover;
-						text-align:center;
-						line-height:36px;/*px*/
+						top:-8px;
+						right:-8px;
+						width:25px;
+						height:25px;
+						background-color:#f00;
+						border-radius:50%;
 					}
+				.isema-doing{
+					font-size:55px;
+					color:#fff;
 				}
 				.txt-doing{
-					margin:15px 0 0 10px;
+					margin-top:15px;
 				}
 			}
 			.right-zone{	
-				width:118px;
+				position:relative;
+				width:102px;
 				height:155px;
-				margin:27px 133px 0 0;
-				float:right;
-				.bg-pic{
-					.bg-big{
-						background:url(../../images/b-person/end.png) no-repeat;	
-						background-size:cover;
-						width:102px;
-						height:105px;
-						margin-top:32px;
-						text-align:center;
-						line-height:101px;/*px*/
-						.isema-shutdown{
-							font-size:55px;/*px*/
-							color:#fff;
-						}
-					}
+				float:left;
+				text-align:center;
+				.zone{
+
+					width:102px;
+					height:101px;
+					line-height:101px;
+					background-color:#ff4545;
+					border-radius:10px;
+				}
+				.isema-shutdown{
+					font-size:55px;
+					color:#fff;
 				}
 				.txt-doing{
-					margin:15px 0 0 10px;
+					margin-top:15px;
 				}
 			}
 		}
