@@ -201,7 +201,6 @@ body {
     bottom: 0;
     overflow: hidden;
     z-index: 1;
-    .pull-down,
     .pull-up,
     .no-more-data {
         display: none;
@@ -240,6 +239,7 @@ body {
 .mod-service-providers {
     position: relative;
     .list {
+        overflow: hidden;
         width: 705px;
         margin: 8px auto 0;
     }

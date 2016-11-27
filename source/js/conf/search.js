@@ -158,8 +158,7 @@ define(function(require, exports, module) {
 
     function _getProviderItem(data) {
         var str = '';
-        str += '<a href="' + url + '">';
-        str += '<div class="ui-service-providers">';
+        str += '<a class="ui-service-providers" href="' + data.url + '">';
         str += '    <div class="cnt">';
         str += '        <div class="img">';
         str += '            <img class="error-img" src="' + data.logUrl + '">';
@@ -174,14 +173,13 @@ define(function(require, exports, module) {
         str += '        </div>';
         str += '    </div>';
         str += '    <div class="desc">' + data.description + '</div>';
-        str += '</div></a>';
+        str += '</a>';
         return str;
     }
 
     function _getProductItem(data) {
         var str = '';
-        str += '<a href="' + url + '">';
-        str += '<div class="ui-product">';
+        str += '<a class="ui-product" href="' + data.url + '">';
         str += '    <div class="img">';
         str += '        <img class="error-img" src="' + data.logUrl + '">';
         str += '    </div>';
@@ -196,7 +194,7 @@ define(function(require, exports, module) {
         str += '        </div>';
         str += '    <div class="desc">' + data.description + '</div>';
         str += '    </div>';
-        str += '</div></a>';
+        str += '</a>';
         return str;
     }
 
