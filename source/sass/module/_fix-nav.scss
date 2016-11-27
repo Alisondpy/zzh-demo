@@ -70,11 +70,31 @@
         color: #fff;
         z-index: 3;
         transform: rotate(0);
+        animation: rotate .5s;
+    }
+}
+
+@keyframes reverseRotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(0);
     }
 }
 
 .ui-fix-nav-show {
     .more {
         transform: rotate(180deg);
+        animation: reverseRotate .5s;
     }
 }

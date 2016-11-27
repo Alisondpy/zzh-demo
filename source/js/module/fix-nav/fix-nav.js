@@ -66,12 +66,12 @@ define(function(require, exports, module) {
     FixNav.prototype._initEvent = function() {
         var _this = this;
         _this.more.on('click', function() {
-            if (_this.more.hasClass('ui-fix-nav-show')) {
+            if (_this.el.hasClass('ui-fix-nav-show')) {
                 _this.cnt.width(0);
-                _this.more.removeClass('ui-fix-nav-show');
+                _this.el.removeClass('ui-fix-nav-show');
             } else {
                 _this.cnt.width(_this.itemsWidth);
-                _this.more.addClass('ui-fix-nav-show');
+                _this.el.addClass('ui-fix-nav-show');
             }
         });
     }
