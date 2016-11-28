@@ -6,108 +6,40 @@
             "logUrl": "../images/conf/logo.png",
             "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
             "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
+            "serviceTypes": [{
+                "code": "1001",
+                "codeName": "软件工具"
+            }, {
+                "code": "1001",
+                "codeName": "软件工具"
+            }]
+        }, {
             "name": "中智汇",
             "logUrl": "../images/conf/logo.png",
             "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
             "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
+            "serviceTypes": [{
+                "code": "1001",
+                "codeName": "软件工具"
+            }, {
+                "code": "1001",
+                "codeName": "软件工具"
+            }]
+        }, {
             "name": "中智汇",
             "logUrl": "../images/conf/logo.png",
             "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
             "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
-            "name": "中智汇",
-            "logUrl": "../images/conf/logo.png",
-            "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
-            "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
-            "name": "中智汇",
-            "logUrl": "../images/conf/logo.png",
-            "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
-            "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
-            "name": "中智汇",
-            "logUrl": "../images/conf/logo.png",
-            "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
-            "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
-            "name": "中智汇",
-            "logUrl": "../images/conf/logo.png",
-            "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
-            "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
-        },{
-            "name": "中智汇",
-            "logUrl": "../images/conf/logo.png",
-            "description": "数据库富家大室看经费看电视就分开的健身房几点睡可减肥的哭声风刀霜剑看",
-            "url": "demo.html",
-            "code": [
-                "1001",
-                "1002"
-            ],
-            "codeName": [
-                "软件工具",
-                "应用工具"
-            ]
+            "serviceTypes": [{
+                "code": "1001",
+                "codeName": "软件工具"
+            }, {
+                "code": "1001",
+                "codeName": "软件工具"
+            }]
         }],
-        "pageSize": "apiResult.data.servicePageDto.pageVendor.pageSize",
-        "page": "apiResult.data.servicePageDto.pageVendor.page"
+        "pageSize": "20",
+        "page": "1"
     },
     "message": ""
 }

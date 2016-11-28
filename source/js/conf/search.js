@@ -166,8 +166,8 @@ define(function(require, exports, module) {
         str += '        <div class="title">';
         str += '            <h3 class="name txt-overflow">' + data.name + '</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        for (var i = 0, len = data.codeName.length; i < len; i++) {
-            str += '<li class="ui-tag">' + data.codeName[i] + '</li>';
+        for (var i = 0, len = data.serviceTypes.length; i < len; i++) {
+            str += '<li class="ui-tag">' + data.serviceTypes[i]['codeName'] + '</li>';
         }
         str += '            </ul>';
         str += '        </div>';
@@ -187,8 +187,8 @@ define(function(require, exports, module) {
         str += '        <div class="title clearfix">';
         str += '            <h3 class="name txt-overflow">' + data.name + '</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        for (var i = 0, len = data.codeName.length; i < len; i++) {
-            str += '<li class="ui-tag">' + data.codeName[i] + '</li>';
+        for (var i = 0, len = data.categoryItems.length; i < len; i++) {
+            str += '<li class="ui-tag">' + data.categoryItems[i]['name'] + '</li>';
         }
         str += '            </ul>';
         str += '        </div>';
