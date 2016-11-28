@@ -97,7 +97,7 @@ define(function(require, exports, module) {
         var _this = this;
         return {
             word: _this.inputWord.val(),
-            typeId: _this.selected.attr('id'),
+            typeId: _this.selected.attr('data-id'),
             typeTxt: _this.selected.html()
         };
     }

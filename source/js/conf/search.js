@@ -23,26 +23,26 @@ define(function(require, exports, module) {
     var searchBox = new SearchBox('#jSearchBox');
     //搜索框改版搜索类型
     searchBox.on('changType', function(data) {
-        searchUrl.jsonUrl.TypeName = data.typeId;
+        searchUrl.jsonUrl.typeName = data.typeId;
         searchUrl.go();
     });
     //搜索框回车或者按钮
     searchBox.on('enter', function(data) {
-        searchUrl.jsonUrl.KeyWords = data.word;
+        searchUrl.jsonUrl.keyWords = data.word;
         searchUrl.go();
     });
 
     //刷选条件 选择分类
     var chooseType = new RadioChoice('#jChooseType');
     chooseType.on('change', function(data) {
-        searchUrl.jsonUrl.Type = data.id;
+        searchUrl.jsonUrl.type = data.id;
         searchUrl.go();
     });
 
     //刷选条件 选择地区
     var chooseRegion = new RadioChoice('#jChooseRegion');
     chooseRegion.on('change', function(data) {
-        searchUrl.jsonUrl.ServiceScope = data.id;
+        searchUrl.jsonUrl.serviceScope = data.id;
         searchUrl.go();
     });
 
