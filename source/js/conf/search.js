@@ -52,11 +52,11 @@ define(function(require, exports, module) {
     function SearchUrl(options) {
         var _this = this;
         var defaults = {
-            TypeName: '', //服务商、服务产品
-            ServiceScope: '', //地区
-            Type: '', //刷选分类
-            Page: 1, //当前页
-            KeyWords: '' //关键词
+            typeName: '', //服务商、服务产品
+            serviceScope: '', //地区
+            type: '', //刷选分类
+            page: 1, //当前页
+            keyWords: '' //关键词
         };
         _this.jsonUrl = $.extend({}, defaults, options);
     }
@@ -90,10 +90,10 @@ define(function(require, exports, module) {
     }
 
     var searchUrl = new SearchUrl({
-        TypeName: searchBox.get().typeId,
-        ServiceScope: chooseRegion.get().id, //地区
-        Type: chooseType.get().id, //刷选分类
-        KeyWords: searchBox.get().word //关键词
+        typeName: searchBox.get().typeId,
+        serviceScope: chooseRegion.get().id, //地区
+        type: chooseType.get().id, //刷选分类
+        keyWords: searchBox.get().word //关键词
     });
 
     function PullUp(selector) {
@@ -120,7 +120,7 @@ define(function(require, exports, module) {
         })
         _this.iscroll.on('pullUp', function(callback) {
             var params = searchUrl.getJsonUrl();
-            params.Page = currentPage + 1;
+            params.page = currentPage + 1;
             IO.get($PAGE_DATA['getSearchList'], params, function(data) {
                 if (data.error > 0) {
                     Box.warn('加载数据失败，再试下看看！');
