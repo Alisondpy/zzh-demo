@@ -1,10 +1,10 @@
 
 @font-face {font-family: "isema";
-  src: url('iconfont.eot?t=1479896291209'); /* IE9*/
-  src: url('iconfont.eot?t=1479896291209#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1479896291209') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1479896291209') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1479896291209#isema') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1480302814962'); /* IE9*/
+  src: url('iconfont.eot?t=1480302814962#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1480302814962') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1480302814962') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1480302814962#isema') format('svg'); /* iOS 4.1- */
 }
 
 .isema {
@@ -39,6 +39,8 @@
 .isema-home:before { content: "\e603"; }
 
 .isema-success:before { content: "\e626"; }
+
+.isema-box:before { content: "\e62c"; }
 
 .isema-loading:before { content: "\e6a8"; }
 
