@@ -53,15 +53,13 @@ body {
                     line-height: 24px;
                     padding: 16px 25px;
                     width: 110px;
-                    border-bottom: 1px solid #b3c4bf;
-                    /*no*/
+                    border-bottom: 1px solid #b3c4bf;/*no*/
                     color: #333;
                     &:last-child {
                         border-bottom: 0;
                     }
                 }
                 .selected {
-                    border-color: $select-color;
                     color: $select-color;
                 }
             }
@@ -91,6 +89,7 @@ body {
         }
     }
     .focus {
+        border-color: $select-color;
         box-shadow: 0 0 13px rgba(151, 237, 209, 1);
         .btn {
             display: block;
