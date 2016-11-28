@@ -37,16 +37,16 @@ html, body{
 		.reason{
 			display: inline-block;
 		}
-		.reason.active{
-			color: #04ad1d;
-		}
 		.isema{
 			display: none;
 			color: #04ad1d;
 		}
-		.isema.active{
+	}
+	.status.active{
+		.isema{
 			display: block;
 		}
+		color: #04ad1d;
 	}
 	textarea{
 		width: 660px;

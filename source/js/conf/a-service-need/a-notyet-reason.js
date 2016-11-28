@@ -14,29 +14,29 @@ define(function(require, exports, module) {
     function ChoiceStatus(el){
         var _this = this;
         _this.el = $(el);
+        _this.items = _this.el.find('status');
+        _this.value = null;
         // _this.id = $(el).attr('data-id');
-        _this.touch();
+        _this._initEvent();
     }
-    ChoiceStatus.prototype.touch = function() {
+    ChoiceStatus.prototype._initEvent = function() {
         var _this = this;
-        _this.el.each(function () {
-            var that = $(this);
-            that.on('tap', function () {
-                console.log(that.attr('data-id'));
-                that.children().addClass('active').parent().siblings().children().removeClass('active');
-                $('input[name="idStatus"]').attr('data-id', that.attr('data-id'));
-                if(that.attr('data-id')==4) {
-                    console.log(5+'被点击了')
-                    that.children().removeClass('active');
-                }else{
-                    $('textarea[name="txtStatus"]').val('');
-                }
-            })
-        })
+        _this.items.on('tap',function(){
+            var $this = $(this);
+            _this.items.removeClass('active');
+            $this.addClass('active');
+            _this.value = $this.attr('data-id');
+            console.log($this)
+        });
     }
 
-    var choice = new ChoiceStatus('#jForm .status');
-
+    ChoiceStatus.prototype.get = function(){
+        var _this = this;
+        console.log(_this.value)
+        return _this.value;
+    }
+    var choice = new ChoiceStatus('#jForm');
+    choice.get()
     $('#jSubmit').on('tap',function(){
 
         var formData = form.serializeForm($('#jForm'));

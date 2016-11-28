@@ -40,12 +40,15 @@ html,body{
 			font-size: 30px;/*px*/
 			font-weight: bold;
 		}
-		i{
-			margin-right: 4px;
-		}
 		.tel-num{
 			margin-top: 15px;
 			color: #999;
+			.isema{
+				margin-right: 4px;
+			}
+			.tel{
+				font-style: normal;
+			}
 		}
 
 	}
@@ -61,11 +64,12 @@ html,body{
 		color: #666;
 	}
 	.describe{
+		line-height: 36px;/*px*/
 		padding: 25px;
-		background-color: #fff;
+		text-align: justify;
 		color: #333;
 		font-size: 22px;/*px*/
-		line-height: 36px;/*px*/
+		background-color: #fff;
 	}
 }
 /* ---按钮样式--- */

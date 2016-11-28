@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import "../common/common";
+
+
+
+/*--个人头像头部样式--*/
+.mod-top{
+    width:100%;
+    height: 236px;
+	background: url(../../images/b-detail/1.png) no-repeat;
+	background-size:100%;
+	border-top: 1px solid #ccc;/*no*/
+    .bg-picture{
+	    width: 100%;
+	    margin-top: 40px;
+	    text-align: center;
+	   .img{
+	       width: 123px;
+	       height: 123px;
+	       border-radius: 50%;
+	   }
+	}
+    .user{
+    	width: 100%;
+    	height: 24px;
+        color: #fff;
+        margin-top: 15px;
+        font-size: 22px;/*px*/
+        text-align: center;
+		letter-spacing: 2px;
+    }
+}
+
+/*--我的需求--*/
+.mod-con{
+	/*上面的内容*/
+	height:330px;
+	border-bottom:1px solid #eee;/*no*/
+	.my-need{
+		letter-spacing: 2px;
+		height:80px;
+		line-height:80px;
+		border-bottom:1px solid #eee;/*no*/
+		font-size:24px;/*px*/
+		color:#333;
+		padding:0 20px 0 25px;
+		.isema-arrow-right{
+			float:right;
+		}
+	}
+	/*--进行中和结束状态--*/
+	.diff-con{
+		padding:0 125px;
+		height:250px;
+		letter-spacing: 2px;
+		display:flex;//弹性盒布局
+		align-items:center;
+		justify-content:space-between;
+		.both-zone{
+			position:relative;
+			width:102px;
+			height:155px;
+			text-align:center;
+			.zone{
+				width:102px;
+				height:101px;
+				line-height:101px;
+				border-radius:10px;
+			}
+			.zone-l{
+				background-color:#40d1ad;
+			}
+			.zone-r{
+				background-color:#ff4545;
+			}
+			.square{
+					position:absolute;
+					top:-8px;
+					right:-8px;
+					width:25px;
+					height:25px;
+					background-color:#f00;
+					border-radius:50%;
+					line-height:25px;
+					font-size:18px;/*px*/
+					color:#fff;
+				}
+			.isema-doing{
+				font-size:55px;/*px*/
+				color:#fff;
+			}
+			.txt-doing{
+				margin-top:15px;
+				color: #666;
+			}
+			.isema-shutdown{
+				font-size:55px;/*px*/
+				color:#fff;
+			}
+		}
+	}
+}

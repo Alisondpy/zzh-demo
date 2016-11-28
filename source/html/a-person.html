@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>需求方个人中心</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/a-person.css" type="text/css" charset="utf-8">
+</head>
+
+<body class="w750">
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <!-- 个人头像 start -->
+    <div class="mod-top">
+        <div class="bg-picture">
+          <img class="img" src="https://img13.360buyimg.com/cms/s140x120_jfs/t3244/22/4188145445/20178/e905e5e6/58381192Na8e6aafe.jpg!q90.webp" />
+        </div>
+        <div class="user">安娜</div>
+    </div>
+    <!-- 个人头像 end -->
+
+    <!-- 进行中的状态 start -->
+    <div class="mod-con">
+      <div class="my-need jNeed">
+          我的需求
+          <i class="isema isema-arrow-right"></i>
+      </div>
+      <div class="diff-con">
+        <div class="both-zone">
+          <div class="zone zone-l">
+            <i class="isema isema-doing"></i>
+          </div>
+           <div class="square jNum">1</div>
+          <p class="txt-doing txt-overflow">进行中</p>
+        </div>
+        
+         <div class="both-zone">
+            <div class="zone zone-r">
+              <i class="isema isema-shutdown"></i>
+            </div>
+            <p class="txt-doing txt-overflow">已结束</p>
+        </div>
+      </div>
+    </div>
+   <!-- 进行中的状态 end -->
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+     require(['conf/a-service-need/a-person'], function() {});
+    </script>
+    <!--#include file="./common/tj.html"-->
+    <!--#include file="./common/statistics.html"-->
+</body>
+
+</html>
