@@ -25,7 +25,8 @@ html, body{
 	background-color: #fff;
 	padding: 0 25px;
 	color: #333;
-	div{
+	.status{
+		display: block;
 		width: 100%;
 		height: 85px;
 		line-height: 85px;/*px*/
@@ -33,6 +34,19 @@ html, body{
 		border-bottom: 1px solid #eee;
 		background-color: #fff;
 		text-align: left;
+		.reason{
+			display: inline-block;
+		}
+		.reason.active{
+			color: #04ad1d;
+		}
+		.isema{
+			display: none;
+			color: #04ad1d;
+		}
+		.isema.active{
+			display: block;
+		}
 	}
 	textarea{
 		width: 660px;

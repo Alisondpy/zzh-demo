@@ -16,8 +16,10 @@ html,body{
 	.top{
 		width: 700px;
 		margin: 0 auto;
-		div{
-			float: left;
+		display: flex;
+		justify-content:space-between;
+		flex-wrap:nowrap;
+		.status{
 			width: 200px;
 			color: #666;
 			text-align: center;
@@ -26,12 +28,6 @@ html,body{
 				line-height: 84px;
 				padding-bottom: 24px;
 			}
-		}
-		.going{
-			margin: 0 35px;
-		}
-		.finish{
-			float:right;
 		}
 		.active{
 			color: #40d1ad;
@@ -54,29 +50,24 @@ html,body{
 		.top{
 			width: 675px;
 			height: 50px;
-			position: relative;
 			span{
+				height: 50px;
+				line-height: 50px;
 				display: inline-block;
-				position: absolute;
-				line-height: 24px;
 			}
 			.tool{
-				top: 0;
-				left: 0;
 				padding: 4px;
 				border:1px solid #40d1ad;/*no*/
+				font-style: normal;
 				border-radius: 4px;
-				font-size: 20px;/*px*/
+				font-size: 24px;/*px*/
 				color: #40d1ad;
 			}
 			.price{
-				right: 0;
 				color: #40d1ad;
 				font-weight: bold;
 				font-size: 30px;/*px*/
 			}
-		}
-		.title{
 		}
 		.describe{
 			margin-top: 12px; 
@@ -89,19 +80,14 @@ html,body{
 				line-height: 35px;
 			}
 		}
-		.footer{
-			position: relative;
+		.bottom{
 			height: 50px;
 			line-height: 50px;
 			font-size: 20px;/*px*/
 			.bid{
-				position: absolute;
-				left: 0;
 				color: #aaa;
 			}
 			.status{
-				position: absolute;
-				right: 0;
 				color: #f5ca00;
 			}
 		} 

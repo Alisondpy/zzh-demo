@@ -13,7 +13,6 @@ html,body{
 	border-bottom: 1px solid #ccc;/*no*/
 	background-color: #fff;
 	.logo{
-		position: relative;
 		margin-left: 25px;
 		float: left;
 		width: 110px;
@@ -21,8 +20,7 @@ html,body{
 		//border: 1px solid red;
 		overflow: hidden;
 		.img{
-				position: absolute;
-				top: 23px;
+				margin-top: 23px;
 				overflow: hidden;
 				width: 88px;
 				height: 88px;
@@ -32,21 +30,13 @@ html,body{
 				img{
 					width: 88px;
 					height: 88px;
-					vertical-align: middle;
-				}
-				span{
-					display: inline-block;
-					vertical-align: middle;
-					height: 100%;
-					width: 0;
 				}
 		}
 	}
 	.describe{
 		float: left;
 		.title{
-			height: 70px;
-			line-height: 100px;
+			margin-top: 40px;
 			font-size: 30px;/*px*/
 			font-weight: bold;
 		}
@@ -54,8 +44,7 @@ html,body{
 			margin-right: 4px;
 		}
 		.tel-num{
-			height: 60px;
-			line-height: 40px;
+			margin-top: 15px;
 			color: #999;
 		}
 
@@ -63,6 +52,7 @@ html,body{
 }
 /* --报价说明-- */
 .mod-main{
+	margin-bottom: 150px;
 	.price-explain{
 		padding-left:25px; 
 		height: 62px;
@@ -91,6 +81,4 @@ html,body{
 		width: 680px;
 	}
 }
-
-
 
