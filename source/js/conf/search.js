@@ -64,6 +64,7 @@ define(function(require, exports, module) {
     //直接跳转
     SearchUrl.prototype.go = function() {
         var _this = this;
+        searchUrl.jsonUrl.page = 1;
         window.location.href = window.location.pathname + '?' + _this.getUrlString();
     }
 
@@ -158,7 +159,7 @@ define(function(require, exports, module) {
 
     function _getProviderItem(data) {
         var str = '';
-        str += '<a class="ui-service-providers" href="' + data.url + '">';
+        str += '<a class="ui-service-providers" href="' + $PAGE_DATA['vendorDetailsUrl'] + data.id + '">';
         str += '    <div class="cnt">';
         str += '        <div class="img">';
         str += '            <img class="error-img" src="' + data.logoUrl + '">';
@@ -166,7 +167,7 @@ define(function(require, exports, module) {
         str += '        <div class="title">';
         str += '            <h3 class="name txt-overflow">' + data.name + '</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        if(data.serviceTypes){
+        if (data.serviceTypes) {
             for (var i = 0, len = data.serviceTypes.length; i < len; i++) {
                 str += '<li class="ui-tag">' + data.serviceTypes[i]['codeName'] + '</li>';
             }
@@ -181,7 +182,7 @@ define(function(require, exports, module) {
 
     function _getProductItem(data) {
         var str = '';
-        str += '<a class="ui-product" href="' + data.url + '">';
+        str += '<a class="ui-product" href="' + $PAGE_DATA['productDetailsUrl'] + data.id + '">';
         str += '    <div class="img">';
         str += '        <img class="error-img" src="' + data.logoUrl + '">';
         str += '    </div>';
@@ -189,7 +190,7 @@ define(function(require, exports, module) {
         str += '        <div class="title clearfix">';
         str += '            <h3 class="name txt-overflow">' + data.name + '</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        if(data.categoryItems){
+        if (data.categoryItems) {
             for (var i = 0, len = data.categoryItems.length; i < len; i++) {
                 str += '<li class="ui-tag">' + data.categoryItems[i]['name'] + '</li>';
             }
