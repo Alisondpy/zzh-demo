@@ -125,12 +125,12 @@ define(function(require, exports, module) {
                 if (data.error > 0) {
                     Box.warn('加载数据失败，再试下看看！');
                 } else {
-                    currentPage++;
-                    if (data.data && data.data.list) {
-                        var str = getListItem(data.data.list, _this.type);
+                    if (data.data && data.data.rows) {
+                        var str = getListItem(data.data.rows, _this.type);
                         if (str == '') {
                             Box.info('别拉了，没有更多数据了！');
                         } else {
+                            currentPage++;
                             _this.scrollList.append(str);
                         }
                     } else {
@@ -161,13 +161,15 @@ define(function(require, exports, module) {
         str += '<a class="ui-service-providers" href="' + data.url + '">';
         str += '    <div class="cnt">';
         str += '        <div class="img">';
-        str += '            <img class="error-img" src="' + data.logUrl + '">';
+        str += '            <img class="error-img" src="' + data.logoUrl + '">';
         str += '        </div>';
         str += '        <div class="title">';
         str += '            <h3 class="name txt-overflow">' + data.name + '</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        for (var i = 0, len = data.serviceTypes.length; i < len; i++) {
-            str += '<li class="ui-tag">' + data.serviceTypes[i]['codeName'] + '</li>';
+        if(data.serviceTypes){
+            for (var i = 0, len = data.serviceTypes.length; i < len; i++) {
+                str += '<li class="ui-tag">' + data.serviceTypes[i]['codeName'] + '</li>';
+            }
         }
         str += '            </ul>';
         str += '        </div>';
@@ -181,14 +183,16 @@ define(function(require, exports, module) {
         var str = '';
         str += '<a class="ui-product" href="' + data.url + '">';
         str += '    <div class="img">';
-        str += '        <img class="error-img" src="' + data.logUrl + '">';
+        str += '        <img class="error-img" src="' + data.logoUrl + '">';
         str += '    </div>';
         str += '    <div class="cnt">';
         str += '        <div class="title clearfix">';
         str += '            <h3 class="name txt-overflow">' + data.name + '</h3>';
         str += '            <ul class="mod-tags clearfix">';
-        for (var i = 0, len = data.categoryItems.length; i < len; i++) {
-            str += '<li class="ui-tag">' + data.categoryItems[i]['name'] + '</li>';
+        if(data.categoryItems){
+            for (var i = 0, len = data.categoryItems.length; i < len; i++) {
+                str += '<li class="ui-tag">' + data.categoryItems[i]['name'] + '</li>';
+            }
         }
         str += '            </ul>';
         str += '        </div>';
