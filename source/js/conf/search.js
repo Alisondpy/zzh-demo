@@ -121,7 +121,7 @@ define(function(require, exports, module) {
         _this.iscroll.on('pullUp', function(callback) {
             var params = searchUrl.getJsonUrl();
             params.Page = currentPage + 1;
-            IO.get('/m-service-market/source/api/search/search.json', params, function(data) {
+            IO.get($PAGE_DATA['getSearchList'], params, function(data) {
                 if (data.error > 0) {
                     Box.warn('加载数据失败，再试下看看！');
                 } else {
@@ -129,12 +129,12 @@ define(function(require, exports, module) {
                     if (data.data && data.data.list) {
                         var str = getListItem(data.data.list, _this.type);
                         if (str == '') {
-                            Box.info('别试了，没有更多数据了！');
+                            Box.info('别拉了，没有更多数据了！');
                         } else {
                             _this.scrollList.append(str);
                         }
                     } else {
-                        Box.info('别试了，没有更多数据了！');
+                        Box.info('别拉了，没有更多数据了！');
                     }
                 }
                 callback && callback();
