@@ -19,7 +19,7 @@ html, body{
 	background-color: #fff;
 	.top{
 		line-height: 40px;
-		span{
+		.tool{
 			display: inline-block;
 			padding: 0 4px;
 			border: 1px solid #40d1ad;/*no*/
@@ -33,15 +33,15 @@ html, body{
 		line-height: 50px;/*px*/
 		font-weight: bold;
 		font-size: 24px;/*px*/
-		span{
+		.name{
 			position: absolute;
 			display: inline-block;
-		}
-		.name{
 			left: 0;
 			font-weight: bold;
 		}
 		.price{
+			position: absolute;
+			display: inline-block;
 			right: 0;
 			color: #40d1ad;
 		}
@@ -51,10 +51,10 @@ html, body{
 		height: 50px;
 		line-height: 50px;/*px*/
 		font-size: 20px;/*px*/
-		i, em{
+		.i, .em{
 			font-style: normal;
 		}
-		span{
+		.upto, .bid{
 			position: absolute;
 			display: inline-block;
 			color: #b0b0b0;
@@ -65,7 +65,7 @@ html, body{
 		}
 		.upto{
 			right: 0;
-			i{
+			.i{
 				color: #ffb712;
 				margin-left: 10px;
 			}
@@ -98,7 +98,7 @@ html, body{
 		padding-left: 25px;
 		line-height: 56px;/*px*/
 		color: #666;
-		i{
+		.i{
 			font-style: normal;
 		}
 	}
@@ -112,7 +112,7 @@ html, body{
 			border-bottom: 1px solid #ccc;
 			font-size: 24px;
 			color: #40d1ad;
-			span{
+			.companny, .status{
 				position: absolute;
 				height: 80px;
 				line-height: 80px;/*px*/

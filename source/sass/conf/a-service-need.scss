@@ -24,14 +24,16 @@ html,body{
 			color: #666;
 			text-align: center;
 			font-weight: bold;
-			span{
+			.title{
 				line-height: 84px;
 				padding-bottom: 24px;
 			}
 		}
-		.active{
-			color: #40d1ad;
-			border-bottom: 5px solid #40d1ad;
+		.status.active{
+			.title{
+				color: #40d1ad;
+				border-bottom: 5px solid #40d1ad;
+			}
 		}
 	}
 }
@@ -60,7 +62,7 @@ html,body{
 				border:1px solid #40d1ad;/*no*/
 				font-style: normal;
 				border-radius: 4px;
-				font-size: 24px;/*px*/
+				font-size: 22px;/*px*/
 				color: #40d1ad;
 			}
 			.price{
@@ -76,7 +78,7 @@ html,body{
 			font-size: 20px;/*px*/
 			color: #666;
 			overflow: hidden;
-			p{
+			.p{
 				line-height: 35px;
 			}
 		}
@@ -84,6 +86,9 @@ html,body{
 			height: 50px;
 			line-height: 50px;
 			font-size: 20px;/*px*/
+			.bid-number{
+				font-style: normal;
+			}
 			.bid{
 				color: #aaa;
 			}

@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import "../common/common";
 
-
-
 /*--个人头像头部样式--*/
 .mod-top{
     width:100%;
@@ -74,6 +72,7 @@
 				background-color:#ff4545;
 			}
 			.square{
+					display: none;
 					position:absolute;
 					top:-8px;
 					right:-8px;
