@@ -1,10 +1,53 @@
 @charset "UTF-8";
 @import "../common/common";
 @import "../common/slider/slider";
+/*index config begin*/
+.reset-h{font-weight: normal;margin: 0;padding: 0}
+.reset-a{text-decoration: none;}
+.reset-input{outline: none;}
+.tc{text-align: center;}
+.tl{text-align: left;}
+.tr{text-align: right;}
+.mod-container{margin: 0 auto;width:1180px;overflow: hidden;}
+@mixin mod-title($color,$top,$bottom){
+  @extend .reset-h;
+  font-size: 48px;
+  color: $color;
+  border-bottom: 2px solid $hoverColor;
+  display: inline-block;
+  line-height: 70px;
+  position: relative;
+  left: 50%;
+  margin:$top 0 $bottom -72px;
+}
+@mixin more($color,$mT,$mB){
+  display: block;
+  width: 138px;
+  height: 34px;
+  margin: 0 auto;
+  line-height: 34px;
+  border: 1px solid $color;
+  font-size: 18px;
+  color: $color;
+  margin-top: $mT;
+  margin-bottom: $mB;
+  border-radius:20px;
+}
+@mixin arrow($url){
+  width: 24px;
+  height: 85px;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top:280px;
+  background: $url;
+}
+/*index config end*/
+/*banner begin*/
 .ui-slider{
   .ui-slider-slide{
     width: 100%;
-    background: #1f2c35;
+    background: $normalColor;
     overflow: hidden;
     img{
       position: relative;
@@ -15,6 +58,7 @@
     }
   }
   .ui-slider-pagination{
+    bottom: 20px;
     li {
       a {
         display: inline-block;
@@ -26,10 +70,237 @@
         opacity: 1;
         text-indent: -999px;
         &.active {
-          background: #ec3e48;
+          background: $hoverColor;
           opacity: 1;
         }
       }
     }
   }
 }
+/*banner end*/
+/*培训课程 begin*/
+.mod-training{
+  .mod-title{
+    @include mod-title(#666,50px,36px);
+  }
+  padding-bottom: 50px;
+  .item{
+    width: 236px;
+    height: 160px;
+    position: relative;
+    img{
+      width: 236px;
+      height: 160px;
+    }
+    &:hover{
+      .mask{
+        background: $hoverColor;
+        opacity: 1;
+      }
+    }
+  }
+  .description{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 21px;
+    color: #fff;
+    font-weight: bold;
+    text-indent: 20px;
+    height: 48px;
+    line-height: 48px;
+    z-index: 1;
+  }
+  .mask{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    background: #000;
+    opacity: 0.5;
+  }
+}
+/*培训课程 end*/
+/*开班信息和行业动态 begin*/
+$width: 128px;
+$height: 172px;
+.mod-class-news{
+  background: #eef3f7;
+  padding: 50px 0 60px 0;
+  h3{
+    @extend .reset-h;
+    font-size: 32px;
+    color: $normalColor;
+    margin-bottom: 30px;
+  }
+  .mod-open{
+    width: 528px;
+    margin-right: 61px;
+    position: relative;
+    .item{
+      width: 528px;
+      height: 100px;
+      background: #fff;
+      margin: 1px auto 0 auto;
+      position: relative;
+      left: 0;
+      transition:width 0.5s linear,left 0.5s linear;
+      &:hover{
+        width: 566px;
+        left: -19px;
+        .date{margin-left: 49px;}
+        .button{margin-right: 41px;}
+      }
+    }
+    .date{
+      font-size: 24px;
+      color: #999;
+      font-weight: bold;
+      line-height: 100px;
+      margin-left: 30px;
+      transition:margin 0.5s linear;
+    }
+    .content{
+      margin-left: 28px;
+      margin-top: 28px;
+    }
+    h4{@extend .reset-h;font-size: 21px;color: #333;font-weight: bold;line-height: 20px;padding-bottom: 10px;}
+    .lecturer{font-size: 16px;color: #666;line-height: 20px;}
+    .button{
+      margin-right: 22px;
+      width: 98px;height: 48px;
+      background: $hoverColor;
+      border: 1px solid $hoverColor;
+      border-radius: 3px;
+      font-size: 18px;
+      line-height: 50px;
+      color: #fff;
+      position: absolute;
+      top:50%;
+      right: 0;
+      margin-top: -25px;
+      transition:margin 0.5s linear;
+      &:hover{background: #ff515b;}
+    }
+  }
+  .mod-industry{
+    width: 591px;
+    position: relative;
+    .content{
+      width: 176px;
+      margin-top: 28px;
+      margin-left: 30px;
+      p{
+        font-size: 16px;
+        color: #333;
+        line-height: 20px;
+        margin-top: 18px;
+      }
+    }
+    .item1,.item2{margin-top: 1px;}
+    .item1Left{padding-left: 31px;background: #fff;padding-bottom: 42px;padding-right: 28px;position: relative;}
+    .img{
+      margin-top: 28px;
+      img{
+        width: 128px;
+        height: 128px;
+      }
+    }
+    .item1Right{margin-left: 1px;width: $width;height: $height;background: #fff;padding: 28px 37px 2px 31px;position: relative;}
+    .item{background: #fff;width: $width;height: $height;margin-right: 1px;padding: 28px 37px 0 31px;position: relative;}
+    .date{font-size: 16px;color: #aaa;}
+    h5{
+      @extend .reset-h;
+      font-size: 21px;
+      color: #333;
+      font-weight: bold;
+      line-height: 30px;
+      &:hover{color: $hoverColor;}
+    }
+    .time{
+      font-size: 16px;
+      color: #aaa;
+      position: absolute;bottom: 42px;
+    }
+  }
+}
+/*开班信息和行业动态 end*/
+/*精品课程 begin*/
+.mod-quality{
+  .mod-title{
+    @include mod-title(#666,60px,16px);
+  }
+  .items{
+    width: 1200px;
+  }
+  .item{
+    margin: 26px 30px 0 0;
+    &:hover{
+      .description{color: $hoverColor;}
+    }
+  }
+  .img,img{width: 270px;height: 180px;}
+  .img,.description{display: block;}
+  .description{
+    font-size: 21px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .lecturer{font-size: 16px;color: #666;}
+  .more{
+    @include more($BgDisabledColor,40px,36px);
+    &:hover{
+      border: 1px solid $hoverColor;
+      color: $hoverColor;
+    }
+  }
+}
+/*精品课程 end*/
+/*师资团队 begin*/
+.mod-teachers{
+  background: #1f2c35;
+  padding-bottom: 52px;
+  .mod-container{position: relative;}
+  .mod-title{
+    @include mod-title(#fff,70px,36px);
+  }
+  .items{overflow: hidden;}
+  .items-width{position: relative;left: 0;}
+  .item{
+    margin: 10px 56px 0;
+    &:hover{
+      .img-hover{display: block;}
+    }
+  }
+  .img{width: 280px;height: 280px;border-radius:100%;position: relative;
+    img{width: 280px;height: 280px;border-radius:100%;}
+  }
+  .img-hover{width: 340px;height: 340px;background: url(../../images/index/circlHover.png);position: absolute;top:-30px;left: -30px;display: none;}
+  .name{@extend .reset-h;font-size: 26px;color: #fff;font-weight: bold;margin-top: 26px;}
+  .job-title{font-size: 18px;color: #fff;margin-top: 10px;}
+  .more{
+    @include more(#95aab8,48px,0px);
+    &:hover{
+      border: 1px solid #ec3e48;
+      color: #ec3e48;
+    }
+  }
+  .arrow-left{
+    @include arrow(url(../../images/index/arrowLeft.png) no-repeat 0 -379px);
+    left: 0px;
+    &:hover{
+      background: url(../../images/index/arrowLeftHover.png) no-repeat 0 -626px;
+    }
+  }
+  .arrow-right{
+    @include arrow(url(../../images/index/arrowRight.png) no-repeat 0 -504px);
+    right: 0px;
+    &:hover{
+      background: url(../../images/index/arrowRightHover.png) no-repeat 0 -746px;
+    }
+  }
+}
+/*师资团队 end*/

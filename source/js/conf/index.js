@@ -101,8 +101,8 @@ define(function(require, exports, module) {
     });
 
 
-    //image-lazyload
-    var lazy = new Lazyload($('#jImgList .jImg'), {
+    //图片懒加载
+    var lazy = new Lazyload($('.jImg'), {
         mouseWheel: true,
         effect: 'fadeIn',
         snap: true
@@ -113,6 +113,28 @@ define(function(require, exports, module) {
             $('#jFixNav').removeClass('ui-fix-nav-show');
         } else {
             $('#jFixNav').addClass('ui-fix-nav-show');
+        }
+    });
+
+    //师资团队滚动
+    var teacherItemWidth = $(".jItem").outerWidth(true);
+    var num = $(".jItem").length;
+    $(".jItemsWidth").width(teacherItemWidth*num);
+
+    function isAnimate(obj){//判断动画是否已完成
+        return obj.is(":animated");
+    };
+
+    $(".jArrowLeft").click(function(){
+        var left = $(".jItemsWidth").position().left;
+        if(left < 0 && !isAnimate($(".jItemsWidth"))){
+            $(".jItemsWidth").animate({"left":left+teacherItemWidth},500);
+        }
+    });
+    $(".jArrowRight").click(function(){
+        var left = $(".jItemsWidth").position().left;
+        if(left > -teacherItemWidth*(num-3) && !isAnimate($(".jItemsWidth"))){
+            $(".jItemsWidth").animate({"left":left-teacherItemWidth},500);
         }
     });
 });
