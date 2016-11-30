@@ -5,26 +5,6 @@ define(function(require, exports, module) {
     var Slider = require('lib/ui/slider/3.0.4/slider');
     var Lazyload = require('lib/plugins/lazyload/1.9.3/lazyload');
     var io = require('lib/core/1.0.0/io/request');
-    var FixNav = require('../module/fix-nav/fix-nav');
-
-    var fixNav = new FixNav({
-        items: [{
-            href: '/',
-            title: '首页',
-            iconClass: 'isema isema-home'
-        }, {
-            href: '',
-            title: '发布需求',
-            iconClass: 'isema isema-publish'
-        }, {
-            href: '',
-            title: '个人中心',
-            iconClass: 'isema isema-admin'
-        }]
-    });
-
-    fixNav.show();
-
     //slider
     var slider = new Slider('#jSlider', {
         lazyLoad: {

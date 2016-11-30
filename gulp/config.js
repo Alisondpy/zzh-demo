@@ -1,6 +1,6 @@
 var path = require('path');
 
-var PROJECT_NAME = 'm-service-market';
+var PROJECT_NAME = 'p-youyong';
 var STATIC_SERVER = 's1.zzhstatic.com';
 var CDN = '//' + STATIC_SERVER + '/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';
@@ -32,7 +32,7 @@ var CONFIG = {
         dest: './' + PATH_DIST + '/css'
     },
     px2rem: {
-        isExecute: true,
+        isExecute: false,
         options: {
             remUnit: 46.875
         }

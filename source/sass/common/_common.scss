@@ -29,8 +29,8 @@
 /*重置字体样式*/
 
 .ibase,
-.isema {
-    font-size: 24px;
+.iyoyo {
+    font-size: 12px;
     /*px*/
 }
 
@@ -75,12 +75,17 @@ a {
 /*公共常用样式*/
 
 body {
-    font: 24px/24px "PingFang SC", "Helvetica Neue", "Helvetica", "STHeiTi", "sans-serif";
-    /*px*/
+    font: 12px/1.5 "Microsoft Yahei", "Arial", "Hiragino Sans GB", "San Francisco", "STHeiti";
 }
 
-a {
-    color: #666;
+a,
+body {
+    color: $normalColor;
+}
+
+a:hover {
+    color: #ff5d66;
+    text-decoration: none;
 }
 
 .clearfix:after {
@@ -113,25 +118,10 @@ a {
     background: url('../../images/error-img.gif');
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .hide {
     display: none;
-}
-
-.ui-tag {
-    font-size: 20px;
-    /*px*/
-    $select-color: #40d1ad;
-    height: 26px;
-    line-height: 26px;
-    float: left;
-    padding: 0 5px;
-    border: 1px solid $select-color;
-    color: $select-color;
-    margin-right: 5px;
-    border-radius: 3px;
 }
 
 .ui-empty-list {
@@ -146,7 +136,7 @@ a {
             transform: scale(1);
         }
     }
-    .isema {
+    .iyoyo {
         animation: scale1 1s linear infinite;
         margin: 0 auto;
         display: block;
@@ -155,7 +145,6 @@ a {
         height: 100px;
         text-align: center;
         font-size: 100px;
-        /*px*/
         line-height: 100px;
     }
     .txt {
@@ -164,7 +153,6 @@ a {
         width: 500px;
         text-align: center;
         font-size: 28px;
-        /*px*/
         line-height: 30px;
         color: #999;
     }

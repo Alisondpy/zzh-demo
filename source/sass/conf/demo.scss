@@ -1,18 +1,14 @@
 @charset "UTF-8";
 @import "../common/common";
 @import "../common/slider/slider";
-@import "../module/fix-nav";
 body {
     background-color: #fff;
 }
 
 h1 {
     display: block;
-    font-size: 36px;
-    /*px*/
     padding: 0 0 10px 10px;
-    border-bottom: 1px solid #40d1ad;/*no*/
-    /*no*/
+    border-bottom: 1px solid #40d1ad;
     height: 36px;
     line-height: 36px;
     color: #40d1ad;
@@ -21,102 +17,4 @@ h1 {
 .w-750 {
     width: 750px;
     margin: 0 auto;
-}
-
-
-/*button*/
-
-.mod-button {
-    .ui-btn {
-        margin: 10px auto;
-    }
-}
-
-
-/*slider*/
-
-.mod-slider {
-    height: 265px;
-    .ui-slider {
-        height: 265px;
-        .ui-slider-navigation {
-            display: none;
-        }
-        .ui-slider-pagination {
-            font-size: 0;  /*px*/
-            height: 12px;
-            bottom: 15px;
-            li {
-                display: inline-block;
-                margin-right: 5px;
-                margin-left: 5px;
-                a {
-                    width: 60px;
-                    height: 12px;
-                    float: left;
-                    background-color: #c8eff0;
-                    float: left;
-                    border-radius: 12px;
-                    border: none;
-                    &.active {
-                        margin-top: 0px;
-                        background-color: #40d1ad;
-                    }
-                }
-            }
-        }
-    }
-    .ui-slider-slide {
-        img {
-            width: 750px;
-            height: 265px;
-        }
-    }
-}
-
-
-/*弹窗样式*/
-
-.mod-box {
-    .btn {
-        width: 600px;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        font-size: 24px;  /*px*/
-        /*px*/
-        display: block;
-        margin: 20px auto;
-        background-color: #ccc;
-        color: #000;
-        text-decoration: none;
-        border-radius: 10px;
-    }
-    a.btn {
-        text-align: center;
-        color: red;
-    }
-}
-
-
-/*图片列表*/
-
-.mod-img-list {
-    .item {
-        width: 750px;
-        height: 441px;
-        img {
-            width: 750px;
-            height: 441px;
-        }
-    }
-}
-
-
-/*iscroll*/
-
-.mod-iscroll {
-    height: 200px;
-    overflow: hidden;
-    border:1px solid red;/*no*/
 }
