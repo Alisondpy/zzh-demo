@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iyoyo";
-  src: url('iconfont.eot?t=1480486923785'); /* IE9*/
-  src: url('iconfont.eot?t=1480486923785#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1480486923785') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1480486923785') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1480486923785#iyoyo') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1480495878811'); /* IE9*/
+  src: url('iconfont.eot?t=1480495878811#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1480495878811') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1480495878811') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1480495878811#iyoyo') format('svg'); /* iOS 4.1- */
 }
 
 .iyoyo {
@@ -15,4 +15,64 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.iyoyo-weixin:before { content: "\e60a"; }
+
+.iyoyo-play:before { content: "\e6bb"; }
+
+.iyoyo-pause:before { content: "\e696"; }
+
+.iyoyo-phone:before { content: "\e627"; }
+
+.iyoyo-qq:before { content: "\e780"; }
+
+.iyoyo-catalog:before { content: "\e619"; }
+
+.iyoyo-favour:before { content: "\e603"; }
+
+.iyoyo-search:before { content: "\e662"; }
+
+.iyoyo-weibo:before { content: "\e653"; }
+
+.iyoyo-question-1:before { content: "\e633"; }
+
+.iyoyo-time:before { content: "\e6a8"; }
+
+.iyoyo-qzone:before { content: "\e7e1"; }
+
+.iyoyo-click:before { content: "\e600"; }
+
+.iyoyo-arrow-right-big:before { content: "\e606"; }
+
+.iyoyo-arrow-right-sm:before { content: "\e60f"; }
+
+.iyoyo-service:before { content: "\e61c"; }
+
+.iyoyo-question-2:before { content: "\e669"; }
+
+.iyoyo-email:before { content: "\e626"; }
+
+.iyoyo-question-3:before { content: "\e67d"; }
+
+.iyoyo-ok:before { content: "\e698"; }
+
+.iyoyo-note:before { content: "\e657"; }
+
+.iyoyo-people:before { content: "\e6b6"; }
+
+.iyoyo-circle:before { content: "\e612"; }
+
+.iyoyo-location:before { content: "\e607"; }
+
+.iyoyo-heart:before { content: "\e656"; }
+
+.iyoyo-close:before { content: "\e602"; }
+
+.iyoyo-arrow-left-big:before { content: "\e7ae"; }
+
+.iyoyo-talk:before { content: "\e601"; }
+
+.iyoyo-half-circle:before { content: "\e604"; }
+
+.iyoyo-arrow-left-sm:before { content: "\e7e2"; }
 

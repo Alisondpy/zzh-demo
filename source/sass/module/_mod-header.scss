@@ -1,0 +1,87 @@
+.mod-header {
+    height: 62px;
+    line-height: 62px;
+    padding: 38px 32px;
+    background-color: #e9eceb;
+    .logo {
+        font-size: 0;
+        float: left;
+        img {
+            width: 214px;
+            height: 62px;
+        }
+    }
+    .nav {
+        float: left;
+        .item {
+            float: left;
+            font-size: 18px;
+            a {
+                color: $grayColor;
+                &:hover {
+                    color: $hoverColor;
+                }
+            }
+            margin-left:30px;
+        }
+        .hover {
+            a {
+                color: $hoverColor;
+                &:hover {
+                    color: $hoverColor;
+                }
+            }
+        }
+        padding-right: 90px;
+    }
+    .search {
+        margin-top: 10px;
+        float: left;
+        position: relative;
+        height: 30px;
+        line-height: 30px;
+        width: 252px;
+        padding: 6px 20px;
+        border-radius: 42px;
+        border: 1px solid $grayColor;
+        input {
+            color: $grayColor;
+            width: 220px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            border: 0;
+            background-color: transparent;
+        }
+        .iyoyo {
+        	background-color: transparent;
+        	border:0;
+            color: $grayColor;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+            right: 20px;
+            top: 6px;
+            text-align: center;
+        }
+    }
+    .login {
+        .item {
+            float: left;
+            margin-left: 20px;
+            a {
+                font-size: 18px;
+            }
+        }
+        .btn {
+            display: inline-block;
+            padding: 0 18px;
+            height: 36px;
+            line-height: 36px;
+            border: 1px solid $grayColor;
+            border-radius: 3px;
+        }
+    }
+}
