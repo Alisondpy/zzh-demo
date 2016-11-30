@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "../common/common";
+@import "../common/slider/slider";
+.ui-slider{
+  .ui-slider-slide{
+    width: 100%;
+    background: #1f2c35;
+    overflow: hidden;
+    img{
+      position: relative;
+      left: 50%;
+      margin-left: -800px;
+      width: 1600px;
+      height: 540px;
+    }
+  }
+  .ui-slider-pagination{
+    li {
+      a {
+        display: inline-block;
+        width: 60px;
+        height: 5px;
+        border-radius:10px;
+        background: #e4ebf0;
+        margin-right: 15px;
+        opacity: 1;
+        text-indent: -999px;
+        &.active {
+          background: #ec3e48;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
