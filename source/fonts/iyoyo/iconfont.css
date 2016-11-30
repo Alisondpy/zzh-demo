@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iyoyo";
-  src: url('iconfont.eot?t=1480495878811'); /* IE9*/
-  src: url('iconfont.eot?t=1480495878811#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1480495878811') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1480495878811') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1480495878811#iyoyo') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1480513789409'); /* IE9*/
+  src: url('iconfont.eot?t=1480513789409#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1480513789409') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1480513789409') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1480513789409#iyoyo') format('svg'); /* iOS 4.1- */
 }
 
 .iyoyo {
@@ -47,6 +47,8 @@
 .iyoyo-arrow-right-sm:before { content: "\e60f"; }
 
 .iyoyo-service:before { content: "\e61c"; }
+
+.iyoyo-box:before { content: "\e62c"; }
 
 .iyoyo-question-2:before { content: "\e669"; }
 

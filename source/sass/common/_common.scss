@@ -29,6 +29,8 @@
 /*mod-header*/
 
 @import "../module/mod-header";
+@import "../module/mod-footer";
+@import "../module/ui-fix-bar";
 
 /*重置字体样式*/
 
@@ -156,9 +158,9 @@ a {
     .txt {
         margin: 0 auto;
         padding: 20px 0 0 0;
-        width: 500px;
+        width: 800px;
         text-align: center;
-        font-size: 28px;
+        font-size: 14px;
         line-height: 30px;
         color: #999;
     }

@@ -1,5 +1,44 @@
 .mod-footer {
     padding: 40px 0;
-    height: 125px;
     background-color: #1f2c35;
+    .img {
+        width: 214px;
+        height: 62px;
+    }
+    .tel {
+        margin-top: 10px;
+        .iyoyo-phone{
+            float: left;
+            font-size: 32px;
+            padding-right: 8px;
+        }
+        span{
+            float: left;
+        }
+        height: 50px;
+        line-height: 50px;
+        font-size: 25px;
+        color: #95aab8;
+    }
+    .friendly {
+        overflow: hidden;
+        margin-top: 15px;
+        ul {
+            margin-left: -16px;
+            li {
+                height: 16px;
+                line-height: 16px;
+                float: left;
+                padding: 0 15px;
+                border-left: 1px solid #95aab8;
+                a {
+                    font-size: 16px;
+                    color: #95aab8;
+                    &:hover{
+                        color: $BgHoverColor;
+                    }
+                }
+            }
+        }
+    }
 }
