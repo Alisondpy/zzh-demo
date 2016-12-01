@@ -5,6 +5,25 @@ define(function(require, exports, module) {
     var Slider = require('lib/ui/slider/3.0.4/slider');
     var Lazyload = require('lib/plugins/lazyload/1.9.3/lazyload');
     var io = require('lib/core/1.0.0/io/request');
+
+    var layer = require('plugins/layer/3.0/layer');
+
+    //tab层
+    layer.tab({
+      area: ['600px', '300px'],
+      tab: [{
+        title: 'TAB1', 
+        content: '内容1'
+      }, {
+        title: 'TAB2', 
+        content: '内容2'
+      }, {
+        title: 'TAB3', 
+        content: '内容3'
+      }]
+    });
+
+
     //slider
     var slider = new Slider('#jSlider', {
         lazyLoad: {
@@ -22,74 +41,6 @@ define(function(require, exports, module) {
             loaded: function() {}
         }
     });
-
-
-    var clickHandles = {
-
-        loadUrl: function() {
-            // async request with loading bar
-            box.loadUrl('/m-service-market/source/api/demo/publish-require.json', {
-                data: { t: +new Date },
-                content: '加载中',
-                success: function(res) {
-                    console.log(res);
-                    alert(JSON.stringify(res));
-                }
-            });
-        },
-
-        loading: function() {
-            // async request with loading bar
-            var _box = box.loading('加载中,3秒后关闭');
-            setTimeout(function() { _box.hide(); }, 3000);
-        },
-
-        tips: function() {
-            box.tips('ok! it\'s a tips', null, 5000);
-        },
-
-        alert: function() {
-            box.alert('ok! it\'s a tips');
-        },
-
-        confirm: function() {
-            box.confirm('Are you sure?',
-                function() {
-                    box.tips('ok');
-                },
-                function() {
-                    alert('cancel');
-                }, this
-            );
-        },
-
-        bubble: function() {
-            box.bubble('我是气泡，可以任意调整方向', { align: 't' }, this);
-        },
-
-        warn: function() {
-            box.warn('Opps!');
-        },
-
-        sendPost: function() {
-            io.jsonp('/m-service-market/source/api/demo/publish-require.json', { 'foo': 'foo text' }, function(res) {
-                alert(res.msg + ' (code: ' + res.error + ')');
-            }, this);
-            // io.get('/m-service-market/source/api/demo/publish-require.json', { 'foo': 'foo text' }, function(res) {
-            //     alert(res.msg + ' (code: ' + res.error + ')');
-            // }, this);
-        }
-    };
-
-    $('#jBox .btn').each(function() {
-        var _this = $(this),
-            type = _this.attr('data-type'),
-            handle = clickHandles[type];
-        if (handle) {
-            _this.on('click', handle);
-        }
-    });
-
 
     //image-lazyload
     var lazy = new Lazyload($('#jImgList .jImg'), {
