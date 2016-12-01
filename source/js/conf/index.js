@@ -1,6 +1,3 @@
-/**
- * Created by wangLiang on 2016/11/30 0030.
- */
 define(function(require, exports, module) {
     'use strict';
     var $ = require('jquery');
@@ -8,8 +5,26 @@ define(function(require, exports, module) {
     var Slider = require('lib/ui/slider/3.0.4/slider');
     var Lazyload = require('lib/plugins/lazyload/1.9.3/lazyload');
     var io = require('lib/core/1.0.0/io/request');
-    var swiper = require('lib/plugins/swiper/3.1.2/swiper');
-    //轮播图
+
+    var layer = require('plugins/layer/3.0/layer');
+
+    //tab层
+    layer.tab({
+      area: ['600px', '300px'],
+      tab: [{
+        title: 'TAB1', 
+        content: '内容1'
+      }, {
+        title: 'TAB2', 
+        content: '内容2'
+      }, {
+        title: 'TAB3', 
+        content: '内容3'
+      }]
+    });
+
+
+    //slider
     var slider = new Slider('#jSlider', {
         lazyLoad: {
             loadingClass: 'img-error'
@@ -21,31 +36,24 @@ define(function(require, exports, module) {
             pauseOnHover: true,
             restartDelay: 2500
         },
-        navigation: {
-            arrows: true,
-            toggleOnHover: false,
-            effect: 'slide',
-            nextArrow: '',
-            prevArrow: ''
-        },
         callback: {
             start: function(index) {},
             loaded: function() {}
         }
     });
 
-    //图片懒加载
-    var lazy = new Lazyload($('.jImg'), {
+    //image-lazyload
+    var lazy = new Lazyload($('#jImgList .jImg'), {
         mouseWheel: true,
         effect: 'fadeIn',
         snap: true
     });
 
-    //师资团队滚动
-    var teacherSwiper = new swiper('.swiper-container',{
-        // 如果需要前进后退按钮
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        slidesPerView: 3
+    $('#jFixNav').find('.more').click(function() {
+        if ($('#jFixNav').hasClass('ui-fix-nav-show')) {
+            $('#jFixNav').removeClass('ui-fix-nav-show');
+        } else {
+            $('#jFixNav').addClass('ui-fix-nav-show');
+        }
     });
 });

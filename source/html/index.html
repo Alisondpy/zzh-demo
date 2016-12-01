@@ -1,329 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>首页</title>
     <!--#include file="./common/meta.html"-->
     <!--#include file="./common/css.html"-->
-    <link rel="stylesheet" href="/css/conf/index.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/css/conf/demo.css" type="text/css" charset="utf-8">
 </head>
+
 <body>
-<!-- 我是注释 -->
-<!--#include file="./common/header.html"-->
-<div class="mod-page">
-    <!-- 轮播图begin -->
-    <div class="mod-slider">
-        <div id="jSlider" class="ui-slider">
-            <a href="javascript:;">
-                <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="轮播图1" class="jSliderImg img-error">
-            </a>
-            <a href="javascript:;">
-                <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="轮播图2" class="jSliderImg img-error">
-            </a>
-            <a href="javascript:;">
-                <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img3.bbgstatic.com/1584d565656_bc_18ab7bb6e171d42fc8a7143bdf1cc202_1242x680.jpeg" alt="轮播图3" class="jSliderImg img-error">
-            </a>
-            <a href="javascript:;">
-                <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img3.bbgstatic.com/15852fc8c17_bc_7029032b6b91c88846006e4228086f6b_1242x680.jpeg" alt="轮播图4" class="jSliderImg img-error">
-            </a>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="mod-page">
+        <!-- 轮播图begin -->
+        <h1>轮播</h1>
+        <div class="mod-slider w-1180">
+            <div id="jSlider" class="ui-slider">
+                <a href="javascript:;"><img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/5087404401/" class="jSliderImg img-error"></a>
+                <a href="javascript:;"><img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="Photo by: Allex Link: http://www.flickr.com/photos/allex_wang/5087404401/" class="jSliderImg img-error"></a>
+                <a href="javascript:;"><img src="" data-src="http://img3.bbgstatic.com/1584d565656_bc_18ab7bb6e171d42fc8a7143bdf1cc202_1242x680.jpeg" class="jSliderImg img-error"></a>
+                <a href="javascript:;"><img src="" data-src="http://img3.bbgstatic.com/15852fc8c17_bc_7029032b6b91c88846006e4228086f6b_1242x680.jpeg" class="jSliderImg img-error"></a>
+            </div>
         </div>
-    </div>
-    <!-- 轮播图end -->
-    <!-- 培训课程  begin -->
-    <div class="mod-training">
-        <div class="mod-container">
-            <h2 class="mod-title">培训课程</h2>
-            <div class="items clearfix">
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="培训课程图片" class="jImg img-error">
-                    <span class="description txt-overflow">美工</span>
-                    <span class="mask"></span>
+        <!-- 轮播图end -->
+        <!-- input start -->
+        <h1>输入框</h1>
+        <div class="mod-input">
+            <input class="ui-input" type="" placeholder="常规状态" name="">
+            <input class="ui-input ui-input-focus" type="" placeholder="输入状态" name="">
+            <input class="ui-input ui-input-error" type="" placeholder="错误状态" name="">
+        </div>
+        <!-- input end -->
+        <!-- button start -->
+        <h1>按钮</h1>
+        <div class="mod-button">
+            <button class="ui-btn">ui-btn-default</button>
+            <button class="ui-btn ui-btn-primary">ui-btn-primary</button>
+            <button class="ui-btn ui-btn-info">ui-btn-info</button>
+            <button class="ui-btn ui-btn-danger">ui-btn-danger</button>
+            <button class="ui-btn ui-btn-disabled">ui-btn-disabled</button>
+        </div>
+        <!-- button end -->
+        <!-- 弹窗 start -->
+        <h1>弹框</h1>
+        <div class="mod-box" id="jBox">
+            <a class="btn" target="_blank" href="https://github.com/zhongzhihui/lib/blob/master/ui/box/1.0.1/README.md">box说明文档参考->></a>
+            <button class="btn" data-type="warn">Opps! (warn)</button>
+            <button class="btn" data-type="bubble">Opps! (bubble)</button>
+            <button class="btn" data-type="alert">Opps! (alert)</button>
+            <button class="btn" data-type="confirm">Are yout sure (confirm)</button>
+            <button class="btn" data-type="tips">Thanks! (tips)</button>
+            <button class="btn" data-type="loadUrl">Send a asyn (box.loadUrl())</button>
+            <button class="btn" data-type="loading">Send a asyn (box.loading())</button>
+            <button class="btn" data-type="sendPost" data-async-text="登录中...">Send post (io.get())</button>
+        </div>
+        <!-- 弹窗 end -->
+        <!-- fix-nav start -->
+        <h1>fix-bar</h1>
+        <div class="ui-fix-bar" id="jFixBar">
+            <ul class="list clearfix" node-type="list">
+                <li class="item item-service" node-type="service">
+                    <a href="javascript:;">
+                        <i class="iyoyo iyoyo-service"></i>
+                        <span>在线客服</span>
+                    </a>
+                </li>
+                <li class="item item-sign-up" node-type="signUp">
+                    <a href="javascript:;">
+                        <i class="iyoyo iyoyo-click"></i>
+                        <span>马上报名</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- fix-nav end -->
+        <!-- 空列表 start -->
+        <h1>空列表</h1>
+        <div class="ui-empty-list">
+            <div class="ui-empty-list">
+                <div class="iyoyo iyoyo-box"></div>
+                <div class="txt">
+                    我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案
+                </div>
+            </div>
+        </div>
+        <!-- 空列表 end -->
+        <!-- 图片懒加载 start -->
+        <h1>图片懒加载</h1>
+        <div class="mod-img-list w-1180" id="jImgList">
+            <div class="item">
+                <a href="http://m.yunhou.com/act-zh-161116-bjzc.html" data-bpm="7.recommend_mainAd.1.2.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img0.bbgstatic.com/15876dccab3_bc_5c1b6a4bb547b5ba9713afd3dd74ded2_1242x680.jpeg">
                 </a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="培训课程图片" class="jImg img-error">
-                    <span class="description txt-overflow">运营</span>
-                    <span class="mask"></span>
-                </a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="培训课程图片" class="jImg img-error">
-                    <span class="description txt-overflow">运营</span>
-                    <span class="mask"></span>
-                </a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="培训课程图片" class="jImg img-error">
-                    <span class="description txt-overflow">运营</span>
-                    <span class="mask"></span>
-                </a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="培训课程图片" class="jImg img-error">
-                    <span class="description txt-overflow">运营</span>
-                    <span class="mask"></span>
+            </div>
+            <div class="item">
+                <a href="http://m.yunhou.com/act-zh-161116-bjzc.html" data-bpm="7.recommend_mainAd.1.2.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img0.bbgstatic.com/15852fea6c2_bc_b20548b4fcfe7ea369f0c85e4f7007a9_1242x680.jpeg">
                 </a>
             </div>
-        </div>
-    </div>
-    <!-- 培训课程 end -->
-    <!-- 开班信息和行业动态 begin -->
-    <div class="mod-class-news">
-        <div class="mod-container clearfix">
-            <div class="mod-open f-l">
-                <h3>开班信息</h3>
-                <div class="items">
-                    <div class="item clearfix">
-                        <span class="date f-l">11.07</span>
-                        <div class="content f-l">
-                            <h4 class="txt-overflow">淘宝精品客服班</h4>
-                            <span class="lecturer">许老师</span>
-                        </div>
-                        <a href="javascript:void(0);" class="button tc">报名</a>
-                    </div>
-                    <div class="item clearfix">
-                        <span class="date f-l">11.07</span>
-                        <div class="content f-l">
-                            <h4 class="txt-overflow">淘宝精品客服班</h4>
-                            <span class="lecturer">许老师</span>
-                        </div>
-                        <a href="javascript:void(0);" class="button tc">报名</a>
-                    </div>
-                    <div class="item clearfix">
-                        <span class="date f-l">11.07</span>
-                        <div class="content f-l">
-                            <h4 class="txt-overflow">淘宝精品客服班</h4>
-                            <span class="lecturer">许老师</span>
-                        </div>
-                        <a href="javascript:void(0);" class="button tc">报名</a>
-                    </div>
-                    <div class="item clearfix">
-                        <span class="date f-l">11.07</span>
-                        <div class="content f-l">
-                            <h4 class="txt-overflow">淘宝精品客服班</h4>
-                            <span class="lecturer">许老师</span>
-                        </div>
-                        <a href="javascript:void(0);" class="button tc">报名</a>
-                    </div>
-                </div>
+            <div class="item">
+                <a href="http://m.yunhou.com/act-my-161116-fx.html" data-bpm="7.recommend_mainAd.1.3.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img1.bbgstatic.com/1584e27c1cd_bc_b010705956e525281650b989dc9cc24f_1242x680.jpeg">
+                </a>
             </div>
-            <div class="mod-industry f-l">
-                <h3>行业动态</h3>
-                <div class="items">
-                    <div class="item1 clearfix">
-                        <a href="javascript:void(0);" class="item1Left f-l clearfix">
-                            <div class="img f-l">
-                                <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="行业动态" class="jImg img-error">
-                            </div>
-                            <div class="content f-l">
-                                <h4 class="txt-overflow">标题标题</h4>
-                                <span class="date">2016.11.07</span>
-                                <p>中智汇集团全员大会将在今天下午14:00准时开始，请提前10分钟到</p>
-                            </div>
-                        </a>
-                        <a href="javascript:void(0);" class="item1Right f-l">
-                            <h5>中智汇集团全员大会将在今天下午</h5>
-                            <span class="time">2016.11.07</span>
-                        </a>
-                    </div>
-                    <div class="item2 clearfix">
-                        <a href="javascript:void(0);" class="item f-l">
-                            <h5>中智汇集团全员大会将在今天下午</h5>
-                            <span class="time">2016.11.07</span>
-                        </a>
-                        <a href="javascript:void(0);" class="item f-l">
-                            <h5>中智汇集团全员大会将在今天下午</h5>
-                            <span class="time">2016.11.07</span>
-                        </a>
-                        <a href="javascript:void(0);" class="item f-l">
-                            <h5>中智汇集团全员大会将在今天下午</h5>
-                            <span class="time">2016.11.07</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="item">
+                <a href="http://m.yunhou.com/act-mz-161116-mz.html" data-bpm="7.recommend_mainAd.1.4.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img1.bbgstatic.com/1584e295a3d_bc_7a077abc771d05217c23497eb5cdab45_1242x680.jpeg">
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://m.yunhou.com/act-ms-161116-sx.html" data-bpm="7.recommend_mainAd.1.5.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img1.bbgstatic.com/1584e2ac4c4_bc_0fc446c823353311aef9c0cdb7ad3658_1242x680.jpeg">
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://m.yunhou.com/act-bj-161116-jk.html" data-bpm="7.recommend_mainAd.1.6.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img1.bbgstatic.com/1584e2d47d1_bc_552c3a73d7a046b15d3e3d18263cddc6_1242x680.jpeg">
+                </a>
+            </div>
+            <div class="item">
+                <a href="http://m.yunhou.com/act-bh-161116-wd.html" data-bpm="7.recommend_mainAd.1.7.0.0">
+                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" class="jImg img-error" data-src="http://img2.bbgstatic.com/1586ad43ffe_bc_59daad9f6c4fe73526addd6efad3998b_1242x680.jpeg">
+                </a>
             </div>
         </div>
+        <!-- 图片懒加载 end -->
     </div>
-    <!-- 开班信息和行业动态 end -->
-    <!-- 精品课程 begin -->
-    <div class="mod-quality">
-        <div class="mod-container">
-            <h2 class="mod-title">精品课程</h2>
-            <div class="items clearfix">
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-                <div class="item f-l">
-                    <a href="javascript:void(0);" class="img">
-                        <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="精品课程" class="jImg img-error">
-                    </a>
-                    <a href="javascript:void(0);" class="description txt-overflow">金字塔原理金字塔原理</a>
-                    <span class="lecturer">徐老师</span>
-                </div>
-            </div>
-            <a href="javascript:void(0);" class="more tc">查看更多</a>
-        </div>
-    </div>
-    <!-- 精品课程 end -->
-    <!-- 师资团队 begin -->
-    <div class="mod-teachers">
-        <div class="mod-container">
-            <h2 class="mod-title">师资团队</h2>
-            <div class="items swiper-container">
-                <div class="items-width swiper-wrapper">
-                    <a href="javascript:void(0);" class="item tc swiper-slide">
-                        <div class="img">
-                            <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="师资团队" class="jImg img-error">
-                            <div class="img-hover"></div>
-                        </div>
-                        <h3 class="name">老谷</h3>
-                        <span class="job-title txt-overflow">史诗级大魔法师</span>
-                    </a>
-                    <a href="javascript:void(0);" class="item tc swiper-slide">
-                        <div class="img">
-                            <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="师资团队" class="jImg img-error">
-                            <div class="img-hover"></div>
-                        </div>
-                        <h3 class="name">老谷</h3>
-                        <span class="job-title txt-overflow">史诗级大魔法师</span>
-                    </a>
-                    <a href="javascript:void(0);" class="item tc swiper-slide">
-                        <div class="img">
-                            <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="师资团队" class="jImg img-error">
-                            <div class="img-hover"></div>
-                        </div>
-                        <h3 class="name">老谷</h3>
-                        <span class="job-title txt-overflow">史诗级大魔法师</span>
-                    </a>
-                    <a href="javascript:void(0);" class="item tc swiper-slide">
-                        <div class="img">
-                            <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="师资团队" class="jImg img-error">
-                            <div class="img-hover"></div>
-                        </div>
-                        <h3 class="name">老谷</h3>
-                        <span class="job-title txt-overflow">史诗级大魔法师</span>
-                    </a>
-                    <a href="javascript:void(0);" class="item tc swiper-slide">
-                        <div class="img">
-                            <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="师资团队" class="jImg img-error">
-                            <div class="img-hover"></div>
-                        </div>
-                        <h3 class="name">老谷</h3>
-                        <span class="job-title txt-overflow">史诗级大魔法师</span>
-                    </a>
-                </div>
-            </div>
-            <div class="arrow-left swiper-button-prev"></div>
-            <div class="arrow-right swiper-button-next"></div>
-            <a href="javascript:void(0);" class="more tc">查看更多</a>
-        </div>
-    </div>
-    <!-- 师资团队 end -->
-    <!-- 展示位 begin -->
-    <div class="mod-show">
-        <a href="javascript:void(0);">
-            <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="展示图片" class="jImg img-error">
-        </a>
-    </div>
-    <!-- 展示位 end -->
-    <!-- 教学环境和合作企业 begin -->
-    <div class="mod-company">
-        <div class="mod-container">
-            <div class="title clearfix">
-                <h2 class="mod-title title-active f-l">教学环境</h2>
-                <h2 class="mod-title ml-70 f-l">合作企业</h2>
-            </div>
-            <div class="items clearfix">
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="教学环境" class="jImg img-error">
-                    <span class="description txt-overflow">精彩活动</span><span class="mask"></span></a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="教学环境" class="jImg img-error">
-                    <span class="description txt-overflow">上课环境</span><span class="mask"></span></a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="教学环境" class="jImg img-error">
-                    <span class="description txt-overflow">精彩活动</span><span class="mask"></span></a>
-                <a href="javascript:void(0);" class="item f-l">
-                    <img src="//s1.zzhstatic.com/lib/assets/images/s.gif" data-src="http://img1.bbgstatic.com/1584d52b0e7_bc_a0497d85409460dcc0e0ecb723257bb4_1242x680.jpeg" alt="教学环境" class="jImg img-error">
-                    <span class="description txt-overflow">上课环境</span><span class="mask"></span></a>
-            </div>
-        </div>
-    </div>
-    <!-- 教学环境和合作企业 end -->
-    <!-- 常见问题 begin -->
-    <div class="mod-question">
-        <div class="mod-container">
-            <h2 class="mod-title">常见问题</h2>
-            <div class="items clearfix">
-                <div class="item f-l">
-                    <h3 class="txt-overflow">奇异博士的脸为什么那么长？</h3>
-                    <p>因为他比别的超级英雄高到不知道哪里去啦！</p>
-                </div>
-                <div class="item f-l">
-                    <h3 class="txt-overflow">奇异博士的脸为什么那么长？</h3>
-                    <p>因为他比别的超级英雄高到不知道哪里去啦！</p>
-                </div>
-                <div class="item f-l">
-                    <h3 class="txt-overflow">奇异博士的脸为什么那么长？</h3>
-                    <p>因为他比别的超级英雄高到不知道哪里去啦！因为他比别的超级英雄高到不知道哪里去啦！因为他比别的超级英雄高到不知道哪里去啦！</p>
-                </div>
-                <div class="item f-l">
-                    <h3 class="txt-overflow">奇异博士的脸为什么那么长？</h3>
-                    <p>因为他比别的超级英雄高到不知道哪里去啦！因为他比别的超级英雄高到不知道哪里去啦！因为他比别的超级英雄高到不知道哪里去啦！</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 常见问题 end -->
-</div>
-<!--#include file="./common/footer.html"-->
-<!--#include file="./common/js.html"-->
-<script type="text/javascript">
-    require(['conf/index'], function() {});
-</script>
-<!--#include file="./common/tj.html"-->
-<!--#include file="./common/statistics.html"-->
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/demo'], function() {});
+    </script>
+    <!--#include file="./common/tj.html"-->
+    <!--#include file="./common/statistics.html"-->
 </body>
 
 </html>
