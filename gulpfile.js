@@ -71,12 +71,12 @@ gulp.task("sass", function() {
     var postcssProcessors = [
         assets,
         urlrev,
-        autoprefixer(CONFIG.autoprefixer),
+        autoprefixer(CONFIG.autoprefixer)
         // postcssSprites({
         //     stylesheetPath: './dist/css',
         //     spritePath: './dist/images' //雪碧图合并后存放地址
         // }),
-        cssgrace
+        // cssgrace
     ];
     if (CONFIG.px2rem.isExecute) {
         postcssProcessors.push(px2rem(CONFIG.px2rem.options));
