@@ -1,6 +1,6 @@
 var path = require('path');
 
-var PROJECT_NAME = 'p-youyong';
+var PROJECT_NAME = 'demo';
 var STATIC_SERVER = 's1.zzhstatic.com';
 var CDN = '//' + STATIC_SERVER + '/' + PROJECT_NAME + '/';
 var PATH_SOURCE = 'source';

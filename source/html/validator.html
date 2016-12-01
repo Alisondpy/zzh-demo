@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>表单验证</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/validator.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="mod-page">
+        <form class="ui-form" name="" method="post" action="#" id="jForm">
+            <fieldset>
+                <legend>表单标题</legend>
+                <div class="ui-form-item">
+                    <label class="ui-label">表单项文本</label>
+                    <p class="ui-form-text">一个个文字文字
+                </div>
+                <div class="ui-form-item">
+                    <label class="ui-label"><span class="ui-form-required">*</span>帐户类型</label>
+                    <div class="controls ui-radio-group">
+                        <label>
+                            <input type="radio" name="user_type" value="1" class="ui-checkbox" required data-validate-required="请选择帐户类型">个人</label>
+                        <label>
+                            <input type="radio" name="user_type" value="2" class="ui-checkbox">便利店</label>
+                        <label>
+                            <input type="radio" name="user_type" value="3" class="ui-checkbox">企业大客户</label>
+                        <label>
+                            <input type="radio" name="user_type" value="4" class="ui-checkbox">校园创业</label>
+                        <label>
+                            <input type="radio" name="user_type" value="5" class="ui-checkbox">网站主</label>
+                        <p class="ui-form-tip">不同类型需要审核的信息及资源政策会不同，填写后不能更改，请准确选择</p>
+                        <p for="user_type" class="ui-tiptext ui-tiptext-error"></p>
+                    </div>
+                </div>
+                <div class="ui-form-item">
+                    <label class="ui-label">
+                        <span class="ui-form-required">*</span>表单项文本
+                    </label>
+                    <input class="ui-input" type="text" placeholder="请输入关键字" required data-validate-required="请输入关键字">
+                    <p class="ui-form-tip">默认文案。</p>
+                </div>
+                <div class="ui-form-item ui-form-item-error ui-form-item-focus">
+                    <label class="ui-label">表单项文本</label>
+                    <input class="ui-input" type="text">
+                </div>
+                <div class="ui-form-item ui-form-item-success">
+                    <label class="ui-label">表单项文本</label>
+                    <textarea class="ui-textarea">一二三四五六七八九十</textarea>
+                    <p class="ui-form-tip ui-tiptext ui-tiptext-success">
+                        <i class="ui-tiptext-icon iyoyo iyoyo-ok" title="成功"></i>成功文案。
+                    </p>
+                </div>
+                <div class="ui-form-item">
+                    <label class="ui-label">下拉选择</label>
+                    <select id="province" name="province" class="ui-select">
+                        <option value="">请选择</option>
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="天津">天津</option>
+                        <option value="浙江">浙江</option>
+                    </select>
+                    <p class="ui-form-tip">更多地区即将开通，敬请期待。</p>
+                </div>
+                <div class="ui-form-item">
+                    <label class="ui-label ui-label-reset">不可用input</label>
+                    <input class="ui-input" type="text" disabled>
+                    <p class="ui-form-tip">目前不可用</p>
+                </div>
+                <div class="ui-form-item">
+                    <label class="ui-label">验证码</label>
+                    <input class="ui-input ui-input-checkcode" type="text" data-explain="请输入右图中字符，不区分大小写。" maxlength="4" autocomplete="off" value="" name="fourcode">
+                    <img class="ui-checkcode-imgcode-img" align="absMiddle" alt="请输入您看到的内容" height="25" src="//ssl.yunhou.com/bubugao-captcha-center/captcha/refreshImage?sessionId=e93b63ce75684692ab3b7a42c6df1009&bizType=1003&randcode=1779393877" title="点击刷新图片校验码">
+                    <a href="#">看不清，换一张</a>
+                    <div class="ui-form-tip">请输入右图中字符，不区分大小写。</div>
+                </div>
+                <div class="ui-form-item">
+                    <label for="test">
+                        <input class="ui-checkbox" id="test" value="" type="checkbox">我已阅读并接受自主缴费服务协议
+                    </label>
+                </div>
+                <div class="ui-form-item">
+                    <input type="button" id=“jSubmit” class="ui-button ui-button-orange" value="确定">
+                    <input type="button" class="ui-button" value="取消">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/validator'], function() {});
+    </script>
+    <!--#include file="./common/tj.html"-->
+    <!--#include file="./common/statistics.html"-->
+</body>
+
+</html>

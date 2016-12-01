@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import "../common/common";
+@import "../common/tips-text/tips-text";
+.mod-page {
+    width: 990px;
+    margin: 0 auto;
+}
+
+
+/*
+Base form for business ui extends.
+@author Allex Wang (allex.wxn@gmail.com)
+*/
+
+$ui-input-text-color: #666 !default;
+$ui-input-text-color-hover: #666 !default;
+$ui-input-text-color-active: #666 !default;
+$ui-input-text-color-error: #f00 !default;
+$ui-input-border-color: #ccc !default;
+$ui-input-border-color-hover: #9c9 !default;
+$ui-input-border-color-active: #9c9 !default;
+$ui-input-border-color-error: #f99 !default;
+@mixin ui-input-focus() {
+    color: $ui-input-text-color-active;
+    border-color: $ui-input-border-color-active;
+    box-shadow: 0 0 4px -2px $ui-input-border-color-active;
+}
+
+@mixin ui-input-hover() {
+    color: $ui-input-text-color-hover;
+    border-color: $ui-input-border-color-hover;
+}
+
+.ui-form {
+    font-size: 12px;
+    line-height: 1.5;
+    list-style: none;
+    * {
+        list-style: none;
+    }
+    fieldset {
+        border: 0;
+    }
+    legend {
+        display: none;
+    }
+}
+
+.ui-form-tip {
+    margin: 0;
+    padding: 4px 0 0;
+    font-size: 12px;
+    color: #b2b2b2;
+}
+
+.ui-form-other {
+    margin-left: 8px;
+}
+
+.ui-form-text {
+    display: inline-block;
+    margin-top: 3px;
+    *display: inline;
+    *zoom: 1;
+}
+
+.ui-form-item {
+    $form-label-width: 180px;
+    padding: 0 5px 14px $form-label-width;
+    zoom: 1;
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+    select {
+        vertical-align: middle;
+        margin: 4px 0 0;
+    }
+    input {
+        vertical-align: middle;
+    }
+    .ui-input {
+        vertical-align: middle;
+        *vertical-align: -5px;
+    }
+    .ui-label {
+        float: left;
+        width: $form-label-width;
+        margin-left: -1 * ($form-label-width + 10);
+        padding-top: 2px;
+        text-align: right;
+        font-size: 14px;
+    }
+}
+
+.ui-form-item-error {
+    .ui-input,
+    .ui-textarea {
+        border: 1px solid $ui-input-border-color-error;
+        color: $ui-input-text-color-error;
+    }
+    .ui-input-reset {
+        border: 1px solid #9c9c9c;
+        color: #000;
+    }
+    .ui-form-tip {
+        color: #ff5243;
+    }
+}
+
+.ui-form-large {
+    .ui-input {
+        font-size: 14px;
+        height: 18px;
+        line-height: 18px;
+        padding: 11px 10px;
+    }
+    .ui-label {
+        padding-top: 12px;
+    }
+}
+
+.ui-input,
+.ui-select,
+.ui-textarea {
+    color: $ui-input-text-color;
+    border: 1px solid $ui-input-border-color;
+    border-radius: 2px;
+}
+
+.ui-input {
+    padding: 5px 6px;
+    line-height: 14px;
+    font-size: 12px;
+    &:hover {
+        @include ui-input-hover();
+    }
+}
+
+.ui-select {
+    background-color: #fff;
+    outline: none;
+}
+
+.ui-textarea {
+    line-height: 15px;
+    padding: 2px 3px 0 3px;
+    overflow: auto;
+    font-family: Arial;
+    font-size: 12px;
+    outline: none;
+}
+
+.ui-textarea:hover,
+.ui-input-hover {
+    @include ui-input-hover();
+}
+
+.ui-input:focus,
+.ui-textarea:focus,
+.ui-input-focus {
+    @include ui-input-focus();
+}
+
+.ui-input[disabled],
+.ui-textarea[disabled],
+.ui-input:disabled,
+.ui-textarea:disabled {
+    border-color: #ccc;
+    background: #f2f2f2;
+}
+
+.placeholder {
+    color: #ccc;
+}
+
+.ui-input-checkcode {
+    width: 100px;
+}
+
+.ui-form-item-hover {
+    .ui-input,
+    .ui-textarea {
+        @include ui-input-hover();
+    }
+}
+
+.ui-form-item-focus {
+    .ui-input,
+    .ui-textarea {
+        @include ui-input-focus();
+    }
+    .ui-form-tip {
+        color: $ui-input-text-color-active;
+    }
+}
+
+.ui-form-item-hover .ui-form-tip {
+    color: #333;
+}
+
+.ui-form-required {
+    color: red;
+    font-family: SimSun;
+    font-size: 14px;
+    margin-right: 6px;
+}
+
+.ui-radio-group {
+    label {
+        margin-right: 10px;
+    }
+}
+
+input.ui-checkbox {
+    vertical-align: baseline;
+    margin-right: 5px;
+}
