@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "../common/common";
 @import "../common/slider/slider";
+@import "../common/swiper/swiper";
 /*index config begin*/
 .reset-h{font-weight: normal;margin: 0;padding: 0}
 .reset-a{text-decoration: none;}
@@ -8,7 +9,7 @@
 .tc{text-align: center;}
 .tl{text-align: left;}
 .tr{text-align: right;}
-.mod-container{margin: 0 auto;width:1180px;overflow: hidden;}
+.mod-container{margin: 0 auto;width:$width;}
 @mixin mod-title($color,$top,$bottom){
   @extend .reset-h;
   font-size: 48px;
@@ -166,7 +167,15 @@ $height: 172px;
       margin-left: 28px;
       margin-top: 28px;
     }
-    h4{@extend .reset-h;font-size: 21px;color: #333;font-weight: bold;line-height: 20px;padding-bottom: 10px;}
+    h4{
+      @extend .reset-h;
+      width:272px;
+      font-size: 21px;
+      color: #333;
+      font-weight: bold;
+      line-height: 20px;
+      padding-bottom: 10px;
+    }
     .lecturer{font-size: 16px;color: #666;line-height: 20px;}
     .button{
       margin-right: 22px;
@@ -193,6 +202,8 @@ $height: 172px;
       margin-top: 28px;
       margin-left: 30px;
       p{
+        height: 60px;
+        overflow: hidden;
         font-size: 16px;
         color: #333;
         line-height: 20px;
@@ -211,13 +222,17 @@ $height: 172px;
     .item1Right{margin-left: 1px;width: $width;height: $height;background: #fff;padding: 28px 37px 2px 31px;position: relative;}
     .item{background: #fff;width: $width;height: $height;margin-right: 1px;padding: 28px 37px 0 31px;position: relative;}
     .date{font-size: 16px;color: #aaa;}
-    h5{
+    h4,h5{
       @extend .reset-h;
       font-size: 21px;
       color: #333;
       font-weight: bold;
       line-height: 30px;
       &:hover{color: $hoverColor;}
+    }
+    h5{
+      height: 95px;
+      overflow : hidden;
     }
     .time{
       font-size: 16px;
@@ -244,6 +259,7 @@ $height: 172px;
   .img,img{width: 270px;height: 180px;}
   .img,.description{display: block;}
   .description{
+    width: 270px;
     font-size: 21px;
     color: #333;
     font-weight: bold;
@@ -261,46 +277,122 @@ $height: 172px;
 /*精品课程 end*/
 /*师资团队 begin*/
 .mod-teachers{
-  background: #1f2c35;
+  background: $normalColor;
   padding-bottom: 52px;
   .mod-container{position: relative;}
   .mod-title{
     @include mod-title(#fff,70px,36px);
   }
-  .items{overflow: hidden;}
+  .items{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
   .items-width{position: relative;left: 0;}
   .item{
-    margin: 10px 56px 0;
+    margin: 10px 0 0 0;
     &:hover{
       .img-hover{display: block;}
     }
   }
-  .img{width: 280px;height: 280px;border-radius:100%;position: relative;
+  .img{width: 280px;height: 280px;border-radius:100%;position: relative;display: inline-block;
     img{width: 280px;height: 280px;border-radius:100%;}
   }
   .img-hover{width: 340px;height: 340px;background: url(../../images/index/circlHover.png);position: absolute;top:-30px;left: -30px;display: none;}
   .name{@extend .reset-h;font-size: 26px;color: #fff;font-weight: bold;margin-top: 26px;}
-  .job-title{font-size: 18px;color: #fff;margin-top: 10px;}
+  .job-title{display: inline-block;width:280px;font-size: 18px;color: #fff;margin-top: 10px;}
   .more{
-    @include more(#95aab8,48px,0px);
+    @include more($disabledColor,48px,0px);
     &:hover{
-      border: 1px solid #ec3e48;
-      color: #ec3e48;
+      border: 1px solid $BgNormalColor;
+      color: $hoverColor;
     }
   }
   .arrow-left{
-    @include arrow(url(../../images/index/arrowLeft.png) no-repeat 0 -379px);
+    @include arrow(url(../../images/index/arrowLeft.png) no-repeat);
     left: 0px;
     &:hover{
-      background: url(../../images/index/arrowLeftHover.png) no-repeat 0 -626px;
+      background: url(../../images/index/arrowLeftHover.png) no-repeat;
     }
   }
   .arrow-right{
-    @include arrow(url(../../images/index/arrowRight.png) no-repeat 0 -504px);
+    @include arrow(url(../../images/index/arrowRight.png) no-repeat);
     right: 0px;
     &:hover{
-      background: url(../../images/index/arrowRightHover.png) no-repeat 0 -746px;
+      background: url(../../images/index/arrowRightHover.png) no-repeat;
     }
   }
 }
 /*师资团队 end*/
+/*展示位 begin*/
+.mod-show{
+  a{
+    img{@extend .reset-a;width:100%;height: 270px;}
+  }
+}
+/*展示位 end*/
+/*教学环境和合作企业 begin*/
+.mod-company{
+  .title{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    margin-top:50px;
+    margin-bottom: 42px;
+    margin-left: -179px;
+    cursor: pointer;
+  }
+  padding-bottom: 76px;
+  .mod-title{
+    @extend .reset-h;
+    font-size: 48px;
+    color: #747c82;
+    display: inline-block;
+    line-height: 70px;
+  }
+  .ml-70{margin-left: 70px;}
+  .title-active{
+    color: $normalColor;
+    border-bottom: 2px solid $BgNormalColor;
+  }
+  .item{
+    width: 295px;
+    height: 209px;
+    img{
+      width: 295px;
+      height: 209px;
+    }
+    position: relative;
+    &:hover{
+      .mask{
+        background: $BgNormalColor;
+        opacity: 1;
+      }
+    }
+  }
+  .description{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 21px;
+    color: #fff;
+    font-weight: bold;
+    text-indent: 20px;
+    height: 48px;
+    line-height: 48px;
+    z-index: 1;
+  }
+  .mask{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    background: #000;
+    opacity: 0.5;
+  }
+}
+/*教学环境和合作企业 end*/
