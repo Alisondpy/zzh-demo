@@ -3,7 +3,7 @@
 @import "../common/slider/slider";
 @import "../common/swiper/swiper";
 /*index config begin*/
-.reset-h{font-weight: normal;margin: 0;padding: 0}
+.reset-h{font-weight: normal;margin: 0;padding: 0;}
 .reset-a{text-decoration: none;}
 .reset-input{outline: none;}
 .tc{text-align: center;}
@@ -396,3 +396,22 @@ $height: 172px;
   }
 }
 /*教学环境和合作企业 end*/
+/*常见问题 begin*/
+.mod-question{
+  background: #eef3f7;
+  padding-bottom: 66px;
+  .mod-title{
+    @include mod-title($normalColor,50px,50px);
+  }
+  .item{
+    margin-top: 1px;
+    margin-right: 1px;
+    background: #fff;
+    width: 473px;
+    height: 96px;
+    padding: 28px 86px 28px 30px;
+  }
+  h3{@extend .reset-h;font-size: 18px;color: $normalColor;font-weight: bold;}
+  p{font-size: 16px;color: $normalColor;line-height: 24px;margin-top: 10px;height: 70px;overflow: hidden;}
+}
+/*常见问题 end*/

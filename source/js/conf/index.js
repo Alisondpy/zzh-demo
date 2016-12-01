@@ -42,10 +42,6 @@ define(function(require, exports, module) {
     });
 
     //师资团队滚动
-    var teacherItemWidth = $(".swiper-slide").width();
-    console.log(teacherItemWidth);
-    var num = $(".swiper-slide").length;
-    $(".swiper-wrapper").width(teacherItemWidth*num);
     var teacherSwiper = new swiper('.swiper-container',{
         // 如果需要前进后退按钮
         nextButton: '.swiper-button-next',
