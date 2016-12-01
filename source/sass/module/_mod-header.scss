@@ -34,7 +34,7 @@
                 }
             }
         }
-        padding-right: 90px;
+        padding-right: 80px;
     }
     .search {
         margin-top: 10px;
@@ -42,13 +42,13 @@
         position: relative;
         height: 30px;
         line-height: 30px;
-        width: 252px;
+        // width: 252px;
         padding: 6px 20px;
         border-radius: 42px;
         border: 1px solid $grayColor;
         input {
             color: $grayColor;
-            width: 220px;
+            width: 180px;
             height: 30px;
             line-height: 30px;
             font-size: 18px;
@@ -99,7 +99,7 @@
         .logined {
             .user-name {
                 display: inline-block;
-                width: 110px;
+                width: 80px;
                 margin-right: 15px;
             }
             .item {
