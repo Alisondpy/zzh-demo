@@ -1,0 +1,10 @@
+{ 
+	"error": "2", 
+	"msg": "牛逼，你已经到后台了！",
+	"data": {
+		"totalCount":200,
+		"pageSize" : 10,
+		"currentPage" : 1
+	},
+	"ver": "1.0" 
+}
