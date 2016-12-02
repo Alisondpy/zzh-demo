@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>表单验证</title>
+    <!--#include file="./common/meta.html"-->
+    <!--#include file="./common/css.html"-->
+    <link rel="stylesheet" href="/css/conf/pagination.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <!-- 我是注释 -->
+    <!--#include file="./common/header.html"-->
+    <div class="mod-page">
+        <div class="pagination-holder clearfix">
+            <div id="jPagination"></div>
+            <div style="padding: 10px 0;">
+                <button class="ui-button ui-button-green selectPage">selectPage(rnd)</button>
+                <button class="ui-button ui-button-green setPageSize">setPageSize(20)</button>
+                <button class="ui-button ui-button-green setTotalCount">setTotalCount(rnd)</button>
+                <button class="ui-button ui-button-orange getPageData">getPageData</button>
+                <button class="ui-button ui-button-red disable">disable</button>
+                <button class="ui-button ui-button-green enable">enable</button>
+                <button class="ui-button ui-button-red destroy">destroy()</button>
+            </div>
+        </div>
+    </div>
+    <!--#include file="./common/footer.html"-->
+    <!--#include file="./common/js.html"-->
+    <script type="text/javascript">
+    require(['conf/pagination'], function() {});
+    </script>
+    <!--#include file="./common/tj.html"-->
+    <!--#include file="./common/statistics.html"-->
+</body>
+
+</html>
