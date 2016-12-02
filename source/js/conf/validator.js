@@ -7,10 +7,14 @@ define(function(require, exports, module) {
     'use strict';
 
     var $ = require('jquery');
-    var Validator = require('lib/plugins/validation/1.15.1/validator');
+    require('lib/plugins/validation/1.15.1/jquery-validate');
+    require('lib/plugins/validation/1.15.1/localization/messages_zh');
+
+    // $.validator.setDefaults({ submitHandler: function() { alert("submitted!"); } });
+    // $("#commentForm").validate();
 
 
-    $('#myform').validate({
+    var a = $('#jForm').validate({
         focusCleanup: false,
         errorElement: 'p',
         errorClass: 'ui-tiptext ui-tiptext-error',
@@ -34,8 +38,9 @@ define(function(require, exports, module) {
         }
     });
 
+    console.log(a);
 
     $('#jSubmit').on('click', function() {
-
+        $('#jForm').submit();
     });
 });
