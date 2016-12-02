@@ -7,38 +7,42 @@ define(function(require, exports, module) {
     'use strict';
 
     var $ = require('jquery');
-    require('lib/ui/pagination/2.0.7/pagination');
-
+    var Pagination = require('lib/ui/pagination/1.0.1/pagination');
     var IO = require('lib/core/1.0.0/io/request');
+    var Box = require('lib/ui/box/1.0.1/box');
 
-    var dataContainer = $('#jDataContainer');
+    var jContainer = $('#jContainer');
+    var jPagination = $('.jPagination');
 
-    $('#jPaginationContainer').pagination({
-        dataSource: $PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json',
-        locator: 'items',
-        totalNumber: 120,
-        pageSize: 20,
-        ajax: {
-            beforeSend: function() {
-                dataContainer.html('Loading data from flickr.com ...');
-            }
-        },
-        callback: function(data, pagination) {
-            // template method of yourself
-            console.log(data);
-            var html = simpleTemplating(data);
-            dataContainer.html(html);
+    var pager = new Pagination(jPagination, {
+        pageSize : 10,
+        onPage: function(pageNum, e) {
+
+            var loading = Box.loading('正在加载...');
+            IO.get($PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json', { curPage: pageNum }, function(data) {
+                jContainer.html(template(data.data.resultList));
+                pager.setTotalCount(data.data.records);
+                loading.hide();
+            }, function(data) {
+                jContainer.html('网络错误，请重试！');
+                loading.hide();
+            });
         }
-    })
+    });
 
-    function simpleTemplating(data) {
-        var html = '<ul>';
-        $.each(data, function(index, item) {
-            html += '<li>' + item + '</li>';
-        });
-        html += '</ul>';
-        return html;
+    IO.get($PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json', {}, function(data) {
+        jContainer.html(template(data.data.resultList));
+        pager.setTotalCount(data.data.records);
+    }, function(data) {
+        jContainer.html('网络错误，请重试！');
+    });
+
+    function template(data) {
+        var str = '';
+        for (var i = 0; i < data.length; i++) {
+            str += '<div>' + data[i] + '</div>';
+        }
+        return str;
     }
-
 
 });

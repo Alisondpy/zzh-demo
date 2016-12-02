@@ -1,10 +1,12 @@
-{ 
-	"error": "2", 
-	"msg": "牛逼，你已经到后台了！",
-	"data": {
-		"totalCount":200,
-		"pageSize" : 10,
-		"currentPage" : 1
-	},
-	"ver": "1.0" 
+{
+    "error": "1",
+    "msg": "牛逼，你已经到后台了！",
+    "data": {
+        "pageNo": 1,
+        "pageSize": 10,
+        "records": 100,
+        "resultList": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        "total": 2
+    },
+    "ver": "1.0"
 }
