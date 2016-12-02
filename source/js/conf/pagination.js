@@ -14,7 +14,7 @@ define(function(require, exports, module) {
     var dataContainer = $('#jDataContainer');
 
     $('#jPaginationContainer').pagination({
-        dataSource: $PAGE_DATA['staticBaseUrl'] + '/source/api/pager.json',
+        dataSource: $PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json',
         locator: 'items',
         totalNumber: 120,
         pageSize: 20,
@@ -25,6 +25,7 @@ define(function(require, exports, module) {
         },
         callback: function(data, pagination) {
             // template method of yourself
+            console.log(data);
             var html = simpleTemplating(data);
             dataContainer.html(html);
         }
