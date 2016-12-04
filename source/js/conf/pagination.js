@@ -10,31 +10,49 @@ define(function(require, exports, module) {
     var Pagination = require('lib/ui/pagination/1.0.1/pagination');
     var IO = require('lib/core/1.0.0/io/request');
     var Box = require('lib/ui/box/1.0.1/box');
+    var Pager = require('./pager');
 
     var jContainer = $('#jContainer');
     var jPagination = $('.jPagination');
 
-    var pager = new Pagination(jPagination, {
-        pageSize : 10,
-        onPage: function(pageNum, e) {
-
-            var loading = Box.loading('正在加载...');
-            IO.get($PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json', { curPage: pageNum }, function(data) {
-                jContainer.html(template(data.data.resultList));
-                pager.setTotalCount(data.data.records);
-                loading.hide();
-            }, function(data) {
-                jContainer.html('网络错误，请重试！');
-                loading.hide();
-            });
+    var pager = new Pager(jPagination, {
+        url: $PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json',
+        data:{
+            class : 'djune'
+        },
+        alias: {
+            currentPage: 'currentPage',
+            pageSize: 'pageSize'
+        },
+        options: {
+            currentPage: 2, // start with 1
+            pageSize: 20
         }
     });
 
-    IO.get($PAGE_DATA['baseStaticUrl'] + '/source/api/pager.json', {}, function(data) {
+    var loading = null;
+
+    pager.on('ajaxStart', function() {
+        loading = Box.loading('正在加载...', {
+            modal: false
+        });
+    });
+
+    pager.on('ajaxSuccess', function(data, callback) {
+        console.log(data, callback);
         jContainer.html(template(data.data.resultList));
-        pager.setTotalCount(data.data.records);
-    }, function(data) {
+        callback && callback(data.data.records);
+        loading && loading.hide();
+    });
+
+    pager.on('ajaxError', function(data) {
         jContainer.html('网络错误，请重试！');
+        loading && loading.hide();
+    });
+
+    pager.on('change', function(pageNum, e) {
+        console.log('pageNum', pageNum, e);
+        $('#jCurrentPage').html(pageNum)
     });
 
     function template(data) {
@@ -42,7 +60,9 @@ define(function(require, exports, module) {
         for (var i = 0; i < data.length; i++) {
             str += '<div>' + data[i] + '</div>';
         }
+        if(str == ''){
+            str = '<div>数据为空</div>'
+        }
         return str;
     }
-
 });

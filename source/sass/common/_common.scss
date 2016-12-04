@@ -16,11 +16,6 @@
 
 @import "./animate/loading";
 
-/*字体*/
-
-@import "../../fonts/ibase/iconfont.css";
-@import "../../fonts/iyoyo/iconfont.css";
-
 /*表单*/
 
 @import "./button/button";
@@ -117,7 +112,7 @@ a {
 }
 
 .img-error {
-    background: url('../../images/error-img.gif');
+    background: url('#{$gImgBase}error-img.gif');
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }

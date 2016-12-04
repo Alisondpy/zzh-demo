@@ -1,13 +1,5 @@
-.mod-page {
-    padding-top: 30px;
-}
-
 .ui-pager {
-    color: #666;
-    font-size: 13px;
-    text-align: right;
-    font-family: "Microsoft Yahei", \5b8b\4f53 Arial, Helvetica, sans-serif;
-    // clearfix
+    color: #333;
     zoom: 1;
     &:after {
         content: ".";
@@ -17,106 +9,61 @@
         visibility: hidden;
     }
     ul {
-        padding: 0;
-        margin: 0;
-    }
-    a,
-    span {
-        display: inline-block;
-        color: #666;
-        line-height: 24px;
-        font-weight: normal;
-        text-align: center;
-        min-width: 14px;
-        padding: 0 7px;
-        margin: 0 5px 0 0;
-        -webkit-user-select: none;
-        border-radius: 3px;
-    }
-    li {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        float: left;
-        a,
-        span {
-            border: 1px solid #ddd;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-        a {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-            background: #fcfcfc;
-        }
-        .current {
-            cursor: default;
-        }
-        .ellipse {
-            background: none;
-            border: none;
-            border-radius: 0;
-            box-shadow: none;
-            font-weight: bold;
-            cursor: default;
-        }
-    }
-    /* plain html structs */
-    a,
-    b,
-    span,
-    input {
-        display: inline-block;
-        color: #666;
-        height: 24px;
-        line-height: 24px;
-        text-align: center;
-        padding: 0 8px;
-        *vertical-align: middle;
-    }
-    a,
-    input {
-        border: 1px solid #ddd;
-    }
-    b {
-        border: 1px solid #fff;
-    }
-    b,
-    a:hover {
-        color: #f00;
-    }
-    a:hover {
-        text-decoration: none;
-    }
-    em,
-    .page-info {
-        margin-left: 10px;
-        input {
-            padding: 6px 0;
-            margin: 0 5px;
-            width: 25px;
-            outline: none;
-            border-radius: 3px;
-        }
-        .ui-button {
-            margin-left: 8px;
-            color: #666;
-            background-color: #f2f2f2;
-            &:hover {
-                color: #666;
-                background-color: #fff;
+        li {
+            float: left;
+            a,
+            span,
+            .ui-button,
+            input {
+                box-sizing: initial;
+                -webkit-user-select: none;
+                text-align: center;
+                display: inline-block;
+                font-size: 14px;
+                height: 28px;
+                line-height: 28px;
+                min-width: 14px;
+                padding: 0 7px;
+                color: #333;
+                border: 1px solid #bbb;
+                border-radius: 2px;
+            }
+            a:hover {
+                border-color: #ea3e48;
+                background-color: #ea3e48;
+                color: #fff;
+            }
+            a,
+            span {
+                margin: 0 5px 0 0;
             }
         }
-    }
-    .disabled .page-info {
-        cursor: default;
-        input {
-            background: #ddd;
+        .active {
+            .current {
+                border-color: #ea3e48;
+                background-color: #ea3e48;
+                color: #fff;
+            }
+            .next,
+            .prev {
+                border-color: #bcbcbc;
+                background-color: transparent;
+                color: #bcbcbc;
+            }
         }
-        .ui-button {
-            background: #ddd;
-            cursor: default;
+        .disabled {
+            .ellipse {
+                border: 0;
+            }
+        }
+        .page-info {
+            .page-no {
+                width: 20px;
+                margin: 0 5px;
+            }
+            .ui-button{
+                margin: 0 0 0 5px;
+            }
         }
     }
 }
