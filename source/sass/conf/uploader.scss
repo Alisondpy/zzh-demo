@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/tab/tab";
+body{
+	background-color: #eef3f7;
+}
+.mod-page {
+    width: 990px;
+    margin: 0 auto;
+}
