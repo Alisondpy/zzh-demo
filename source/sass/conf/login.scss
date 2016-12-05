@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import "../common/config/level-1";
+@import "../common/common";
+@import "../common/tips-text/tips-text";
+body{
+    width: 500px;
+    padding: 20px;
+    min-width: auto;
+}
+.mod-page {
+    margin: 0 auto;
+}
