@@ -8,14 +8,17 @@ define(function(require, exports, module) {
 
     var $ = require('jquery');
     require('plugins/validator/1.0.0/validator');
-    var box = require('lib/ui/box/1.0.1/crossbox');
     var io = require('lib/core/1.0.0/io/request');
 
-    
+    //因为要跨页面了（非跨域），所以请用此box,父页面和子页面都要用此box, 支持lib/ui/box/1.0.1/box的所有功能
+    var box = require('lib/ui/box/1.0.1/crossbox');
+
+
 
     var validate1 = $('#jForm').validate({
         submitHandler: function(form) {
             io.get($PAGE_DATA['baseStaticUrl'] + '/source/api/login.json', function(data) {
+                //通过此方法可以获取父页面的当前弹窗的实例
                 var top = box.get(window);
                 console.log('top success');
                 top && top.hide();

@@ -10,6 +10,8 @@ define(function(require, exports, module) {
     var Util = require('lib/core/1.0.0/utils/util');
     var build = require('lib/core/1.0.0/dom/build');
     var IO = require('lib/core/1.0.0/io/request');
+
+    //因为要跨页面了（非跨域），所以请用此box,父页面和子页面都要用此box, 支持lib/ui/box/1.0.1/box的所有功能
     var box = require('lib/ui/box/1.0.1/crossbox');
 
     var nodeList = build.parse($('#jBtns'));
@@ -20,36 +22,6 @@ define(function(require, exports, module) {
                 autoRelease: false,
                 modal: false
             });
-        },
-        tips: function() {
-            box.tips('ok! it\'s a tips', null, 5000);
-        },
-        confirm: function() {
-            box.confirm('Are you sure?',
-                function() {
-                    box.tips('ok');
-                },
-                function() {
-                    alert('cancel');
-                }
-            );
-        },
-        warn: function() {
-            box.warn('Opps!');
-        },
-        sendPost: function() {
-            ajaxApi.post({ 'foo': 'foo text' }, function(res) {
-                alert(res.msg + ' (code: ' + res.code + ')');
-            }, this);
-        },
-        loginBox: function() {
-            // require('common/ui/loginbox').login({ title: '步步高商城用户登陆' }, function(e) {
-            //     console.log('success', arguments);
-            // }, function(e) {
-            //     console.log('error', arguments);
-            // }, function(e) {
-            //     console.log('close', arguments);
-            // });
         }
     };
 
