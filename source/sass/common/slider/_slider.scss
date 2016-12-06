@@ -1,49 +1,118 @@
-.ui-slider {
-    position: relative;
-    display: none;
-    transform: translateX(0);
-    a {
-        &:link,
-        &:visited {
-            color: #333;
+/* 轮播图 */
+
+.ui-slide {
+    height: 360px;
+    .slide-list {
+        height: 360px;
+        li,
+        .slid-click a {
+            height: 360px;
         }
-        &:hover,
-        &:active {
-            color: #9e2020;
-        }
-    }
-    .ui-slider-navigation {
-        margin-top: 5px;
-    }
-    .ui-slider-pagination {
-        list-style: none;
-        position: absolute;
+        position: relative;
+        z-index: 1;
         width: 100%;
-        bottom: 10px;
-        left: 50%;
-        margin-left: -50%;
-        z-index: 10;
-        text-align: center;
+        overflow: hidden;
+        background: url("#{$gLibBase}images/loading/loading32x32.gif") no-repeat 50% 50% transparent;
         li {
-            display: inline;
-            display: inline;
-            margin: 0px 10px;
-            text-align: center;
-            line-height: 0;
-            font-size: 0;
+            background: #fff no-repeat 50% 50%;
+            width: 100%;
+            position: relative;
+            display: none;
+            opacity: 0;
+            position: absolute;
+            overflow: hidden;
+        }
+        .slid-click {
+            width: 1190px;
+            margin: 0 auto;
+            position: relative;
             a {
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                background-color: #999;
-                opacity: 0.4;
-                text-indent: -999px;
-                &.active {
-                    background-color: #fff;
-                    opacity: 1;
-                }
+                z-index: 2;
+                position: absolute;
+                display: block;
+                width: 760px;
+                top: 0;
+                left: 200px;
+                overflow: hidden;
             }
         }
+    }
+    position: relative;
+    .slide-num {
+        position: absolute;
+        left: 0;
+        bottom: 12px;
+        text-align: center;
+        height: 16px;
+        width: 100%;
+        z-index: 2;
+        a {
+            width: 14px;
+            height: 14px;
+            background-color: #333;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin: 0 4px;
+            cursor: pointer;
+            display: inline-block;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+        }
+        .hover {
+            background: #d2293d;
+        }
+    }
+    .arrow-l,
+    .arrow-r {
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        z-index: 10;
+        width: 26px;
+        height: 40px;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .arrow-l em,
+    .arrow-r em {
+        left: 0px;
+        top: 0px;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        width: 26px;
+        height: 40px;
+        background-color: #000000;
+        opacity: 0.1;
+        filter: alpha(opacity=10);
+    }
+    i {
+        text-align: center;
+        line-height: 40px;
+        top: 0;
+        z-index: 2;
+        font-size: 33px;
+        color: #fff;
+        font-weight: 400;
+        display: inline-block;
+        position: absolute;
+    }
+    .arrow-l {
+        left: 0px;
+        border-radius: 0px 5px 5px 0px;
+        i {
+            left: -5px;
+        }
+    }
+    .arrow-r {
+        right: 0px;
+        border-radius: 5px 0px 0px 5px;
+    }
+    .arrow-l:hover i,
+    .arrow-r:hover i {
+        opacity: 0.5;
+        filter: alpha(opacity=50);
     }
 }
