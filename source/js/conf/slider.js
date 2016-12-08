@@ -7,7 +7,7 @@ define(function(require, exports, module) {
     // var swiper = require('lib/plugins/swiper/3.1.2/swiper');
     // 
 
-    $('#jSlider').slide();
+    $('#jSlider').slider();
 
     // var slider = new Slider('#jSlider', {
     //     lazyLoad: {

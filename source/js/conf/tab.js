@@ -15,7 +15,7 @@ define(function(require, exports, module) {
     var tab = new Tab(jTab);
 
     tab.on('change', function(el) {
-        console.log(el.body);
+        console.log(el);
     });
 
     tab.setCurrent();

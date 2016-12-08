@@ -55,6 +55,8 @@ define(function(require, exports, module) {
         $('#jCurrentPage').html(pageNum)
     });
 
+    pager.pagination.selectPage(2);
+
     function template(data) {
         var str = '';
         for (var i = 0; i < data.length; i++) {
