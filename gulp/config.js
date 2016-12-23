@@ -21,6 +21,10 @@ var CONFIG = {
     fonts: {
         src: './' + PATH_SOURCE + '/fonts/**/*',
         dest: './' + PATH_DIST + '/fonts'
+    },    
+    video: {
+        src: './' + PATH_SOURCE + '/video/**/*',
+        dest: './' + PATH_DIST + '/video'
     },
     html: {
         src: './' + PATH_SOURCE + '/html/**/*.{html,htm}',
@@ -102,11 +106,30 @@ var CONFIG = {
         common: {
             findNestedDependencies: true,
             paths: {
+                'template': 'lib/template/3.0/template-simple',
                 'css': 'lib/require/2.1/plugins/css/css', // or whatever the path to require-css is
                 'text': 'lib/require/2.1/plugins/text/text', // or whatever the path to require-css is
-                'jquery': 'lib/zeptojs/1.1.5/zepto'
+                'jquery': 'lib/jquery/1.11.1/jquery'
             },
-            shim: {}
+            shim: {},
+            //打包相关
+            optimize: 'uglify2',
+            uglify2: {
+                mangle: {
+                    screw_ie8: false
+                },
+                compress: {
+                    screw_ie8: false,
+                    sequences: false,
+                    global_defs: {
+                        DEBUG: false
+                    }
+                },
+                output: {
+                    screw_ie8: false,
+                    beautify: true
+                }
+            }
         },
         //app.js配置文件专门入口
         app: {

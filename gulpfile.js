@@ -118,6 +118,12 @@ gulp.task('copy-fonts', function() {
         .pipe(gulp.dest(CONFIG.fonts.dest));
 });
 
+//copy-video
+gulp.task('copy-video', function() {
+    return gulp.src(CONFIG.video.src)
+        .pipe(gulp.dest(CONFIG.video.dest));
+});
+
 //copy-images
 gulp.task('copy-images', function() {
     return gulp.src(CONFIG.images.src)

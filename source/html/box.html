@@ -19,6 +19,10 @@
     <!--#include file="./common/footer.html"-->
     <!--#include file="./common/js.html"-->
     <script type="text/javascript">
+    alert(1);
+    window.onerror(function(e){
+        alert(1);
+    });
     require(['conf/box'], function() {});
     </script>
     <!--#include file="./common/tj.html"-->
